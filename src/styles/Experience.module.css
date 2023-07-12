@@ -1,0 +1,336 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0vh;
+  margin-top: 5vh;
+  width: 60%;
+  border-radius: 30px;
+}
+
+.sectionContainer {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.listContainer {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 4.5vw;
+  margin-bottom: 20vh;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Adjust the gap as per your preference */
+}
+
+.skillImage {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px;
+  flex: 1;
+  min-width: 150px; /* Adjust the min-width as per your preference */
+  max-width: 300px; /* Adjust the max-width as per your preference */
+  transition: opacity 0.3s ease;
+  color: white;
+  text-shadow: 1px 2px 2px black;
+  font-weight: 500;
+}
+.floating { 
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 5px); }
+  100%   { transform: translate(0, -0px); }   
+}
+.floating1 { 
+  animation-name: floating;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating1 {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 4.8px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+.floating1 { 
+  animation-name: floating;
+  animation-duration: 4.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating1 {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 5.3px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+.floating2 { 
+  animation-name: floating;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating2 {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 4.9px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+  .floating3 { 
+  animation-name: floating;
+  animation-duration: 4.9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating3 {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 5.8px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+  .floating4 { 
+  animation-name: floating;
+  animation-duration: 5.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+@keyframes floating4 {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 5.2px); }
+  100%   { transform: translate(0, -0px); }   
+}
+
+.image {
+  margin-bottom: 10px;
+  width: 75px;
+  height: 75px;
+}
+
+.skillImageLast {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px;
+  width: 50px;
+  transition: opacity 0.3s ease;
+}
+
+.head {
+
+  text-align: center;
+  color: white;
+  text-shadow: 4px 4px 8px black;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.resumeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section {
+  margin-top: 15vh;
+}
+
+.skillSection {
+  width: 50%;
+  margin: auto;
+}
+
+.sectionTitle {
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40vh;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 4px 4px 8px black;
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 12vh;
+}
+
+.experienceItem,
+.educationItem {
+  color: white;
+  text-shadow: 4px 4px 8px black;
+  margin-bottom: 16px;
+}
+
+.companyName {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.positionTitle {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+
+.resumeLines {
+  margin: auto;
+  width: 5%;
+  border-radius: 10px;
+  margin-bottom: 7px;
+}
+
+.timeline {
+  color: black;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.educationItem {
+  color: black;
+}
+
+.description {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.universityName {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 1300px) {
+  .listContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0vh;
+  }
+  .list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap:nowrap;
+    gap: 1vw;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+
+    margin-top: calc(5vh + 130px);
+}
+}
+
+
+@media (max-width: 600px) {
+
+  .sectionTitle {
+    display: flex;
+    justify-content: center;
+
+  }
+
+.image {
+  margin-bottom: 10px;
+  width: 75px;
+  height: 75px;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap:nowrap;
+  gap: 0vw;
+}
+.skillImage {
+  margin: 40px;
+  flex: 1;
+  min-width: 70px; /* Adjust the min-width as per your preference */
+}
+
+}
+
+@media (max-width: 500px) {
+
+  .header {
+    height: 100px;
+    margin-bottom: -5vh;
+    width: 80%;
+  }
+
+.image {
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap:nowrap;
+  gap: 0vw;
+}
+.skillImage {
+  margin: 25px;
+  min-width: 50px; /* Adjust the min-width as per your preference */
+}
+
+}

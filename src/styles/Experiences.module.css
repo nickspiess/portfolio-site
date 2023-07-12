@@ -1,0 +1,31 @@
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d16f16;
+    text-align: center;
+    margin-bottom: 10vh;
+    height: 50px;
+}
+
+.headText {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.mainContainer {
+    margin-bottom: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vh;
+}
+
+.tileContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    gap: 5vh;
+}

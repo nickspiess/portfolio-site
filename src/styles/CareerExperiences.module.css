@@ -1,0 +1,212 @@
+.resumeContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  position: relative;
+  margin-bottom: 0vh;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.experienceBar {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  display: flex; /* Update display to inline-flex */
+  text-align: center;
+  justify-content: center;
+  margin: 1px;
+  align-items: center;
+  border-radius: 12px;
+  width: 110%;
+  text-decoration: underline;
+  font-weight: 800;
+  border: 2px solid #8f1515;
+  transition: background-color 0.1s, color 0.3s;
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: 8px 6px 6px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  height: 60px;
+  color: #fff;
+  box-shadow: inset 0px 1px 0px rgba(255,255,255,1), 0px 0px 2px 1px rgb(208, 208, 208);;
+  border: 1px solid #ba6;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.6s;
+  text-shadow: 0px 0px 4px black;
+}
+
+.title:hover {
+  box-shadow: inset 10px 0 0 50px #334668;
+  text-shadow: 0px 0px 40px black;
+  color: white;
+}
+
+.selected {
+  background: linear-gradient(to bottom, rgba(234, 234, 234, 0.5),rgba(51, 70, 104, 0.5),#334668,rgba(51, 70, 104, 0.5), rgba(234, 234, 234, 0.5));
+  color: #fff;
+  text-shadow: 0px 0px 4px black;
+}
+
+.experienceDetails {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  border-radius: 8px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 1;
+  box-shadow: 
+      0px 0px 10px 1px rgb(208, 208, 208);
+  background-color: white;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 1vh;
+  background-color: #8E1515;
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.line {
+
+  border-top: solid black 1px;
+  width: 40px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.line2 {
+  border-top: solid black 1px;
+  width: 20px;
+  margin-bottom: 10px;
+  
+}
+
+.company {
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.timeline {
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+.description {
+  color: black;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.3s;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.slideLeft {
+  transform: translateX(-100%);
+}
+
+.slideRight {
+  transform: translateX(-100%);
+}
+
+@media (max-width: 768px) {
+  .selected {
+    background: linear-gradient(to bottom, rgba(234, 234, 234, 0.5),rgba(51, 70, 104, 0.5),#334668,rgba(51, 70, 104, 0.5), rgba(234, 234, 234, 0.5));
+    color: #fff;
+    text-shadow: 0px 0px 4px black;
+  }
+
+  .experienceBar {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .experienceDetails {
+    width: 90%;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    min-height: 200px;
+    margin-top: 3vh;
+  }
+
+  .title {
+    font-size: 14px;
+    padding: 8px 12px;
+    flex-wrap: wrap;
+    padding: 10px;
+    width: 40%;
+  }
+
+  .position {
+    padding: 10px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .selected {
+    background: linear-gradient(to bottom, rgba(234, 234, 234, 0.5),rgba(51, 70, 104, 0.5),#334668,rgba(51, 70, 104, 0.5), rgba(234, 234, 234, 0.5));
+    color: #fff;
+    text-shadow: 0px 0px 4px black;
+  }
+  .title {
+    display: flex;
+    font-size: 12px;
+    padding: 6px 10px;
+    width: 40%;
+  }
+  .experienceBar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: auto;
+  }
+}
