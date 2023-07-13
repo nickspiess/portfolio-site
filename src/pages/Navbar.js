@@ -47,7 +47,7 @@ const Navbar = () => {
           className={styles.link}
           onClick={handleMobileMenuToggle}
         >
-          Works
+          Projects
         </ScrollLink>
         <ScrollLink
           to="contact"
@@ -93,7 +93,7 @@ const Navbar = () => {
             className={styles.link}
             onClick={handleMobileMenuToggle}
           >
-            Works
+            Projects
           </ScrollLink>
           <ScrollLink
             to="contact"
