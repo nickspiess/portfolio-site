@@ -14,7 +14,7 @@ import NodeJS from '../../public/images/nodejs.png'
 import HyperLedger from '../../public/images/hyperledger.png'
 import Agile from '../../public/images/agile.png'
 import NextJS from '../../public/images/NextJS.png'
-import MongoDB from '../../public/images/MongoDB.png'
+import MongoDB from '../../public/images/mongoDB.png'
 import SCCM from '../../public/images/SCCM.png'
 import CareerExperiences from './CareerExperiences';
 
