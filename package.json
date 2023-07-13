@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "npm run custom-build",
-    "custom-build": "npm run build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "custom-build": "npm run build",
+    "build": "next build"
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
