@@ -22,7 +22,7 @@ const Experience = () => {
   return (
       <>
       <section id='experience' className={styles.sectionContainer}>
-      <header className={styles.header}>
+      <header className={styles.header}> 
           <h2 className={styles.head}>Career Experiences</h2>
       </header>
     <div className={styles.resumeContainer}>
