@@ -12,8 +12,8 @@ const ExperienceTile = ({ title, summary, image, link }) => {
   };
   const handleButtonClick = () => {
     if (link) {
-      console.log('LINK : ' + link)
-      document.location.href = link;
+      window.open(link.startsWith('http') ? link : `//${link}`, '_blank', 'noopener noreferrer');
+
     }
   };
 
@@ -40,7 +40,7 @@ const ExperienceTile = ({ title, summary, image, link }) => {
             <div className={`${styles.projectInfo} ${isRotated ? styles.show : ''}`}>
               <p className={styles.summary}>{summary}</p>
                 <a target="_blank" href={link} rel="noopener noreferrer">
-                  <button className={styles.projectButton}>View Project</button>
+                  <button className={styles.projectButton} onClick={handleButtonClick}>View Project</button>
                 </a>
             </div>
           </div>

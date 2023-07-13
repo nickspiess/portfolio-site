@@ -128,7 +128,7 @@
   @media (max-width: 768px) {
     .sectionContainer {
       margin-top: 10vh;
-      margin-bottom: 250px;
+      margin-bottom: 170px;
     }
 
     .contactForm, .head {
@@ -137,4 +137,10 @@
     .contactForm {
       margin-bottom: 10vh;
     }
+      
+  .button {
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   }
