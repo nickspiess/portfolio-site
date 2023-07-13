@@ -5,9 +5,11 @@
     color: white;
     line-height: 2.5;
     letter-spacing: 1px;
-    font-size: 24px;
+    font-size: 28px;
     margin-top: 5vh;
     margin-bottom: 25vh;
+    text-shadow: 4px 4px 8px black;
+    font-weight: 400;
 }
 
 .header {

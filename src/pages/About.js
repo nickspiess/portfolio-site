@@ -14,8 +14,8 @@ const About = () => {
                 </header>
                 <article className={styles.aboutInfo}>
                     <p>Hello, my name is Nick Spiess.  I'm a web developer living out in Denver, Colorado and I have a passion for creating clean and simple software.
-                        <br /><br />I specialize in building web applications for small businsses and enjoy getting to know organizations and their histories.
-                        <br /><br />My main hobbies entail distance running, brazilian jiu jitsu, and being outside and enjoying all Colorado has to offer.
+                        <br /><br />I specialize in building web applications for small businesses and enjoy getting to know organizations and their histories.
+                        <br /><br />My main hobbies entail distance running, brazilian jiu jitsu, and being outside to enjoy all Colorado has to offer.
                     </p>
                 </article>
             </section>

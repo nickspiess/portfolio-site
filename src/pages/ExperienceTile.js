@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
 import styles from '../styles/ExperienceTile.module.css';
 import Image from 'next/image';
+import Link from 'next/link'
 
 const ExperienceTile = ({ title, summary, image, link }) => {
   const [isRotated, setIsRotated] = useState(false); // State for rotation
 
   const handleTileClick = () => {
+    console.log(link)
     setIsRotated(!isRotated);
+  };
+  const handleButtonClick = () => {
+    if (link) {
+      console.log('LINK : ' + link)
+      document.location.href = link;
+    }
   };
 
   return (
@@ -31,7 +39,9 @@ const ExperienceTile = ({ title, summary, image, link }) => {
             </div>
             <div className={`${styles.projectInfo} ${isRotated ? styles.show : ''}`}>
               <p className={styles.summary}>{summary}</p>
-              <button className={styles.projectButton}>View Project</button>
+                <a target="_blank" href={link} rel="noopener noreferrer">
+                  <button className={styles.projectButton}>View Project</button>
+                </a>
             </div>
           </div>
         </div>

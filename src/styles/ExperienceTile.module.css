@@ -71,10 +71,14 @@
     transform: rotateY(180deg);
     transform-style: preserve-3d;
     transition: transform 0.3s, opacity 0.8s;
+    pointer-events: none; /* Add this line */
     backface-visibility: hidden;
-    pointer-events: none;
     width: 100%;
     z-index: -1;
+  }
+
+  .projectInfo button {
+    pointer-events: auto; /* Add this line */
   }
   
   

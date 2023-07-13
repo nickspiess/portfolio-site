@@ -157,3 +157,15 @@
     100%   { transform: translate(0, -0px); }   
   }
   
+
+  @media (max-width: 768px) {
+    .link {
+      font-size: 18px;
+    }
+    .navigation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
