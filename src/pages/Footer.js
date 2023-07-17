@@ -24,7 +24,7 @@ const Footer = () => {
         <a href="https://www.twitter.com/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating2} ${styles.icon}`}>
           <Image src={Twitter} width={30} />
         </a>
-        <a href="https://www.linkedin.com/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating3} ${styles.icon}`}>
+        <a href="https://www.linkedin.com/in/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating3} ${styles.icon}`}>
           <Image src={LinkedIn} width={30} />
         </a>
         <a href="https://www.instagram.com/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating4} ${styles.icon}`}>
