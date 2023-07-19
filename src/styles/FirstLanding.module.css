@@ -165,10 +165,9 @@
       margin-top: 2vh;
     }
     .one {
-
-    border-radius: 300px;
-    width: 300px;
-    height: 300px;
+    border-radius: 270px;
+    width: 270px;
+    height: 270px;
     transition: all 250ms;
   }
   .one:before {
@@ -177,9 +176,9 @@
     left: 0;
     top: 0;
     z-index: 0;
-    width: 300px;
-    height: 300px;
-    border-radius: 300px;
+    width: 270px;
+    height: 270px;
+    border-radius: 270px;
     background-color: lightgrey;
     transform: scale(1);
     transition: all 250ms;
@@ -208,9 +207,10 @@
     display: inline-block;
     z-index: 1;
     overflow: hidden;
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 270px;
+    max-width: 270px;
     border-radius: 50vw;
+    border: solid rgb(255, 255, 255) 1px;
   }
   .body {
     height: 1200px;
