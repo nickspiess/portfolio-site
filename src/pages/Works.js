@@ -8,7 +8,7 @@ const Works = () => {
   const experiences = [
     {
       title: 'Spiess Carpet Cleaning',
-      summary: 'This is a web app, built using React and Nextjs, for a small business located in Minnesota. This project was near to me as I worked for this company growing up, so it was surreal to be able to build a site for something so close to him.',
+      summary: 'This is a web app, built using React and Nextjs, for a small business located in Minnesota. This was a project very close to home since it was the first company I ever worked for.',
       image: '/images/logo copy.png',
       link: 'www.spiesscarpet.com',
     },
