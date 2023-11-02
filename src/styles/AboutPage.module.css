@@ -1,7 +1,4 @@
-.overlayWrapper {
-    position: relative;
-    z-index: 10;
-  }
+
   
   .bgOverlay {
     position: absolute;
@@ -14,15 +11,8 @@
   }
 
   .content {
-    background-color:black;
-background-image:
-radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
-radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
-radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
-radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
-background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
-background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
-transition: background-position 0.3s ease;
+    background: rgb(1,22,13);
+    background: linear-gradient(0deg, rgba(7, 9, 8,1) 0%, rgb(57, 61, 61) 18%, rgb(68, 72, 72) 50%, rgb(57, 61, 61)75%, rgb(7, 9, 8) 100%);
 }
   
   .bgvideo,
@@ -55,6 +45,7 @@ transition: background-position 0.3s ease;
   }
   
   .aboutContainer {
+      margin-top: 25px;
     margin-bottom: 100px;
   }
   
