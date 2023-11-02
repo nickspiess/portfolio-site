@@ -5,7 +5,7 @@
     color: white;
     text-align: center;
     background-color: #3a5b95;
-    background: linear-gradient(to bottom, rgba(58, 91, 149, 0.35),rgba(58, 91, 149, 0.9),rgb(58, 91, 149),rgba(58, 91, 149, 0.9), rgba(58, 91, 149, 0.35));
+    background: linear-gradient(to bottom, rgba(68, 33, 138, 0.55),rgba(103, 63, 183, 0.9),rgb(123, 81, 205),rgba(103, 63, 183, 0.9), rgba(68, 33, 138, 0.55));
     display: flex;
     justify-content: center;
     align-items: center;

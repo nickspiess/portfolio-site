@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 0vh;
-  margin-top: 5vh;
+  margin-top: 150px;
   width: 60%;
   border-radius: 30px;
 }
@@ -23,7 +23,7 @@
   align-items: center;
   text-align: center;
   gap: 4.5vw;
-  margin-bottom: 20vh;
+  margin-bottom: 150px;
 }
 
 .list {
@@ -176,7 +176,7 @@
 }
 
 .section {
-  margin-top: 15vh;
+  margin-top: 75px;
 }
 
 .skillSection {
@@ -192,7 +192,7 @@
   display:  flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40vh;
+  margin-top: 200px;
   text-align: center;
   width: 100%;
   text-align: center;
@@ -202,6 +202,7 @@
   font-weight: bold;
   margin-bottom: 12vh;
 }
+
 
 .experienceItem,
 .educationItem {

@@ -22,42 +22,18 @@ const Navbar = () => {
         </Link>
       </div>
       <div className={`${styles.links} ${isMobileMenuOpen ? styles.mobileLinksOpen : ''}`}>
-        <ScrollLink
-          to="about"
-          smooth={true}
-          duration={500}
-          className={styles.link}
-          onClick={handleMobileMenuToggle}
-        >
+      <Link href='/About' >
           About
-        </ScrollLink>
-        <ScrollLink
-          to="experience"
-          smooth={true}
-          duration={500}
-          className={styles.link}
-          onClick={handleMobileMenuToggle}
-        >
-          Experience
-        </ScrollLink>
-        <ScrollLink
-          to="works"
-          smooth={true}
-          duration={500}
-          className={styles.link}
-          onClick={handleMobileMenuToggle}
-        >
-          Projects
-        </ScrollLink>
-        <ScrollLink
-          to="contact"
-          smooth={true}
-          duration={500}
-          className={styles.link}
-          onClick={handleMobileMenuToggle}
-        >
+       </Link>
+       <Link href='/Portfolio' >
+           Portfolio
+        </Link>
+        <Link href='/Services' >
+           Services
+        </Link>
+        <Link href='/Contact' >
           Contact
-        </ScrollLink>
+        </Link>
         <div className={styles.divider} />
         <Link className={styles.blog}  href="/blog" passHref>
           <p onClick={handleMobileMenuToggle}>Blog</p>
@@ -68,42 +44,18 @@ const Navbar = () => {
       </div>
       {isMobileMenuOpen && (
         <div className={`${styles.mobileContainer} ${styles.mobileContainerOpen}`}>
-          <ScrollLink
-            to="about"
-            smooth={true}
-            duration={500}
-            className={styles.link}
-            onClick={handleMobileMenuToggle}
-          >
-            About
-          </ScrollLink>
-          <ScrollLink
-            to="experience"
-            smooth={true}
-            duration={500}
-            className={styles.link}
-            onClick={handleMobileMenuToggle}
-          >
-            Experience
-          </ScrollLink>
-          <ScrollLink
-            to="works"
-            smooth={true}
-            duration={500}
-            className={styles.link}
-            onClick={handleMobileMenuToggle}
-          >
-            Projects
-          </ScrollLink>
-          <ScrollLink
-            to="contact"
-            smooth={true}
-            duration={500}
-            className={styles.link}
-            onClick={handleMobileMenuToggle}
-          >
-            Contact
-          </ScrollLink>
+          <Link href='/About' >
+          About
+       </Link>
+       <Link href='/Portfolio' >
+           Portfolio
+        </Link>
+        <Link href='/Services' >
+           Services
+        </Link>
+        <Link href='/Contact' >
+          Contact
+        </Link>
           <div className={styles.divider} />
           <Link className={styles.blog} href="/blog" passHref>
             <p onClick={handleMobileMenuToggle}>Blog</p>

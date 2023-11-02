@@ -1,0 +1,13 @@
+
+.background {
+    background: linear-gradient(360deg,  rgb(26, 128, 14)0%, rgb(6, 100, 6) 30%,rgb(0, 49, 25)100%);
+}
+
+
+.contactFormContainer {
+    margin-top: -150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

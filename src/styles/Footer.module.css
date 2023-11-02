@@ -47,9 +47,8 @@
   }
   
   .link:hover {
-    color: rgb(216, 191, 113);
+    color: rgb(211, 193, 111);
     cursor: pointer;
-    transform: translateY(-2px);
   }
   
   .name {

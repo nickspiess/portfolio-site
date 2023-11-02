@@ -1,0 +1,48 @@
+
+
+.background {
+    background: linear-gradient(360deg,  hsla(216, 41%, 64%, 1)0%, hsla(216, 39%, 45%, 1) 30%,hsla(216, 85%, 29%, 1) 100%);
+    background-size: cover;
+    background-position: center;
+}
+
+.links a:hover {
+    transition: 0.3s;
+    color: rgb(113, 147, 216);
+    transform: translateY(-2px);
+    cursor: pointer;
+  }
+  
+  .sectionTitle {
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40vh;
+    text-align: center;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 8px black;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 12vh;
+  }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0vh;
+    margin-top: 5vh;
+    width: 60%;
+    border-radius: 30px;
+  }
+  
+  
+  .head {
+  
+    text-align: center;
+    color: white;
+    text-shadow: 4px 4px 8px black;
+    font-size: 40px;
+    font-weight: bold;
+  }
