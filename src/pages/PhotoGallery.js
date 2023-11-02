@@ -3,7 +3,7 @@ import styles from '../styles/PhotoGallery.module.css';
 
 const PhotoGallery = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [selectedGallery, setSelectedGallery] = useState('running');
+    const [selectedGallery, setSelectedGallery] = useState('adventures');
     const [fadeClass, setFadeClass] = useState(styles['image-fade-in']);
 
 
