@@ -2,14 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   background-color: transparent;
+  width: 100%;
   box-shadow: none;
+  padding-left: 1rem; /* Apply padding only to the left side */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 0; /* Set right padding to zero */
 }
 
 .logo {
   cursor: pointer;
-  margin-left: 4%;
+  margin-left: 50px; /* Adjusted to make logo flush to the left */
   margin-top: 20px;
   width: 165px;
   height: auto;
@@ -21,8 +25,8 @@
   display: flex;
   gap: 1vw;
   align-items: center;
-  position: absolute;
-  right: 4%;
+  margin-right: 50px;
+  margin-left: auto; /* Set the right margin to zero to ensure it's flush to the right */
 }
 
 .links a {
@@ -38,6 +42,7 @@
 .links a:hover {
   transition: 0.3s;
   color: rgb(216, 191, 113);
+  transform: translateY(-2px);
   cursor: pointer;
 }
 
@@ -155,14 +160,6 @@ display: none;
   }
 }
 
-/* For Desktop */
-@media (min-width: 769px) {
-  .navbar {
-    position: static; /* Not fixed */
-  }
-}
-
-
 @media (max-width: 768px) {
   .links {
     display: none;
@@ -178,7 +175,7 @@ display: none;
     align-items: center;
     background-color: transparent;
     box-shadow: none;
-    z-index: 5;
+    z-index: 1000;
     background-color: transparent;
   }
 
