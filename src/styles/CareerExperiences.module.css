@@ -1,7 +1,7 @@
 .resumeContainer {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 40px;
+  padding: 0px;
   position: relative;
   margin-bottom: 0vh;
   width: 100%;
@@ -60,12 +60,12 @@
 }
 
 .experienceDetails {
-  margin-top: 3vh;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 0px;
   border-radius: 8px;
   position: relative;
   opacity: 0;
@@ -98,7 +98,7 @@
   width: 100%;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
-  margin-bottom: 2vh;
+  margin-bottom: 15px;
 }
 
 .line {

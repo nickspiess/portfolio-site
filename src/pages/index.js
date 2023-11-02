@@ -1,8 +1,9 @@
 import React from 'react';
 import FirstLanding from './FirstLanding'
 import Experience from './Experience';
+import ServiceComponent from './ServiceComponent';
 import Works from './Works';
-import About from './About'
+import AboutLanding from './AboutLanding'
 import ContactForm from './ContactForm'
 import Footer from './Footer'
 import Navbar from './Navbar'
@@ -11,11 +12,11 @@ import Link from 'next/link';
 import Head from 'next/head'
 import styles from '../styles/Main.module.css'
 import StructuredData from 'src/pages/StructuredData';
-import BackgroundPhoto from '../../public/images/mountainBackdrop.jpeg'
+import BackgroundPhoto from '../../public/images/mountainBackdrop1.jpeg'
 
 export default class extends React.Component {
     
-  
+   
 
   render() {
     const sectionIds = ['about', 'experience', 'work', 'contact'];
@@ -55,11 +56,12 @@ export default class extends React.Component {
                 <div className="wrapper">
                     <Navbar />
                     <FirstLanding />
-                    <About />
                     <div className={styles.gradientBackground}>
-                        <Experience />
-                        <Works />
+                        <ServiceComponent />
+                        <AboutLanding />
+                        <div className={styles.contactContainer}>
                         <ContactForm />
+                        </div>
                         <Footer />
                     </div>
                 </div>

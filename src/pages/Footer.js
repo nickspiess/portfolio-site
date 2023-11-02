@@ -35,18 +35,18 @@ const Footer = () => {
         </a>
       </div>
       <div className={styles.navigation}>
-        <ScrollLink to="about" smooth={true} duration={500} className={styles.link}>
+      <Link className={styles.link} href='/About' >
           About
-        </ScrollLink>
-        <ScrollLink to="experience" smooth={true} duration={500} className={styles.link}>
-          Experience
-        </ScrollLink>
-        <ScrollLink to="works" smooth={true} duration={500} className={styles.link}>
-          Works
-        </ScrollLink>
-        <ScrollLink to="contact" smooth={true} duration={500} className={styles.link}>
+       </Link>
+       <Link className={styles.link} href='/Portfolio' >
+           Portfolio
+        </Link>
+        <Link className={styles.link} href='/Services' >
+           Services
+        </Link>
+        <Link className={styles.link} href='/Contact' >
           Contact
-        </ScrollLink>
+        </Link>
         <Link className={styles.blog} href="/blog">
           <p className={styles.link}>Blog</p>
         </Link>
