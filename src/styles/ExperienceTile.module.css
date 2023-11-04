@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px;
+    margin: 20px;
     box-shadow: 
   0px 0px 3px 1px rgb(208, 208, 208);
   width: 90%;
@@ -17,7 +17,7 @@
 }
 
 .titleHeader {
-  padding: 30px;
+  padding: 20px;
 }
 
 .experienceTile {
@@ -36,7 +36,7 @@
     border-radius: 10px;
     height: 300px;
     margin: 60px;
-    margin-top: -10px;
+    margin-top: 5px;
     transition: background-image 0.6s ease-in-out;
 }
 
@@ -54,8 +54,8 @@
   }
   
   .imageDiv {
-      display: flex;
-      justify-content: center;
+    display: flex;
+    justify-content: center;
     backface-visibility: hidden;
     transition: transform 0.5s;
     margin: 0px;
@@ -64,10 +64,9 @@
   .projectInfo {
     /* Existing styles */
     position: absolute;
-
     opacity: 0;
-        display: flex;
-        flex-direction: column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transform: rotateY(180deg);
@@ -174,7 +173,7 @@ text-shadow: 0px 0px 0px black;
 
 @media (max-width: 1000px) {
   .imageDiv {
-    width: 40vw;
+    width: 60vw;
 }
   .image {
  

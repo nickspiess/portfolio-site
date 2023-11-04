@@ -32,7 +32,7 @@ const PhotoGallery = () => {
     // Switch the image after the fade-out is complete
     const cycleImageTimer = setTimeout(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % galleries[selectedGallery].length);
-    }, 8000); // 8 seconds (you can adjust this)
+    }, 6000); // 8 seconds (you can adjust this)
   
     return () => {
       clearTimeout(fadeInTimer);
