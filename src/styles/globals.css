@@ -73,10 +73,19 @@ div.body div.wrapper {
 @media (max-width: 768px) {
 
   .contactContainer {
-    margin-top: -150px;
+    margin-top: 0px;
+
   }
 
   .background-photo {
-    height: 1000px;
+    height: 110vh;
   }
+}
+
+@media (max-width: 400px) {
+  .background-photo {
+    
+    height: 1100px;
+  }
+
 }

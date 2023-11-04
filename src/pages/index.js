@@ -25,9 +25,9 @@ export default class extends React.Component {
     const structuredData =  {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
-      "name": "Spiess Publishing",
+      "name": "Spiess Technologies",
       "url": "https://www.realnickspiess.com/",
-      "description": "We are the most experienced carpet cleaner in the Twin Cities, providing expert-level carpet cleaning services.",
+      "description": "Empower your business with Spiess Technologies – your partner in crafting holistic web solutions designed to boost online traffic and create stunning websites. Specializing in helping small and medium-sized businesses thrive online. Let's build your digital success story today!",
       "address": {
           "@type": "PostalAddress",
           "streetAddress": "9774 Bexley Drive",
@@ -39,7 +39,9 @@ export default class extends React.Component {
       "telephone": "+1-651-472-2736",
       "openingHours": "Mo-Fr 07:00-17:00",
       "sameAs": [
+          "https://www.x.com/realnickspiess",
           "https://www.twitter.com/realnickspiess",
+          "https://www.linkedin.com/in/realnickspiess",
       ]
   };
 
@@ -60,7 +62,7 @@ export default class extends React.Component {
                         <ServiceComponent />
                         <AboutLanding />
                         <div className={styles.contactContainer}>
-                        <ContactForm />
+                            <ContactForm />
                         </div>
                         <Footer />
                     </div>

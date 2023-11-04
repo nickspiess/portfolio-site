@@ -92,7 +92,11 @@
   }
 
   .backContainer {
-    height: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:stretch;
+    align-items: center;
   }
   
   /* Card back styling - rotated initially */
@@ -122,13 +126,14 @@
     padding-left: 20px;
     padding-right: 20px;
     font-size: 22px;
-    padding-top: 20px;
     font-weight: 800;
     letter-spacing: 2px;
     color: rgb(255, 255, 255);
     text-shadow: 4px 4px 8px black;
     text-decoration: underline;
     line-height: 1.5;
+    margin-bottom: auto;
+    margin-top: 20px;
   }
   
   /* Card list styling */
@@ -136,8 +141,6 @@
     list-style: none;
     padding-left: 15px;
     padding-right: 15px;
-    margin-bottom: 25px;
-    margin-top: 37.5px;
     text-shadow: 4px 2px 6px black;
   }
   
@@ -163,13 +166,14 @@
     text-decoration: none;
     font-weight: 600;
     border-radius: 7.5px;
-    margin-top: 20px;
     display: inline-block;
     padding: 12.5px;
     padding-left: 35px;
     padding-right: 35px;
     transition: all 0.15s ease;
     border: solid #c4c4c4 1px;
+    margin-top: auto;
+    margin-bottom: 30px;
   }
 
   .learnMore:hover {
@@ -204,7 +208,6 @@
       /* Learn More link styling */
   .learnMore {
     border-radius: 7.5px;
-    margin-top: 10px;
     padding: 10px;
     padding-left: 25px;
     padding-right: 25px;
@@ -221,28 +224,7 @@
     }
   }
 
-  @media (max-width: 1100px) {
-    .learnMore {
-      margin-top: 0px;
-    }
 
-  }
-
-  @media (max-width: 950px) {
-    .learnMore {
-      margin-top: 10px;
-    }
-
-    .cardSubtitle {
-       font-size: 18px;
-    }
-
-    .cardList {
-      font-size: 15px;
-    }
-
-  }
-  
   /* Responsive design */
   @media (max-width: 870px) {
 
@@ -264,11 +246,7 @@
       font-size: 20px;
     }
 
-    .cardList {
-      margin-top: 35px;
-      margin-bottom: 35px;
-      font-size: 14px;
-    }
+    
 
 
 
@@ -339,7 +317,7 @@
 
     .cardList {
       font-size: 13px;
-      margin-top: 35px;
+      margin-top: 20px;
       margin-bottom: 17px;
     }
 
@@ -387,6 +365,7 @@
     .learnMore {
       font-size: 12px;
       margin-top: 0;
+      margin-bottom: 20px;
       padding: 15px;
       padding-top:7.5px;
       padding-bottom:7.5px;
@@ -398,6 +377,13 @@
       height: 450px;
     }
     .cardBack,.cardFront, .cardInner, .pullInCard {
-      height: 450px;
+      height: 425px;
+    }
+  }
+
+  @media (max-width: 389px) {
+
+    .img {
+      margin-bottom: 25px;
     }
   }

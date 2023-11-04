@@ -10,5 +10,6 @@ background: linear-gradient(0deg, rgba(0,61,34,1) 0%, rgba(18,107,68,1) 18%, rgb
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
