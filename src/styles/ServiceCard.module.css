@@ -27,6 +27,7 @@
   }
   
   .cardInner {
+    margin: auto;
     color: white;
     text-align: center;
     width: 100%;

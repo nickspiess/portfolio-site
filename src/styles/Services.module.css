@@ -1,8 +1,7 @@
 
 /* Container for the entire services page */
 .container {
-    max-width: 90vw;
-
+    width: 100vw;
     padding: 20px;
     height: 100%;
     display: flex;
@@ -31,8 +30,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10vw;
-    max-width: 100vw;
+    text-align: center;
+    gap: 45px;
+    width: 90vw;
   }
 
   /* Individual pull-in category card styling */
@@ -41,7 +41,10 @@
     perspective: 1000px;
     height: 550px;
     width: 300px;
-    
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
   }
   
