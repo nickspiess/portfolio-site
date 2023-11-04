@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/PricingPackage.module.css';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
 
 const PricingPackage = () => {
 
@@ -10,7 +10,7 @@ const PricingPackage = () => {
     // Use the router.push method inside the handler
     router.push('/Contact');
   };
-  
+
   return (
     <div className={styles.packagePricingContainer}>
 
@@ -23,9 +23,7 @@ const PricingPackage = () => {
         </ul>
         <div className={styles.divider}></div>  {/* Small line added here */}
         <p className={styles.price}>$4000</p>  {/* Moved below <ul> and divider */}
-        <button className={styles.button} onClick={handleButtonClick}>
-          Schedule Services
-        </button>
+        <button className={styles.button} onClick={handleButtonClick}>Contact Us</button>
       </div>
 
       <div className={`${styles.packageCard} ${styles.standard}`}>
@@ -37,7 +35,7 @@ const PricingPackage = () => {
         </ul>
         <div className={styles.divider}></div>  {/* Small line added here */}
         <p className={styles.price}>$6000</p>  {/* Moved below <ul> and divider */}
-        <button className={styles.button}>Contact Us</button>
+        <button className={styles.button} onClick={handleButtonClick}>Contact Us</button>
       </div>
 
       <div className={`${styles.packageCard} ${styles.premium}`}>
@@ -49,7 +47,7 @@ const PricingPackage = () => {
         </ul>
         <div className={styles.divider}></div>  {/* Small line added here */}
         <p className={styles.price}>$7000+</p>  {/* Moved below <ul> and divider */}
-        <button className={styles.button}>Contact Us</button>
+        <button className={styles.button} onClick={handleButtonClick}>Contact Us</button>
       </div>
 
       {/* Custom Package Information */}
