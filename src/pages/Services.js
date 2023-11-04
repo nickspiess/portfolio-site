@@ -9,10 +9,17 @@ import PricingPackages from './PricingPackage';
 import styles from '../styles/ServicePage.module.css';
 import ServiceCards from './ServiceCards'; // Import the new component
 import { React, useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 const Services = () => {
 
+  const router = useRouter();
 
+  const handleButtonClick = () => {
+    // Use the router.push method inside the handler
+    router.push('/Contact');
+  };
+  
 
   return (
     <>
@@ -24,9 +31,9 @@ const Services = () => {
               Holistic Web Solutions<br />for your Craft
             </p>
             <div className={styles.buttonContainer}>
-              <button className={styles.headerButton}>
-                Schedule Services
-              </button>
+            <button className={styles.headerButton} onClick={handleButtonClick}>
+      Schedule Services
+    </button>
             </div>
           </div>
           <div className={styles.content}>

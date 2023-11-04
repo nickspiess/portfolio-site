@@ -6,9 +6,13 @@ import Image from 'next/image';
 import Business from '../../public/images/Business.jpeg'
 import Individual from '../../public/images/Individual.jpeg'
 import StartUp from '../../public/images/StartUp.jpeg'
+import { useRouter } from 'next/router';
 
 
 const ServiceCard = ({ title, subtitle, listItems, quote, link, img, alt }) => {
+
+  const router = useRouter();
+
     const [isFlipped, setIsFlipped] = useState(false);
   
     return (
@@ -31,12 +35,12 @@ const ServiceCard = ({ title, subtitle, listItems, quote, link, img, alt }) => {
               <h3 className={styles.cardSubtitle}>{subtitle}</h3>
               <ul className={styles.cardList}>
                 {listItems.map((item, index) => (
-                  <li key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
+                  <li className={styles.listItem} key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
                 ))}
               </ul>
-              <Link href={link} passHref>
-                <button className={styles.learnMore}>Learn More</button>
-              </Link>
+              <button className={styles.learnMore} onClick={() => router.push(link)}>
+                Learn More
+              </button>
               </div>
           </div>
         </div>

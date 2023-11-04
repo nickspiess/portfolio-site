@@ -163,7 +163,7 @@ const ContactForm = () => {
             name="message"
             value={message}
             onChange={handleInputChange}
-            className={`${styles.input} ${errors.message ? styles.invalid : ''}`}
+            className={`${styles.messageInput} ${errors.message ? styles.invalid : ''}`}
           />
           {errors.message && <span className={styles.error}>{errors.message}</span>}
         </div>

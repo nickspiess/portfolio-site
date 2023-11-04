@@ -30,7 +30,7 @@ const Experience = () => {
             <CareerExperiences />
         </div>
       <div className={styles.skillSection}>
-        <h2 className={`${styles.floating} ${styles.sectionTitle}`}>Skills and Technologies</h2>
+        <h2 className={`${styles.sectionTitle}`}>Skills and Technologies</h2>
         <div className={styles.listContainer}>
             <ul className={styles.list}>
                 <li className={`${styles.floating4} ${styles.skillImage}`}><Image className={styles.image} src={Javascript} width={80} alt='JavaScript' />JavaScript</li>

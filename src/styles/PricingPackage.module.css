@@ -5,6 +5,10 @@
   }
   
   .packageCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
     width: 30%;
     padding: 40px;
     border: 1px solid #ccc;
@@ -26,12 +30,11 @@
   .price {
     font-size: 24px;
     font-weight: 600;
-    margin: 10px 0;
+    margin-bottom: 25px;
   }
   
   .priceTitle {
-    margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: auto;
     font-size: 24px;
     font-weight: bold;
     text-decoration: underline;
@@ -43,6 +46,12 @@
       margin-top: 40px;
   }
 
+  .list {
+    margin-top: 20px;
+
+  }
+  
+
   
   .priceList {
     padding-left: 0;
@@ -51,12 +60,13 @@
   }
 
   .listItem {
-      margin: 10px;
+    margin: 10px;
       text-align: center;
   }
   
   .button {
-    margin-top: 20px;
+    margin-top: auto;
+
     padding: 10px 20px;
     background-color: #1b7ab9;
     font-weight: 600;
@@ -107,6 +117,7 @@
     }
 
     .list {
+      margin-top: 40px;
         font-size: 16px;
     }
 
@@ -168,4 +179,27 @@
     margin: auto;
   }
 
+  }
+
+
+  @media (max-width: 500px) {
+    .list {
+      margin-top: 10px;
+      width: 200px;
+  
+    }
+    .price {
+      margin-bottom: 30px;
+    }
+    .divider {
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+    .price {
+      margin-bottom: 35px;
+    }
+    .listItem {
+      margin: 20px;
+        text-align: center;
+    }
   }

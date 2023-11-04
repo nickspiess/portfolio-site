@@ -20,32 +20,33 @@ const ExperienceTile = ({ title, summary, image, link }) => {
   return (
     <>
       <div className={styles.mainContainer}>
-        <div className={styles.title}>
-          <h2 className={styles.titleHeader}>{title}</h2>
-        </div>
-        <div className={styles.container}>
-          <div
-            className={`${styles.experienceTile} ${isRotated ? styles.hovered : ''}`}
-            onClick={handleTileClick}
-          >
-            <div className={`${styles.imageDiv} ${isRotated ? styles.hide : styles.show}`}>
-              <Image
-                className={styles.image}
-                src={image}
-                alt={title}
-                width={400}
-                height={300}
-              />
-            </div>
-            <div className={`${styles.projectInfo} ${isRotated ? styles.show : ''}`}>
-              <p className={styles.summary}>{summary}</p>
-                <a target="_blank" href={link} rel="noopener noreferrer">
-                  <button className={styles.projectButton} onClick={handleButtonClick}>View Project</button>
-                </a>
-            </div>
-          </div>
-        </div>
+  <div className={styles.title}>
+    <h2 className={styles.titleHeader}>{title}</h2>
+  </div>
+  <div className={styles.container}>
+    <div
+      className={`${styles.experienceTile} ${isRotated ? styles.hovered : ''}`}
+      onClick={handleTileClick}
+    >
+      {/* Assuming ServiceCard has a more modern and sleek image presentation */}
+      <div className={`${styles.imageDiv} ${isRotated ? styles.hide : styles.show}`}>
+        <Image
+          className={styles.image}
+          src={image}
+          alt={title}
+          layout="responsive" // Assume the ServiceCard uses responsive images
+          width={800}
+          height={300}
+        />
       </div>
+      <div className={`${styles.projectInfo} ${isRotated ? styles.show : ''}`}>
+        <p className={styles.summary}>{summary}</p>
+        {/* Assuming ServiceCard uses a more subtle button style */}
+        <button className={styles.projectButton} onClick={handleButtonClick}>View Project</button>
+      </div>
+    </div>
+  </div>
+</div>
     </>
   );
 };
