@@ -63,7 +63,7 @@ const ServiceCard = ({ title, subtitle, listItems, quote, link, img, alt }) => {
               "<br/><strong>Maintenance and Support</strong>: <br/>Maintain Smooth Digital Operations."
             ]}
             quote="📈 Boost your business's ROI with our holistic digital solutions."
-            link="/services-for-businesses"
+            link="/Services"
             img={Business}
             alt="Providing Solutions for Businesses of any size"
           />
@@ -77,7 +77,7 @@ const ServiceCard = ({ title, subtitle, listItems, quote, link, img, alt }) => {
               "<br/><strong>SEO Footprint</strong>: <br/>Get noticed in a crowded digital world."
             ]}
             quote="🚀 Fast-track your startup's success with our specialized offerings."
-            link="/services-for-businesses"
+            link="/Services"
             img={StartUp}
             alt="Providing Solutions for Startups looking to announce and expand their digital footprint."
           />
@@ -91,7 +91,7 @@ const ServiceCard = ({ title, subtitle, listItems, quote, link, img, alt }) => {
               "<br/><strong>Maintenance and Support</strong>: <br/>Maintain Smooth Digital Operations."
             ]}
             quote="🎨 Turn your passion into a profession with our personalized services."
-            link="/services-for-businesses"
+            link="/Services"
             img={Individual}
             alt="Bringing your content to the next level and a bigger audience."
           />
