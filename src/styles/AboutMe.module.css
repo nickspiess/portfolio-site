@@ -9,6 +9,7 @@
   .title {
     font-size: 44px;
     font-weight: bold;
+    color: white;
     text-shadow: 1px 2px 4px black;
     margin-bottom: 100px;
     text-decoration: underline;
@@ -19,6 +20,7 @@
     line-height: 2.5;
     margin-bottom: 25px;
     font-weight: 500;
+    color: white;
   }
   @media (max-width: 767px) {
     .aboutMe {

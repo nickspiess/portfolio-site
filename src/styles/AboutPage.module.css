@@ -8,6 +8,7 @@
     height: 310vh;  /* Covering both videos */
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
+    color: white;
   }
 
   .content {
@@ -24,6 +25,7 @@
     height: 100%;  /* Changed to 100% */
     z-index: 0;
     object-fit: cover;
+    color: white;
   }
   
   .bgvideoSecond {
@@ -42,10 +44,12 @@
 
   .galleryContainer {
       margin-bottom: 50px;
+      color: white;
   }
   
   .aboutContainer {
       margin-top: 0;
+      color: white;
     margin-bottom: 100px;
   }
   
