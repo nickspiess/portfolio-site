@@ -9,6 +9,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    color: white;
   }
   
   /* Title styling */
@@ -33,6 +34,7 @@
     text-align: center;
     gap: 45px;
     width: 90vw;
+    color: white;
   }
 
   /* Individual pull-in category card styling */
@@ -46,6 +48,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    color: white;
   }
   
   /* Inner card container for rotation */
@@ -57,6 +60,7 @@
     transition: transform 0.6s;
     transform-style: preserve-3d;
     padding: 60px;
+    color: white;
   }
   
   /* Rotation effect when hovered */
@@ -64,6 +68,7 @@
     background-color: rgba(246, 245, 245, 0) !important;
     transform: rotateY(180deg);
     height: 550px;
+    color: white;
   }
 
   .cardFront {
@@ -75,6 +80,7 @@
     background-color: rgba(0, 0, 0, .4);
     box-shadow: 0 4px 8px rgba(0,0,0,0.6);
     padding: 80px;
+    color: white;
   }
 
   .img {
@@ -98,6 +104,7 @@
   background-color: rgba(159, 56, 56, 0);
   box-shadow: 0 4px 8px rgba(0,0,0,0.6);
   padding: 20px;
+  color: white;
   }
 
   .backContainer {
@@ -106,6 +113,7 @@
     flex-direction: column;
     justify-content:stretch;
     align-items: center;
+    color: white;
   }
   
   /* Card back styling - rotated initially */
@@ -114,6 +122,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: white;
 }
 .cardSubtitle, .cardList, .cardQuote {
   flex-grow: 1;
@@ -128,6 +137,7 @@
     color: rgb(255, 255, 255);
     text-shadow: 4px 4px 8px black;
     line-height: 1.5;
+    color: white;
   }
   
   /* Card subtitle styling */
@@ -143,6 +153,7 @@
     line-height: 1.5;
     margin-bottom: auto;
     margin-top: 20px;
+    color: white;
   }
   
   /* Card list styling */
@@ -164,6 +175,7 @@
     text-shadow: 2px 2px 5px black;
     padding-right: 15px;
     letter-spacing: 0.5px;
+    color: white;
   }
   
   /* Learn More link styling */
@@ -183,11 +195,13 @@
     border: solid #c4c4c4 1px;
     margin-top: auto;
     margin-bottom: 30px;
+    color: white;
   }
 
   .learnMore:hover {
     border: solid white 1px;
     background-color:rgb(4, 66, 211);
+    color: white;
   }
 
   @media (max-width: 1400px) {
