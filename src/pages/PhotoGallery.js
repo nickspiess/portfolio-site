@@ -8,7 +8,7 @@ const PhotoGallery = () => {
 
 
   const galleries = {
-    running: ['/images/running/Bell.JPG', '/image/running/Finish.jpeg', '/images/running/Smilin.jpeg'],
+    running: ['/images/running/Bell.JPG', '/images/running/AppletonFinish.jpeg', '/images/running/Smilin.jpeg'],
     adventures: ['/images/adventures/NearSneffels.jpeg', '/images/adventures/MountainGarden.jpeg', '/images/adventures/BlueMesa.jpeg', '/images/adventures/Elbert.jpg', '/images/adventures/SneffelsLakes.jpeg'],
     jiuJitsu: ['/images/jiu-jitsu/Cheesin.jpg', '/images/jiu-jitsu/DoubleLeg.jpeg', '/images/jiu-jitsu/Gold.jpeg', '/images/jiu-jitsu/HalfGuard.jpg', '/images/jiu-jitsu/WiscoGold.jpeg'],
   };
