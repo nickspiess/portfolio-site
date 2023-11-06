@@ -41,7 +41,7 @@ export default class extends React.Component {
       "sameAs": [
           "https://www.x.com/realnickspiess",
           "https://www.twitter.com/realnickspiess",
-          "https://www.linkedin.com/in/realnickspiess",
+          "https://www.linkedin.com/company/spiess-technologies",
       ]
   };
 
