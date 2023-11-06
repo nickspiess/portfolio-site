@@ -109,7 +109,7 @@ const ContactForm = () => {
     <section className={styles.sectionContainer} id='contact'>
     <article className={styles.container}>
     <header className={styles.head}>
-      <h2 className={styles.contactHeader}>Let's Build Something</h2> 
+      <h2 className={styles.contactHeader}>Let's Build Something Great</h2> 
     </header>
       <form onSubmit={onSubmit} className={styles.contactForm}>
 
