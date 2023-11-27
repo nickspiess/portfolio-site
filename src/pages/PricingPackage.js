@@ -22,7 +22,7 @@ const PricingPackage = () => {
           <li className={styles.listItem}>Email Support</li>
         </ul>
         <div className={styles.divider}></div>  {/* Small line added here */}
-        <p className={styles.price}>$4000</p>  {/* Moved below <ul> and divider */}
+        <p className={styles.price}>$2500</p>  {/* Moved below <ul> and divider */}
         <button className={styles.button} onClick={handleButtonClick}>Contact Us</button>
       </div>
 
@@ -34,7 +34,7 @@ const PricingPackage = () => {
           <li className={styles.listItem}>Maintenance Packages</li>
         </ul>
         <div className={styles.divider}></div>  {/* Small line added here */}
-        <p className={styles.price}>$6000</p>  {/* Moved below <ul> and divider */}
+        <p className={styles.price}>$5000</p>  {/* Moved below <ul> and divider */}
         <button className={styles.button} onClick={handleButtonClick}>Contact Us</button>
       </div>
 
