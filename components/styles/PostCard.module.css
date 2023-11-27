@@ -1,0 +1,83 @@
+.author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.authorPhoto {
+
+}
+
+.authorInfo {
+    font-size: 16px;
+}
+
+.excerpt {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    gap: 12px;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+
+.continueReadingButton {
+    background: linear-gradient(0deg, rgba(87, 109, 129, 0.5) 0%, rgb(63, 118, 172) 20%, rgba(0,57,115,1) 50%, rgb(63, 118, 172) 80%, rgba(87, 109, 129, 0.5) 100%);
+    margin: 0px;
+    padding: 7.5px 35px;
+    text-align: center;
+    color: white;            
+    box-shadow: 0 0 20px #eee, 0px 3px 6px 3px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    border: solid rgba(255,255,255, 0.4) 2px;
+    transition: border 0.5s ease-in; /* Transition for background-position and color */
+}
+
+
+.continueReadingButton:hover {
+    border: solid rgb(255, 255, 255) 2px;
+}
+
+
+.postTitle {
+    transition: all 0.5s;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.postTitle:hover {
+    color: red;
+}
+
+.postContainer {
+    background-color: rgba(255,255,255, 0.8);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+
+.summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: -10px;
+}
+

@@ -4,16 +4,18 @@ import path from 'path';
 import Link from 'next/link';
 import styles from '../styles/Blog.module.css';
 import Head from 'next/head'
+import BlogHeader from './BlogHeader';
 import { PostCard, Categories, PostWidget } from '../../components/';
+import { getPosts } from '../../services';
 
-const posts = [
-  { title: "GPT's Impact on Society", excerpt: "We taught sand how to think, what's to come next?"},
-  { title: "Masculinity in 2023", excerpt: "Andrew Tate, Femboys, and E-Girls. What happened to men?"},
-]
 
-const blog = () => {
+
+const blog = ({ posts }) => {
 
   return (
+    <>
+
+    <BlogHeader />
     <div className={styles.blog}>
       <div className="container mx-auto px-10 mb-8">
         <Head>
@@ -23,7 +25,7 @@ const blog = () => {
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className="lg:col-span-8 col-span-1">
             <div className={styles.posts}>
-              {posts.map((post) => <PostCard post={post} key={post.title} /> )}
+              {posts.map((post) => <PostCard post={post.node} key={post.title} /> )}
               </div>
           </div>
           <div className="lg:col-span-4 col-span-1">
@@ -35,7 +37,17 @@ const blog = () => {
         </div>
       </div>
     </div>
+
+    </>
   );
 };
+
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+
+  return {
+    props: { posts }
+  }
+}
 
 export default blog;
