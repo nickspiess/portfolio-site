@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from './styles/PostCard.module.css';
 
 const PostCard = ({ post }) => {
-  console.log(post);
+
   return (
     <div className={`${styles.postContainer} bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8`}>
 
@@ -35,7 +35,6 @@ const PostCard = ({ post }) => {
           </p>
         </div>
         <div className={`${styles.info}`}>
-          svg icon here
           <span className={`${styles.createdAt}`}>
             {moment(post.createdAt).format('MMM DD, YYYY')}
           </span>

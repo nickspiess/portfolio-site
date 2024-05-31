@@ -1,31 +1,38 @@
-import React, { useContext } from 'react'
-
 import Link from 'next/link';
+import Image from 'next/image';
 
-const categories = [{name: 'React', slug: 'react'}, {name: "Web Development", slug: "web-dev"}]
+import React, { useState, useEffect } from 'react'
+import { getCategories } from '../../services'
+
+import styles from '../styles/Blog.module.css'
+
+import OrdoAbChao from '../../public/images/OrdoAbChao.png'
+
 
 const BlogHeader = () => {
+
+    const [categories, setCategories] = useState([]);
+
+    useEffect(() => {
+        getCategories()
+        .then((newCategories) => setCategories(newCategories))
+    }, [])
+
+
   return (
-    <div className="container mx-auto px-10 mb-8">
-        <div className="border-b w-full inline-block border-blue-400 py-8">
-            <div className="md:float-left block">
-                <Link href="">
-                    <span className="cursor-pointer font-bold text-4xl text-white">
-                        Ordo Ab Chao
-                    </span>
-                </Link>
-            </div>
-            <div className="hidden md:float-left md:contents">
-                {categories.map((category) => (
-                    <Link key={category.slug} href={`/category/${category.slug}`}>
-                        <span className='md:float-right mt-2 align-middle text-white ml-4 font-semibold cursor-pointer'>
-                            {category.name}
-                        </span>
-                    </Link>
+
+    <nav className={styles.navbar}>
+        <Image src={OrdoAbChao} className={styles.logo}/>
+            <ul className={styles.navLinks}>
+                {categories.map((category, index) => (
+                    <li key={index}>
+                        <Link href={`/category/${category.slug}`} passHref>
+                            <p className={styles.navLink}>{category.name}</p>
+                        </Link>
+                    </li>
                 ))}
-            </div>
-        </div>
-    </div>
+            </ul>
+        </nav>
   )
 }
 

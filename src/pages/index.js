@@ -11,7 +11,7 @@ import Link from 'next/link';
 import Head from 'next/head'
 import styles from '../styles/Main.module.css'
 import StructuredData from 'src/pages/StructuredData';
-import BackgroundPhoto from '../../public/images/mountainBackdrop.jpeg'
+//import BackgroundPhoto from '../../public/images/mountainBackdrop.jpeg'
 
 export default class extends React.Component {
     

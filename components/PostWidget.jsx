@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './styles/PostWidget.module.css';
 
 import { getRecentPosts, getSimilarPosts } from '../services'
-
+ 
 
 const PostWidget = ({ categories, slug }) => {
 
@@ -12,7 +12,7 @@ const PostWidget = ({ categories, slug }) => {
   
   useEffect(() => {
       if (slug) {
-        getSimilarPosts(category, slug)
+        getSimilarPosts(categories, slug)
           .then(( result ) => setRelatedPosts(result))
       } else {
         getRecentPosts()
@@ -37,11 +37,13 @@ const PostWidget = ({ categories, slug }) => {
                   className={`${styles.img}`}
                   src={post.featuredImage.url}
               />
-            </div>
-            <div className={`${styles.dateContainer}`}>
               <p className={`${styles.date}`}>
                 {moment(post.createdAt).format('MMM DD, YYYY')}
               </p>
+            </div>
+            <div className={`${styles.emptyContainer}`}>
+              </div>
+            <div className={`${styles.dateContainer}`}>
               <Link href={`/post/${post.slug}`} className={`${styles.link}`} key={post.title} >
                 {post.title}
               </Link>

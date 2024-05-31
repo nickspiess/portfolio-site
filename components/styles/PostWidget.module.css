@@ -1,29 +1,81 @@
 
-
-
-.widgetContainer {
-    background: white;
-    border-radius: 20px;
-    padding: 20px;
+.categoryContainer {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.postsHeader {
-    text-align: left;
-    margin-top: 5px;
+.categoryContainerCat {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.widgetContainer, .category, .categoryCat {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+
+}
+
+.category {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+}
+
+.categoryCat {
+    padding: 30px;
+}
+
+.postsHeader, .categoryHeader {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 40px;
     font-size: 22px;
     text-decoration: underline;
     font-weight: 700;
 }
 
+.categoryHeader {
+    margin-bottom: 30px;
+}
+
+.categoryLink {
+    cursor:pointer;
+    transition:.5s;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.categoryLink:hover {
+    cursor:pointer;
+    color: rgb(59, 119, 201);
+}
+
 .postTitle {
     display: flex;
-    gap: 15px;
-    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.emptyContainer {
+    width: 40px;
 }
 
 .postContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     flex-direction: column;
     gap: 25px;
@@ -36,8 +88,13 @@
     border-radius: 40px;
 }
 
-.dateContainer {
+.imgContainer {
     text-align: left;
+    left: 0;
+}
+
+.dateContainer {
+    text-align: right;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +103,7 @@
 
 .date {
     font-size: 14px;
-    margin-top: -5px;
+    margin-top: 5px;
     text-align: center;
     color: black;
 }

@@ -7,6 +7,7 @@ import Head from 'next/head'
 import BlogHeader from './BlogHeader';
 import { PostCard, Categories, PostWidget } from '../../components/';
 import { getPosts } from '../../services';
+import { FeaturedPosts } from '../../sections';
 
 
 
@@ -14,14 +15,20 @@ const blog = ({ posts }) => {
 
   return (
     <>
-
-    <BlogHeader />
     <div className={styles.blog}>
-      <div className="container mx-auto px-10 mb-8">
+      <div>
+      <BlogHeader />
+      </div>
+      
+      <div className={styles.mainContainer}>
         <Head>
           <title>Ordo Ab Chao</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        <h1 className={styles.featuredPostHeader}>
+                Featured Posts
+          </h1>
+        <FeaturedPosts />
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className="lg:col-span-8 col-span-1">
             <div className={styles.posts}>
@@ -29,7 +36,7 @@ const blog = ({ posts }) => {
               </div>
           </div>
           <div className="lg:col-span-4 col-span-1">
-              <div className="lg:sticky relative top-8">
+              <div className={styles.sideContainer}>
                 <PostWidget />
                 <Categories />
               </div>
@@ -38,7 +45,7 @@ const blog = ({ posts }) => {
       </div>
     </div>
 
-    </>
+    </> 
   );
 };
 

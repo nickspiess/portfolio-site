@@ -1,0 +1,134 @@
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.commentLength {
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+
+.commentP {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.commentsFormContainer {
+    background: white;
+    padding: 8px;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    border-radius: 8px;
+    min-height: 100px;
+    box-shadow: 0 0 15px #eee, 0px 3px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.formHeader {
+    font-weight: 600;
+    padding: 20px;
+    padding-bottom: 15px;
+}
+
+.commentArea {
+    width: 100%;
+    padding: 20px;
+}
+
+.infoArea {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.inputContainer {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.inputButton {
+    margin: 5px;
+    margin-left: 20px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+
+.commentText, .input {
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(207, 206, 206, 0.5);
+    border: solid rgba(66, 66, 66, 0.75) 1px;
+    color:rgb(45, 45, 45);
+}
+
+.comment {
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgba(247, 247, 247, 0.9);
+    box-shadow: 0 0 10px #eee, 0px 3px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.commentInput {
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgba(207, 206, 206, 0.5);
+    border: solid rgba(66, 66, 66, 0.75) 1px;
+    color:rgb(45, 45, 45);
+}
+
+.commentText {
+    padding: 17.5px;
+    background-color: rgba(166, 165, 165, 0.5);
+    color: black;
+    font-weight:400;
+}
+
+
+.button {
+    background-color: rgb(33, 114, 158);
+    padding: 10px;
+    font-weight: 500;
+    transition:all .8s;
+    border-radius: 12px;
+    color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgb(34, 124, 172), 0px 3px 6px 3px rgba(0, 0, 0, 0.3);
+    border: solid 1px rgb(16, 52, 71);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.button:hover {
+    background-color: rgb(21, 74, 103);
+    box-shadow: 0 0 15px rgb(18, 68, 95), 0px 3px 6px 3px rgba(0, 0, 0, 0.3);
+
+    border: solid 1px white;
+}
+
+.successMessage {
+    margin-top: 8px;
+    color: rgb(16, 130, 16);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.input {
+    
+}
