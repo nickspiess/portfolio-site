@@ -1,19 +1,26 @@
 import React from 'react'
+import { useRouter } from 'next/router';
 
 //import { getPosts, getPostDetails } from '../../services';
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm } from '../../../components';
+import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader } from '../../../components';
 
-import BlogHeaderPost from '../BlogHeaderPost';
+import BlogHeader from '../BlogHeader';
+import BlogFooter from '../BlogFooter';
 
 import styles from '../../styles/Slug.module.css'
 import { getPostDetails, getPosts } from '../../../services';
 
 export const PostDetails = ({ post }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader />;
+  }
 
   return (
-    <div className={styles.postPage}>
-      <div>
-      <BlogHeaderPost />
+    <div className={styles.categoryBackground}>
+      <div className={styles.navContainer}>
+        <BlogHeader />
       </div>
       <div className={styles.mainContainer}>
     <div className={styles.postDetailContainer}>
@@ -33,6 +40,7 @@ export const PostDetails = ({ post }) => {
           </div>
       </div>
       </div>
+      <BlogFooter />
     </div>
   )
 }

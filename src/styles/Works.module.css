@@ -1,26 +1,23 @@
 
-.head {
+  .header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #4F3D6D;
+    margin-bottom: 40px;
+    margin-top: 0px;
+    border-radius: 30px;
     text-align: center;
-    margin: auto;
-    margin-bottom: 15vh;
-    padding: 2vh;
-    width: 100%;
-    box-shadow: 
-    0px 0px 10px 1px rgb(208, 208, 208);
-}
-
-.headText {
+  }
+  
+  
+  .head {
+    
     text-align: center;
     color: white;
     text-shadow: 4px 4px 8px black;
-    font-size: 34px;
+    font-size: 40px;
     font-weight: bold;
-    padding: 10px;
-}
+  }
 
 .floating { 
     animation-name: floating;
@@ -58,10 +55,13 @@
         justify-content: center;
         align-items: center;
     }
+    .header {
+      margin-bottom: 0;
+    }
 
     .head {
-        margin-bottom: 15vh;
-        margin-top: calc(10vh + 130px);
+        margin-bottom: 100px;
+        margin-top: 200px;
     }
 
 }

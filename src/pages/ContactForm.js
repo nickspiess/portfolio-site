@@ -109,7 +109,7 @@ const ContactForm = () => {
     <section className={styles.sectionContainer} id='contact'>
     <article className={styles.container}>
     <header className={styles.head}>
-      <h2 className={styles.contactHeader}>Let's Build Something</h2> 
+      <h2 className={styles.contactHeader}>Let's Build Something Great</h2> 
     </header>
       <form onSubmit={onSubmit} className={styles.contactForm}>
 
@@ -163,7 +163,7 @@ const ContactForm = () => {
             name="message"
             value={message}
             onChange={handleInputChange}
-            className={`${styles.input} ${errors.message ? styles.invalid : ''}`}
+            className={`${styles.messageInput} ${errors.message ? styles.invalid : ''}`}
           />
           {errors.message && <span className={styles.error}>{errors.message}</span>}
         </div>

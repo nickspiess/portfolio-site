@@ -2,14 +2,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
   background-color: transparent;
+  width: 100%;
   box-shadow: none;
+  padding-left: 1rem; /* Apply padding only to the left side */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 0; /* Set right padding to zero */
 }
 
 .logo {
   cursor: pointer;
-  margin-left: 4%;
+  margin-left: 50px; /* Adjusted to make logo flush to the left */
   margin-top: 20px;
   width: 165px;
   height: auto;
@@ -21,8 +25,8 @@
   display: flex;
   gap: 1vw;
   align-items: center;
-  position: absolute;
-  right: 4%;
+  margin-right: 50px;
+  margin-left: auto; /* Set the right margin to zero to ensure it's flush to the right */
 }
 
 .links a {
@@ -107,10 +111,6 @@
 .mobileMenuToggle.open .hamburger::after {
   transform: rotate(-45deg) translate(-6px, 6px);
   top: 0;
-}
-
-.mobileLinksOpen {
-
 }
 
 .mobileLinksOpen.closed {
@@ -225,6 +225,7 @@ display: none;
     animation-duration: 0.3s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
+    color: white;
   }
 
   .link:hover {

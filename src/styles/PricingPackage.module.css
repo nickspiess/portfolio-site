@@ -1,0 +1,211 @@
+.packagePricingContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .packageCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    width: 30%;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: white;
+    box-shadow: 0 1px 8px 3px rgba(170, 170, 170, 0.6);
+    text-shadow: 1px 2px 4px black;
+    color: white;
+  }
+
+  .divider {
+    width: 1in;  /* About an inch wide */
+    height: 1px;  /* 1px height to make it a thin line */
+    background-color: #ccc;  /* Gray color */
+    margin: 30px auto;  /* Centered horizontally */
+  }
+
+  .price {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: white;
+  }
+  
+  .priceTitle {
+    margin-bottom: auto;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+  }
+
+  .customPricing {
+      color: white;
+      text-shadow: 1px 2px 4px black;
+      margin-top: 40px;
+  }
+
+  .list {
+    margin-top: 20px;
+    color: white;
+  }
+  
+
+  
+  .priceList {
+    padding-left: 0;
+    list-style-type: none;
+    line-height: 10px;
+    color: white;
+  }
+
+  .listItem {
+    margin: 10px;
+      text-align: center;
+      color: white;
+  }
+  
+  .button {
+    margin-top: auto;
+
+    padding: 10px 20px;
+    background-color: #1b7ab9;
+    font-weight: 600;
+    text-shadow: 1px 2px 4px black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 1px rgba(245, 245, 245, .5);
+  }
+  
+  .packageCard button:hover {
+    background-color: #0056b3;
+  }
+  
+  .basic:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .standard:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .premium:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .customPackageInfo {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    color: white;
+  }
+
+  @media (max-width: 1100px) {
+    .packageCard {
+
+    }
+  }
+  
+  @media (max-width: 1000px) {
+
+    .priceTitle {
+        font-size: 20px;
+    }
+
+    .list {
+      margin-top: 40px;
+        font-size: 16px;
+    }
+
+    .listItem {
+        margin-bottom: 10px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .button {
+        padding: 5px;
+    }
+
+  }
+
+  @media (max-width: 900px) {
+    .packagePricingContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .packageCard {
+          width: 80%;
+      }
+
+      .priceTitle {
+          font-size: 24px;
+      }
+
+      .listItem {
+          font-size: 18px;
+      }
+
+      .price {
+          font-size: 22px;
+      }
+
+      .button {
+          padding: 10px;
+      }
+      .customPricing {
+          margin-top: 0;
+          font-size: 18px;
+          font-weight: 600;
+      }
+
+  }
+
+  @media (max-width: 900px) {
+    .packageCard {
+      width: 100%;
+      margin: auto;
+  }
+  .packagePricingContainer {
+    margin: auto;
+  }
+
+  }
+
+
+  @media (max-width: 500px) {
+    .list {
+      margin-top: 10px;
+      width: 200px;
+  
+    }
+    .price {
+      margin-bottom: 30px;
+    }
+    .divider {
+      margin-top: 20px;
+      margin-bottom: 25px;
+    }
+    .price {
+      margin-bottom: 35px;
+    }
+    .listItem {
+      margin: 20px;
+        text-align: center;
+    }
+  }

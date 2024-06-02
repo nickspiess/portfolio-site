@@ -1,0 +1,55 @@
+
+  
+  .bgOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 310vh;  /* Covering both videos */
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    color: white;
+  }
+
+  .content {
+    background: rgb(1,22,13);
+    background: linear-gradient(0deg, rgba(7, 9, 8,1) 0%, rgb(57, 61, 61) 18%, rgb(68, 72, 72) 50%, rgb(57, 61, 61)75%, rgb(7, 9, 8) 100%);
+}
+  
+  .bgvideo,
+  .bgvideoSecond {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  /* Changed to 100% */
+    z-index: 0;
+    object-fit: cover;
+    color: white;
+  }
+  
+  .bgvideoSecond {
+    top: 155vh;
+  }
+  
+  .background,
+  .aboutContainer,
+  .galleryContainer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .galleryContainer {
+      margin-bottom: 50px;
+      color: white;
+  }
+  
+  .aboutContainer {
+      margin-top: 0;
+      color: white;
+    margin-bottom: 100px;
+  }
+  

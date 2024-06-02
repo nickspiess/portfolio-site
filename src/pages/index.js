@@ -1,8 +1,9 @@
 import React from 'react';
 import FirstLanding from './FirstLanding'
 import Experience from './Experience';
+import ServiceComponent from './ServiceComponent';
 import Works from './Works';
-import About from './About'
+import AboutLanding from './AboutLanding'
 import ContactForm from './ContactForm'
 import Footer from './Footer'
 import Navbar from './Navbar'
@@ -15,7 +16,7 @@ import StructuredData from 'src/pages/StructuredData';
 
 export default class extends React.Component {
     
-  
+   
 
   render() {
     const sectionIds = ['about', 'experience', 'work', 'contact'];
@@ -24,21 +25,23 @@ export default class extends React.Component {
     const structuredData =  {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
-      "name": "Spiess Publishing",
-      "url": "https://www.realnickspiess.com/",
-      "description": "We are the most experienced carpet cleaner in the Twin Cities, providing expert-level carpet cleaning services.",
+      "name": "Spiess Technologies",
+      "url": "https://www.spiess.tech/",
+      "description": "Empower your business with Spiess Technologies – your partner in crafting holistic web solutions designed to boost online traffic and create stunning websites. Specializing in helping small and medium-sized businesses thrive online. Let's build your digital success story today!",
       "address": {
           "@type": "PostalAddress",
-          "streetAddress": "9774 Bexley Drive",
-          "addressLocality": "Littleton",
+          "streetAddress": "995 Cobbleston Drive",
+          "addressLocality": "Highlands Ranch",
           "addressRegion": "CO",
           "postalCode": "80126",
           "addressCountry": "US",
       },
-      "telephone": "+1-651-472-2736",
+      "telephone": "+1-651-216-9512",
       "openingHours": "Mo-Fr 07:00-17:00",
       "sameAs": [
+          "https://www.x.com/realnickspiess",
           "https://www.twitter.com/realnickspiess",
+          "https://www.linkedin.com/company/spiess-technologies",
       ]
   };
 
@@ -55,11 +58,12 @@ export default class extends React.Component {
                 <div className="wrapper">
                     <Navbar />
                     <FirstLanding />
-                    <About />
                     <div className={styles.gradientBackground}>
-                        <Experience />
-                        <Works />
-                        <ContactForm />
+                        <ServiceComponent />
+                        <AboutLanding />
+                        <div className={styles.contactContainer}>
+                            <ContactForm />
+                        </div>
                         <Footer />
                     </div>
                 </div>

@@ -13,6 +13,12 @@ const Works = () => {
       link: 'www.spiesscarpet.com',
     },
     {
+      title: 'Preece Financial Planning',
+      summary: 'Web Design overhaul for Preece Financial Planning, bringing their website to life through modern design principles.',
+      image: '/images/transparentPFP.png',
+      link: 'www.preecefp.com',
+    },
+    {
       title: 'Run It',
       summary: 'An automated marathon training platform.. coming soon!',
       image: '/images/RunIt.png',
@@ -24,9 +30,9 @@ const Works = () => {
 return (
     <>
     <section id='works' className={styles.mainContainer}>
-        <header className={styles.head}>
-            <h3 className={styles.headText}>Projects</h3>
-        </header>
+    <header className={styles.header}> 
+          <h2 className={styles.head}>Projects</h2>
+      </header>
         <div className={styles.secondaryContainer}>
         <div className={`${styles.floating2} ${styles.tileContainer}`}>
         {experiences.map((experience, index) => (

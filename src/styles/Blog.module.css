@@ -41,6 +41,18 @@
   padding: 0 20px; /* Adjust based on your design */
   background-color: transparent; /* Example background color */
   margin-bottom: 50px;
+  padding-top: 40px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px; /* Adjust based on your design */
+  background-color: transparent; /* Example background color */
+  margin-bottom: 20px;
+  margin-top: 40px;
   padding-top: 20px;
 }
 
@@ -51,8 +63,17 @@
   margin-left: 40px;
 }
 
+.footerLogo {
+  width: 125px;
+  height: auto;
+  border-radius: 16px;
+  margin: auto;
+  margin-bottom: 25px;
+  margin-top: 22px;
+}
+
 .featuredPostHeader {
-  margin-top: 2px;
+  margin-top: 32px;
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 40px;
@@ -95,6 +116,17 @@
   font-weight: 800;
 }
 
+.footerNavLinks {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  margin-top: 12px;
+  list-style: none;
+  margin-bottom:  16px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
 .navLinkPost {
   margin-left: 20px; /* Space between links */
   text-decoration: none;
@@ -119,6 +151,15 @@
   text-shadow: rgb(255, 255, 255) 1px 4px 10px;
 }
 
+.footerNavLink {
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  color: #333; /* Link color */
+  font-size: 20px; /* Adjust based on your design */
+  transition: all .5s ease;
+  text-shadow: rgb(255, 255, 255) 1px 4px 10px;
+}
+
 .navLink:hover {
   color: rgb(65, 98, 155);
   text-shadow: rgb(255, 255, 255) 1px 0 10px;
@@ -128,4 +169,36 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+@media (max-width: 768px) {
+
+  .navbar {
+      display: flex;
+      flex-direction: column;
+  }
+  .logo {
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  
+  .navLinks {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0px;
+    gap: 40px;
+    margin-bottom: 20px;
+  }
+
+  .navLink {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 }

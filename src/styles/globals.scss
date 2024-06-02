@@ -64,6 +64,10 @@ div.body div.wrapper {
   padding: 0px;
 }
 
+.body {
+  width: 100vw;
+}
+
 .background-photo {
   background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.8)),
     url("../../public/images/mountainBackdrop1.jpeg");
@@ -80,7 +84,20 @@ div.body div.wrapper {
 
 @media (max-width: 768px) {
 
-  .background-photo {
-    height: 1200px
+  .contactContainer {
+    margin-top: 0px;
+
   }
+
+  .background-photo {
+    height: 110vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .background-photo {
+    
+    height: 1100px;
+  }
+
 }

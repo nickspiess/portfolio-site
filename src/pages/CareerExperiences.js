@@ -8,11 +8,11 @@ const CareerExperiences = () => {
 
   const experiences = [
     {
-      title: 'Python Developer',
-      position: 'Python Developer',
-      company: 'SlingTV',
-      timeline: '06/2022 - 06/2023',
-      description: "• Build Automation systems using Python's Behave framework.<br />• Perform end-to-end regression testing for Dynamic Ad Insertion technologies serving millions of customers.<br />• Convert business requirements into automation programs by interacting with developers and QA teams.<br />",
+      title: 'QA Engineer',
+      position: 'QA Engineer',
+      company: 'Spectrum',
+      timeline: '07/2023 - Present',
+      description: "• Engineer and maintain a test reporting web application using React, Python, and PostgreSQL.<br />• Perform regression testing and create test automation programs for the Spectrum News SmartTV application.<br />",
     },
     {
       title: 'Web Developer',
@@ -22,10 +22,17 @@ const CareerExperiences = () => {
       description: "• Create websites using React and Nextjs frameworks for small businesses.<br />• Work with clients to understand their business needs.<br />• Create mockups and wireframes for design pitching.<br />",
     },
     {
+      title: 'Python Developer',
+      position: 'Python Developer',
+      company: 'SlingTV',
+      timeline: '06/2022 - 06/2023',
+      description: "• Build Automation systems using Python's Behave framework.<br />• Perform end-to-end regression testing for Dynamic Ad Insertion technologies serving millions of customers.<br />• Convert business requirements into automation programs by interacting with developers and QA teams.<br />",
+    },
+    {
       title: 'Marketing Coordinator',
       position: 'Marketing Coordinator',
       company: 'Gweihir Project',
-      timeline: '01/2023 - Present',
+      timeline: '01/2023 - 05/2024',
       description: '• Oversee community relationship efforts and project branding.<br />• Represent the project and team at technical conferences.<br />',
     },
     {

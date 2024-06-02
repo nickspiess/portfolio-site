@@ -22,7 +22,9 @@ const BlogHeader = () => {
   return (
 
     <nav className={styles.navbar}>
-        <Image src={OrdoAbChao} className={styles.logo}/>
+        <Link href={`/blog`} passHref>
+            <Image src={OrdoAbChao} className={styles.logo}/>
+        </Link>
             <ul className={styles.navLinks}>
                 {categories.map((category, index) => (
                     <li key={index}>

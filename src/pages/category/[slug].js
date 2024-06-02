@@ -2,8 +2,10 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../styles/Slug.module.css'
 
+import Navbar from '../BlogHeader';
+import BlogFooter from '../BlogFooter';
 import { getCategories, getCategoryPost } from '../../../services';
-import { PostCardCategory, CategoriesCat, Loader } from '../../../components';
+import { PostCardCategorySlug, CategoriesCat, Loader } from '../../../components';
 
 const CategoryPost = ({ posts }) => {
   const router = useRouter();
@@ -14,10 +16,11 @@ const CategoryPost = ({ posts }) => {
 
   return (
     <div className={styles.categoryBackground}>
+      <Navbar />
       <div className={styles.categoryContainer}>
         <div className={styles.posts}>
           {posts.map((post, index) => (
-            <PostCardCategory key={index} post={post.node} />
+            <PostCardCategorySlug key={index} post={post.node} />
           ))}
         </div>
         <div className={styles.categoryContainer}>
@@ -26,6 +29,7 @@ const CategoryPost = ({ posts }) => {
           </div>
         </div>
       </div>
+      <BlogFooter />
     </div>
   );
 };

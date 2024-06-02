@@ -6,12 +6,19 @@
 
 .commentLength {
     color: white;
+    margin: auto;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
+    box-shadow: 0 0 15px #eee, 0px 3px 6px 3px rgba(0, 0, 0, 0.3);
+
+    background-color: rgba(33, 102, 158, 0.9);
+    border-radius: 12px;
+    width: 25%;
+    padding: 10px 10px;
 }
 
 .commentP {
@@ -22,13 +29,14 @@
 .comments {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
+    margin-bottom: 80px;
 }
 
 .commentsFormContainer {
     background: white;
     padding: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
     padding-bottom: 12px;
     border-radius: 8px;
     min-height: 100px;
@@ -112,7 +120,7 @@
     box-shadow: 0 0 15px rgb(34, 124, 172), 0px 3px 6px 3px rgba(0, 0, 0, 0.3);
     border: solid 1px rgb(16, 52, 71);
     margin-top: 16px;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
 }
 
 .button:hover {

@@ -85,7 +85,7 @@ export const CommentsForm = ({ slug }) => {
           </div>
         </div>
         {error && <p className={styles.errorField}>All fields are required.</p>}
-        <div classname={styles.buttonContainer}>
+        <div className={styles.buttonContainer}>
           <button 
             type="button" 
             onClick={handleCommentSubmission}
