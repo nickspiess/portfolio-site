@@ -21,7 +21,7 @@
     font-family: 'Times New Roman', serif; /* A classic font for the journal feel */
     padding: 20px; /* Adequate padding around the text */
     line-height: 1.6; /* Improved line spacing for readability */
-    font-size: 18px; /* A comfortable reading size, adjust as needed */
+    font-size: 20px; /* A comfortable reading size, adjust as needed */
     max-width: 100%; /* Maximum width for optimal reading line length */
     margin: auto; /* Center the container */
 }
