@@ -73,6 +73,7 @@
 }
 
 .featuredPostHeader {
+  text-align: center;
   margin-top: 32px;
   font-size: 24px;
   font-weight: 800;
@@ -173,7 +174,16 @@
 
 @media (max-width: 768px) {
 
+  .featuredPostHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    font-size: 20px;
+  }
+
   .navbar {
+    padding-top: 0;
       display: flex;
       flex-direction: column;
   }
@@ -189,8 +199,15 @@
     justify-content: center;
     align-items: center;
     margin-right: 0px;
-    gap: 40px;
+    gap: 10%;
     margin-bottom: 20px;
+  }
+  .footerNavLinks {
+    gap: 10%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .navLink {
