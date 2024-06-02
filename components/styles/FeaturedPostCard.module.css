@@ -1,0 +1,162 @@
+.imgContainer {
+  position: relative; /* This is crucial for absolute children to be positioned correctly */
+  height: 300px; /* Set the height to the desired value */
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.imageSlide {
+  position: absolute; /* Positioned absolutely to its first positioned ancestor */
+  top: 0; /* Align top edge with the container's top edge */
+  left: 0; /* Align left edge with the container's left edge */
+  right: 0; /* Align right edge with the container's right edge */
+  bottom: 0; /* Align bottom edge with the container's bottom edge */
+  display: flex; /* Use flexbox to center content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  opacity: 0; /* Start out transparent */
+  transition: opacity 1s ease; /* Smooth transition for opacity changes */
+}
+
+.imageSlide:active {
+  opacity: 1; /* Make active slide fully opaque */
+}
+
+
+.featuredCard {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures the card takes full width of its parent */
+  height: 100%; /* Ensures the card takes full height of its parent */
+  overflow: hidden; /* Keeps any overflowing content from being visible */
+  border-radius: 12px; /* Optional: For rounded corners if you need them */
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px; /* Ensure consistency with .featuredCard */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(156, 163, 175, 0.5), rgba(55, 65, 81, 0.7), rgba(0, 0, 0, 0.9));
+  border-radius: 12px; /* Matches .featuredCard and .imageContainer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  color: #fff;
+}
+
+  
+  .imageContainer {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+
+    position: absolute; /* Ensure full coverage within .featuredCard */
+    width: 300px;
+    height: 100%; /* Updated to fill .featuredCard */
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px; /* Ensure consistency with .featuredCard */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(156, 163, 175, 0.5), rgba(55, 65, 81, 0.7), rgba(0, 0, 0, 0.9));
+    border-radius: 12px; /* Match the .featuredCard and .imageContainer */
+  }
+  
+  
+  .info {
+    position: absolute; /* Adjusted for absolute positioning */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content */
+    gap: 0px; /* Maintain gap for visual spacing */
+    color: #fff; /* Ensure text color is white for readability */
+  }
+  
+  .date {
+    font-style: italic;
+    margin-bottom: 45px; /* Adjust spacing */
+    font-weight: 600;
+    font-size: 14px; /* Adjusted for consistency */
+  }
+
+  .itemMargin {
+    margin: 0 0 32px 42px; /* Adjust the 32px to whatever value you need */
+    
+}
+
+  .carousel-item-padding {
+    padding: 0 16px; /* Adjust the horizontal padding if needed */
+    margin-right: 24px; /* Add margin to create gaps between items */
+    margin-left: 24px; /* Add margin to create gaps between items */
+  }
+  
+  .title {
+    font-weight: 600;
+    font-size: 28px; /* Adjusted for visual hierarchy */
+    text-align: center;
+    color: white; /* Ensure readability */
+    text-decoration: none; /* Maintain your style */
+    margin: 0; /* Reset margin */
+    margin-bottom: 110px; /* Adjusted spacing */
+    margin-top: 30px;
+    transition: all 0.5s;
+  }
+
+  .title:hover {
+    color: rgb(238, 238, 238);
+    text-shadow: rgb(255, 255, 255) 1px 4px 10px;
+
+  }
+  
+  .authorInfo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 30px; /* Position at the bottom */
+    width: 100%;
+    justify-content: center;
+    gap: 10px; /* Maintain gap between image and name */
+  }
+  
+  .authorImage {
+    border-radius: 50%; /* Ensure circular images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+  }
+  
+  .authorName {
+    font-weight: 500;
+    color: #fff; /* Ensure text color is white for readability */
+    margin: 0; /* Reset margin */
+  }
+  
+  .postNameLink {
+    font-weight: 600;
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  

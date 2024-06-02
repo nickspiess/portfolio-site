@@ -57,9 +57,6 @@
   display: none;
 }
 
-.blog {
-  display: none;
-}
 
 .contactBlog {
   display: flex;
@@ -114,10 +111,6 @@
 .mobileMenuToggle.open .hamburger::after {
   transform: rotate(-45deg) translate(-6px, 6px);
   top: 0;
-}
-
-.mobileLinksOpen {
-
 }
 
 .mobileLinksOpen.closed {

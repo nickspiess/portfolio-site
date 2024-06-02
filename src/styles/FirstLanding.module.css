@@ -9,14 +9,6 @@
     color: white;
 }
 
-.buttonContainer {
-  margin-top: 40px;
-  display: flex;
-  gap: 80px;
-  justify-content: center;
-  align-items: center;
-}
-
 .button {
     font-size: 18px;
     background: linear-gradient(144deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 33%, rgba(239, 239, 239, 0.9) 50%, rgba(250, 250, 250, 0.85) 71%, rgba(210, 210, 210, 0.75) 100%);

@@ -12,7 +12,7 @@ import Link from 'next/link';
 import Head from 'next/head'
 import styles from '../styles/Main.module.css'
 import StructuredData from 'src/pages/StructuredData';
-import BackgroundPhoto from '../../public/images/mountainBackdrop1.jpeg'
+//import BackgroundPhoto from '../../public/images/mountainBackdrop.jpeg'
 
 export default class extends React.Component {
     
@@ -26,17 +26,17 @@ export default class extends React.Component {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
       "name": "Spiess Technologies",
-      "url": "https://www.realnickspiess.com/",
+      "url": "https://www.spiess.tech/",
       "description": "Empower your business with Spiess Technologies – your partner in crafting holistic web solutions designed to boost online traffic and create stunning websites. Specializing in helping small and medium-sized businesses thrive online. Let's build your digital success story today!",
       "address": {
           "@type": "PostalAddress",
-          "streetAddress": "9774 Bexley Drive",
-          "addressLocality": "Littleton",
+          "streetAddress": "995 Cobbleston Drive",
+          "addressLocality": "Highlands Ranch",
           "addressRegion": "CO",
           "postalCode": "80126",
           "addressCountry": "US",
       },
-      "telephone": "+1-651-472-2736",
+      "telephone": "+1-651-216-9512",
       "openingHours": "Mo-Fr 07:00-17:00",
       "sameAs": [
           "https://www.x.com/realnickspiess",

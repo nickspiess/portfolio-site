@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,400;1,500;1,700;1,800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/souvenir');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+@font-face {
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,800;0,900;1,400;1,500;1,700;1,800&display=swap');
+    font-family: 'Montserrat';
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+
+.text-shadow{
+  text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
+}
+
+.adjacent-post{
+  & .arrow-btn{
+    transition: width 300ms ease;
+    width: 50px;
+  }
+  &:hover{
+    & .arrow-btn{
+      width: 60px;
+    }
+  }
+}
+
+.react-multi-carousel-list {
+  & .arrow-btn{
+    transition: width 300ms ease;
+    width: 50px;
+    &:hover{
+      width: 60px;
+    }
+  }
+  
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background-color: white;
+}
+
+
+div.body div.wrapper {
+  margin: 0;
+  position:relative;
+  z-index:5;
+}
+.wrapper div {
+  padding: 0px;
+}
+
+.body {
+  width: 100vw;
+}
+
+.background-photo {
+  background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.8)),
+    url("../../public/images/mountainBackdrop1.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 900px;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+
+  .contactContainer {
+    margin-top: 0px;
+
+  }
+
+  .background-photo {
+    height: 110vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .background-photo {
+    
+    height: 1100px;
+  }
+
+}

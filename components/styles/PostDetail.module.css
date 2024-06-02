@@ -1,0 +1,90 @@
+
+.mainContainer  {
+    width: 90vw;
+    background-image: url('/images/paper.jpeg');
+    background-size: cover; /* Cover the entire area of the element */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 0px;
+    margin-bottom: 80px;
+    box-shadow: 0 0 15px rgb(210, 197, 101), 0px 3px 6px 3px rgba(0, 0, 0, 0.3);
+
+}
+
+.paragraph { /* A light brown/yellow, resembling old paper */
+    color: #000000; /* A darker brown for high contrast text */
+    font-family: 'Times New Roman', serif; /* A classic font for the journal feel */
+    padding: 20px; /* Adequate padding around the text */
+    line-height: 1.6; /* Improved line spacing for readability */
+    font-size: 20px; /* A comfortable reading size, adjust as needed */
+    max-width: 100%; /* Maximum width for optimal reading line length */
+    margin: auto; /* Center the container */
+}
+
+.innerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.detailImage {
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+
+.author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.authorPhoto {
+    border-radius: 12px;
+}
+
+.createdAt {
+    margin-bottom: 5px;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.h1 {
+    font-size: 32px; /* Large enough for visibility */
+    color: rgb(18, 18, 18); /* Dark color for contrast against a light background */
+    font-weight: bold; /* Make the title stand out */
+    margin-bottom: 30px; /* Add some space below the header */
+    text-align: center; /* Center-align the title */
+    line-height: 2; /* Adjust line height for better readability */
+    padding: 0 20px; /* Add some padding on the sides */
+    word-wrap: break-word; /* Ensure long titles are wrapped properly */
+    font-family: 'Merriweather', serif;
+    text-decoration: underline;
+    letter-spacing: 2px;
+
+}
+
+.authorInfo {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    gap: 12px;
+}

@@ -1,0 +1,25 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-content-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-content {
+    display: flex;
+    transition: transform 0.3s ease-out;
+}
+
+.carousel-content > * {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
