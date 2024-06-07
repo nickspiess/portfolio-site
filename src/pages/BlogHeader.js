@@ -22,7 +22,7 @@ const BlogHeader = () => {
   return (
 
     <nav className={styles.navbar}>
-        <Link href={`/blog`} passHref>
+        <Link href={`/ordoabchao`} passHref>
             <Image src={OrdoAbChao} className={styles.logo}/>
         </Link>
             <ul className={styles.navLinks}>

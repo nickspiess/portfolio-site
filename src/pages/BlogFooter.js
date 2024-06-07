@@ -22,7 +22,7 @@ const BlogHeader = () => {
   return (
 
     <nav className={styles.footer}>
-        <Link href={`/blog`} passHref>
+        <Link href={`/ordoabchao`} passHref>
             <Image src={OrdoAbChao} className={styles.footerLogo}/>
         </Link>
             <ul className={styles.footerNavLinks}>
