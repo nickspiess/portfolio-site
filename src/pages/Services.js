@@ -8,8 +8,10 @@ import Holistic from '../../public/images/Holistic.png'
 import PricingPackages from './PricingPackage';
 import styles from '../styles/ServicePage.module.css';
 import ServiceCards from './ServiceCards'; // Import the new component
-import { React, useEffect, useState } from 'react';
+import { React } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head'
+import StructuredData from 'src/pages/StructuredData';
 
 const Services = () => {
 
@@ -19,10 +21,31 @@ const Services = () => {
     // Use the router.push method inside the handler
     router.push('/Contact');
   };
+
+  const structuredData =  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Spiess Technologies",
+    "url": "https://spiess.tech/services",
+    "description": "Learn about the services to maximize your digital footprint.",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "995 Cobbleston Drive",
+        "addressLocality": "Highlands Ranch",
+        "addressRegion": "CO",
+        "postalCode": "80126",
+        "addressCountry": "US",
+    },
+};
+
   
 
   return (
     <>
+    <Head>
+            <title>Spiess Tech Services</title>
+        </Head>
+        <StructuredData data={structuredData} />
       <div className={styles.background}>
         <div className={styles.servicePage}>
           <div className={styles.serviceHeader}>

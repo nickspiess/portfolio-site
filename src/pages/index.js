@@ -24,13 +24,13 @@ export default class extends React.Component {
 
     const structuredData =  {
       "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
+      "@type": "ProfessionalService",
       "name": "Spiess Technologies",
-      "url": "https://www.spiess.tech/",
+      "url": "https://spiess.tech/",
       "description": "Empower your business with Spiess Technologies – your partner in crafting holistic web solutions designed to boost online traffic and create stunning websites. Specializing in helping small and medium-sized businesses thrive online. Let's build your digital success story today!",
       "address": {
           "@type": "PostalAddress",
-          "streetAddress": "995 Cobbleston Drive",
+          "streetAddress": "995 Cobblestone Drive",
           "addressLocality": "Highlands Ranch",
           "addressRegion": "CO",
           "postalCode": "80126",
@@ -49,7 +49,7 @@ export default class extends React.Component {
       return (
         <>
             <Head>
-                <title>Nick Spiess</title>
+                <title>Spiess Technologies</title>
             </Head>
             
         <StructuredData data={structuredData} />

@@ -57,10 +57,10 @@
 }
 
 .logo {
-  width: 125px;
+  width: 175px;
   height: auto;
   border-radius: 16px;
-  margin-left: 40px;
+  margin-left: 80px;
 }
 
 .footerLogo {
@@ -74,7 +74,7 @@
 
 .featuredPostHeader {
   text-align: center;
-  margin-top: 32px;
+  margin-top: 60px;
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 40px;
@@ -110,9 +110,9 @@
 .navLinks {
   display: flex;
   justify-content: flex-end;
-  gap: 15px;
+  gap: 60px;
   list-style: none;
-  margin-right: 40px;
+  margin-right: 80px;
   font-size: 24px;
   font-weight: 800;
 }
@@ -147,7 +147,7 @@
   text-decoration: none;
   letter-spacing: 1.5px;
   color: #333; /* Link color */
-  font-size: 20px; /* Adjust based on your design */
+  font-size: 24px; /* Adjust based on your design */
   transition: all .5s ease;
   text-shadow: rgb(255, 255, 255) 1px 4px 10px;
 }
