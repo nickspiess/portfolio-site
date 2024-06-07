@@ -9,6 +9,7 @@ import { PostCard, Categories, PostWidget } from '../../components';
 import { getPosts } from '../../services';
 import { FeaturedPosts } from '../../sections';
 import StructuredData from 'src/pages/StructuredData';
+import Logo from '../../public/images/OrdoAbChao.png'
 
 
 
@@ -42,6 +43,18 @@ const blog = ({ posts }) => {
           <Head>
             <title>Ordo Ab Chao</title>
             <link rel="icon" href="/ordoabchao.ico" />
+            <meta name="description" content='Bringing order to chaos.' />
+            <meta property="og:title" content='Ordo Ab Chao' />
+            <meta property="og:description" content='Bringing order to chaos.'/>
+            <meta property="og:image" content={'/images/OrdoAbChao.png'}  />
+                <meta property="og:url" content={`https://spiess.tech/ordoabchao`} />
+                <meta name="robots" content="index,follow" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Order Ab Chao" />
+                <meta name="twitter:description" content='Bringing order to chaos.' />
+                <meta name="twitter:image" content={'/images/OrdoAbChao.png'} />
+                <link rel="canonical" href={`https://spiess.tech/ordoabchao`} />
+
           </Head>
           <h1 className={styles.featuredPostHeader}>
             Featured Posts

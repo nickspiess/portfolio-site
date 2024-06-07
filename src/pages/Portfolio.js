@@ -36,6 +36,17 @@ const Portfolio = () => {
         <>
             <Head>
                 <title>Portfolio - Spiess Technologies</title>
+                <meta name="description" content='Check out the portfolio of our work.' />
+                <meta property="og:title" content="Spiess Technologies Portfolio" />
+                <meta property="og:description" content='Check out the portfolio of our work.'/>
+                <meta property="og:image" content={'/images/Logo.png'}/>
+                <meta property="og:url" content={`https://spiess.tech/Portfolio`} />
+                <meta name="robots" content="index,follow" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Spiess Technologies Portfolio" />
+                <meta name="twitter:description" content='Check out the portfolio of our work.' />
+                <meta name="twitter:image" content={'/images/Logo.png'} />
+                <link rel="canonical" href={`https://spiess.tech/Portfolio`} />
             </Head>
             
         <StructuredData data={structuredData} />
