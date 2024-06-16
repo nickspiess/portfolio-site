@@ -206,7 +206,7 @@ margin-top: 75px;
       min-width: 40%;
     }
     .mainContainer {
-      margin-top: 60px;
+      margin-top: 80px;
       display: inline;
     }
 
@@ -290,7 +290,7 @@ margin-top: 75px;
   @media (max-width: 580px) {
 
 .body {
-  height: 105vh;
+  height: 115vh;
 }
 
     .nameHead {
