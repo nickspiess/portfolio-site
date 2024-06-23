@@ -19,12 +19,101 @@
 .paragraph { /* A light brown/yellow, resembling old paper */
     color: #000000; /* A darker brown for high contrast text */
     font-family: 'Times New Roman', serif; /* A classic font for the journal feel */
-    padding: 20px; /* Adequate padding around the text */
-    line-height: 1.6; /* Improved line spacing for readability */
+    padding: 0px; /* Adequate padding around the text */
+    line-height: 1.8; /* Improved line spacing for readability */
     font-size: 20px; /* A comfortable reading size, adjust as needed */
     max-width: 100%; /* Maximum width for optimal reading line length */
     margin: auto; /* Center the container */
+    margin: 1em 0;
+    margin-bottom: 30px;
 }
+  
+  .textXl {
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 1em 0;
+  }
+  
+  .textMd {
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 1em 0;
+  }
+  
+  .underlineLink {
+    font-family: 'Times New Roman', serif; /* A classic font for the journal feel */
+
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1.6;
+    transition: color .25s ease-in;
+  }
+
+  .underlineLink:hover {
+
+    color: rgb(80, 157, 245);
+    }
+  
+  .list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 1em 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .listItem {
+    font-family: 'Times New Roman', serif; /* A classic font for the journal feel */
+
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0.5em 0;
+  }
+  
+  .mainContainer {
+    padding: 2em;
+  }
+  
+  .innerContainer {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  .h1 {
+    font-size: 24px;
+    margin-bottom: 1em;
+    font-weight: 800;
+  }
+  
+
+  .author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+  }
+  
+  .authorPhoto {
+    border-radius: 50%;
+    margin-right: 0.5em;
+  }
+  
+  .authorInfo {
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .info {
+    margin-bottom: 1em;
+    color: rgb(0, 0, 0);
+  }
+  
+  .contentHolder {
+    line-height: 1.8;
+    margin-bottom: 2em;
+  }
+  
 
 .innerContainer {
     display: flex;
@@ -36,9 +125,12 @@
 }
 
 .detailImage {
-    height: 300px;
-    margin-bottom: 10px;
+    width: 80%;
+    height: auto;
+    margin-top: 2em;
     border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    margin-bottom: 2em;
 }
 
 
@@ -63,9 +155,8 @@
 }
 
 .h1 {
-    font-size: 32px; /* Large enough for visibility */
+    font-size: 38px; /* Large enough for visibility */
     color: rgb(18, 18, 18); /* Dark color for contrast against a light background */
-    font-weight: bold; /* Make the title stand out */
     margin-bottom: 30px; /* Add some space below the header */
     text-align: center; /* Center-align the title */
     line-height: 2; /* Adjust line height for better readability */
@@ -74,6 +165,8 @@
     font-family: 'Merriweather', serif;
     text-decoration: underline;
     letter-spacing: 2px;
+    font-weight: 800;
+    margin-top: 24px;
 
 }
 
@@ -88,6 +181,7 @@
     align-items: center;
     margin-top: 0px;
     gap: 12px;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
