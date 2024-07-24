@@ -8,11 +8,11 @@ const CareerExperiences = () => {
 
   const experiences = [
     {
-      title: 'QA Engineer',
-      position: 'QA Engineer',
+      title: 'Full-Stack Developer',
+      position: 'Full-Stack Developer',
       company: 'Spectrum',
       timeline: '07/2023 - Present',
-      description: "• Engineer and maintain a test reporting web application using React, Python, and PostgreSQL.<br />• Perform regression testing and create test automation programs for the Spectrum News SmartTV application.<br />",
+      description: "• Designed and developed a full-stack internal web application using Reactjs, TypeScript, and Postgres.<br />• Created a RESTful API that allowed for easy integration with internal applications.<br />• Initiated and developed training programs and technical documentation.<br />• Collaborated with stakeholders from initial contact through to the final product delivery.",
     },
     {
       title: 'Web Developer',

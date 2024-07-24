@@ -10,57 +10,14 @@ import BlogFooter from '../BlogFooter';
 import styles from '../../styles/Slug.module.css'
 import { getPostDetails, getPosts } from '../../../services';
 
-import Head from 'next/head'
-import StructuredData from '../StructuredData';
-
-
-
 export const PostDetails = ({ post }) => {
-
   const router = useRouter();
 
   if (router.isFallback) {
     return <Loader />;
   }
 
-      const structuredData =  {
-        "@context": "https://schema.org",
-        "@type": "Blog",
-        "name": `${post.title}`,
-        "url": `https://spiess.tech/orderabchao/${post}`,
-        "description": `${post.excerpt}`,
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "995 Cobblestone Drive",
-            "addressLocality": "Highlands Ranch",
-            "addressRegion": "CO",
-            "postalCode": "80126",
-            "addressCountry": "US",
-        },
-    };
-
   return (
-    <>
-    <StructuredData data={structuredData} />
-    <Head>
-    <title>Ordo Ab Chao - {post.title}</title>
-    <link rel="icon" href="/ordoabchao.ico" />
-    <meta name="description" content={post.excerpt} />
-    <meta property="og:title" content={post.title} />
-    <meta property="og:description" content={post.excerpt} />
-    <meta property="og:image" content={post.featuredImage.url} />
-    <meta property="og:url" content={`https://spiess.tech/ordoabchao/post/${post.title}`} />
-    <meta property="og:type" content="article" />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:image" content={'/images/OrdoAbChao.png'}  />
-    <meta property="og:url" content={`https://spiess.tech/ordoabchao/post/${post.title}`} />
-    <meta name="robots" content="index,follow" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={post.title} />
-    <meta name="twitter:description" content={post.excerpt} />
-    <meta name="twitter:image" content={post.featuredImage.url} />
-    <link rel="canonical" href={`https://spiess.tech/ordoabchao/post/${post.title}`} />
-  </Head>
     <div className={styles.categoryBackground}>
       <div className={styles.navContainer}>
         <BlogHeader />
@@ -79,12 +36,12 @@ export const PostDetails = ({ post }) => {
       <div className={styles.side}>
           <div className={styles.sideContainer}>
             <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)}/>
+            <Categories />
           </div>
       </div>
       </div>
       <BlogFooter />
     </div>
-    </>
   )
 }
 

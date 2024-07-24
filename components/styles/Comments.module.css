@@ -140,13 +140,3 @@
 .input {
     
 }
-
-@media (max-width: 768px) {
-    .commentsFormContainer {
-        width: 90%;
-    }
-
-    .commentLength {
-        width: 100%;
-    }
-}

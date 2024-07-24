@@ -10,6 +10,7 @@ import styles from './styles/FeaturedPostCard.module.css'
 export const FeaturedPostCard = ({ post }) => {
     return (
       <div className={styles.featuredCard}>
+        
       <div className={styles.imageContainer} style={{ backgroundImage: `url('${post.featuredImage.url}')` }}>
           <div className={styles.overlay}>
               <div className={styles.info}>

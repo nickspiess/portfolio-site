@@ -65,7 +65,7 @@
   
   /* Rotation effect when hovered */
   .cardInner.isFlipped {
-    background-color: rgba(0, 0, 0, .2) !important;
+    background-color: rgba(246, 245, 245, 0) !important;
     transform: rotateY(180deg);
     height: 550px;
     color: white;
@@ -166,6 +166,7 @@
   
   /* Card quote styling */
   .cardQuote {
+    font-style: italic;
     margin-top: 0px;
     font-size: 18px;
     margin-bottom: 20px;
@@ -173,7 +174,7 @@
     padding-left: 15px;
     text-shadow: 2px 2px 5px black;
     padding-right: 15px;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     color: white;
   }
   
@@ -334,13 +335,13 @@
     }
 
     .cardSubtitle {
-      font-size: 17px;
+      font-size: 15px;
     }
 
     .cardList {
       font-size: 13px;
-      margin-top: 30px;
-      margin-bottom: 20px;
+      margin-top: 20px;
+      margin-bottom: 17px;
     }
 
     .cardInner {
@@ -350,7 +351,7 @@
     .pullInCard {
       display: flex;
       justify-content: center;
-      height: 470px;
+      height: 450px;
       width: 100%;
       height: 100%;
       align-items: center;
@@ -358,14 +359,14 @@
     }
 
     .cardBack {
-      height: 470px;
+      height: 450px;
     }
     
     /* Inner card container for rotation */
     .cardInner {
       position: relative;
       width: 70vw;
-      height: 470px;
+      height: 450px;
       text-align: center;
       transition: transform 0.6s;
       transform-style: preserve-3d;
@@ -381,13 +382,13 @@
     .cardFront {
       position: absolute;
       width: 100%;
-      height: 470px;
+      height: 450px;
     }
 
     .learnMore {
       font-size: 12px;
-      margin-top: 10px;
-      margin-bottom: 30px;
+      margin-top: 0;
+      margin-bottom: 20px;
       padding: 15px;
       padding-top:7.5px;
       padding-bottom:7.5px;
@@ -399,11 +400,13 @@
       height: 450px;
     }
     .cardBack,.cardFront, .cardInner, .pullInCard {
-      height: 455px;
+      height: 425px;
     }
   }
 
   @media (max-width: 389px) {
 
-    
+    .img {
+      margin-bottom: 25px;
+    }
   }

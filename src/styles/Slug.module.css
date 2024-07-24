@@ -88,32 +88,10 @@
 
 @media (max-width: 768px) {
 
-    .categorySubContainer {
-        display: none;
+    .categoryContainer {
+        margin-top: 20px;
+        margin-bottom: 0px;
     }
 
-
-    .postDetail {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .mainContainer {
-        width: 100%;
-        padding: 0;
-    }
-    .innerContainer {
-        width: 90%;
-    }
-
-    .paragraph {
-        width: 90%;
-        padding: 0;
-    }
-    .side {
-        display: none;
-    }
 
 }

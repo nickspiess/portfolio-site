@@ -4,7 +4,7 @@ import styles from '../styles/Footer.module.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import Link from 'next/link';
 import Facebook from '../../public/images/FacebookLink.png'
-import X from '../../public/images/x.svg'
+import Twitter from '../../public/images/TwitterLink.png'
 import Insta from '../../public/images/InstaLink.png'
 import LinkedIn from '../../public/images/LinkedInLink.png'
 import GitHub from '../../public/images/GitHubLink.png'
@@ -18,19 +18,19 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.socialMedia}>
-        <a href="https://github.com/nickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating} ${styles.icon}`}>
+        <a href="https://www.github.com/nickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating} ${styles.icon}`}>
           <Image src={GitHub} width={30} />
         </a>
-        <a href="https://x.com/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating2} ${styles.icon}`}>
-          <Image src={X} width={40} />
+        <a href="https://www.twitter.com/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating2} ${styles.icon}`}>
+          <Image src={Twitter} width={30} />
         </a>
-        <a href="https://linkedin.com/in/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating3} ${styles.icon}`}>
+        <a href="https://www.linkedin.com/in/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating3} ${styles.icon}`}>
           <Image src={LinkedIn} width={30} />
         </a>
-        <a href="https://instagram.com/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating4} ${styles.icon}`}>
+        <a href="https://www.instagram.com/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating4} ${styles.icon}`}>
           <Image src={Insta} width={30} />
         </a>
-        <a href="https://facebook.com/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating2} ${styles.icon}`}>
+        <a href="https://www.facebook.com/realnickspiess" target="_blank" rel="noopener noreferrer" className={`${styles.floating2} ${styles.icon}`}>
           <Image src={Facebook} width={30} />
         </a>
       </div>

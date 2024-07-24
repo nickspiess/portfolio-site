@@ -24,13 +24,13 @@ export default class extends React.Component {
 
     const structuredData =  {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
+      "@type": "HomeAndConstructionBusiness",
       "name": "Spiess Technologies",
-      "url": "https://spiess.tech/",
+      "url": "https://www.spiess.tech/",
       "description": "Empower your business with Spiess Technologies – your partner in crafting holistic web solutions designed to boost online traffic and create stunning websites. Specializing in helping small and medium-sized businesses thrive online. Let's build your digital success story today!",
       "address": {
           "@type": "PostalAddress",
-          "streetAddress": "995 Cobblestone Drive",
+          "streetAddress": "995 Cobbleston Drive",
           "addressLocality": "Highlands Ranch",
           "addressRegion": "CO",
           "postalCode": "80126",
@@ -49,18 +49,7 @@ export default class extends React.Component {
       return (
         <>
             <Head>
-                <title>Spiess Technologies</title>
-                <meta name="description" content='Your partner in expanding your digital footprint.' />
-                <meta property="og:title" content='Spiess Technologies' />
-                <meta property="og:description" content='Your partner in expanding your digital footprint.'/>
-                <meta property="og:image" content={'/images/Logo.png'}  />
-                <meta property="og:url" content={`https://spiess.tech`} />
-                <meta name="robots" content="index,follow" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="Spiess Technologies" />
-                <meta name="twitter:description" content='Your partner in expanding your digital footprint.' />
-                <meta name="twitter:image" content={'/images/Logo.png'} />
-                <link rel="canonical" href={`https://spiess.tech`} />
+                <title>Nick Spiess</title>
             </Head>
             
         <StructuredData data={structuredData} />
