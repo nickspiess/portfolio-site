@@ -6,8 +6,11 @@ import Navbar from '../BlogHeader';
 import BlogFooter from '../BlogFooter';
 import { getCategories, getCategoryPost } from '../../../services';
 import { PostCardCategorySlug, CategoriesCat, Loader } from '../../../components';
+import Head from 'next/head'
+
 
 const CategoryPost = ({ posts }) => {
+
   const router = useRouter();
 
   if (router.isFallback) {
@@ -15,6 +18,11 @@ const CategoryPost = ({ posts }) => {
   }
 
   return (
+<>
+    <Head>
+    <title>Ordo Ab Chao</title>
+    <link rel="icon" href="/ordoabchao.ico" />
+    </Head>
     <div className={styles.categoryBackground}>
       <Navbar />
       <div className={styles.categoryContainer}>
@@ -31,6 +39,7 @@ const CategoryPost = ({ posts }) => {
       </div>
       <BlogFooter />
     </div>
+    </>
   );
 };
 export default CategoryPost;

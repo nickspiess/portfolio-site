@@ -35,7 +35,7 @@ const Navbar = () => {
           Contact
         </Link>
         <div className={styles.divider} />
-        <Link className={styles.blog}  href="/blog" passHref>
+        <Link className={styles.blog}  href="/ordoabchao" passHref>
           <p onClick={handleMobileMenuToggle}>Blog</p>
         </Link>
       </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
           Contact
         </Link>
           <div className={styles.divider} />
-          <Link className={styles.blog} href="/blog" passHref>
+          <Link className={styles.blog} href="/ordoabchao" passHref>
             <p onClick={handleMobileMenuToggle}>Blog</p>
           </Link>
         </div>

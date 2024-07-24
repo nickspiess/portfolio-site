@@ -8,8 +8,11 @@ import Holistic from '../../public/images/Holistic.png'
 import PricingPackages from './PricingPackage';
 import styles from '../styles/ServicePage.module.css';
 import ServiceCards from './ServiceCards'; // Import the new component
-import { React, useEffect, useState } from 'react';
+import { React } from 'react';
 import { useRouter } from 'next/router';
+import Head from 'next/head'
+import StructuredData from 'src/pages/StructuredData';
+import Logo from '../../public/images/Logo.png'
 
 const Services = () => {
 
@@ -19,10 +22,43 @@ const Services = () => {
     // Use the router.push method inside the handler
     router.push('/Contact');
   };
+
+  const structuredData =  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Spiess Technologies",
+    "url": "https://spiess.tech/services",
+    "description": "Learn about the services to maximize your digital footprint.",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "995 Cobblestone Drive",
+        "addressLocality": "Highlands Ranch",
+        "addressRegion": "CO",
+        "postalCode": "80126",
+        "addressCountry": "US",
+    },
+};
+
   
 
   return (
     <>
+    <Head>
+            <title>Spiess Tech Services</title>
+            
+                <meta name="description" content='Our services to expand your digital footprint.' />
+                <meta property="og:title" content="Spiess Tech Services" />
+                <meta property="og:description" content='Our services to expand your digital footprint.'/>
+                <meta property="og:image" content={'/images/Logo.png'}  />
+                <meta property="og:url" content={`https://spiess.tech/Services`} />
+                <meta name="robots" content="index,follow" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Spiess Technologies Services" />
+                <meta name="twitter:description" content='Our services to expand your digital footprint.' />
+                <meta name="twitter:image" content={'/images/Logo.png'} />
+                <link rel="canonical" href={`https://spiess.tech/Services`} />
+        </Head>
+        <StructuredData data={structuredData} />
       <div className={styles.background}>
         <div className={styles.servicePage}>
           <div className={styles.serviceHeader}>

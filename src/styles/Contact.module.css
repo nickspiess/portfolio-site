@@ -32,7 +32,7 @@
     flex-direction: column;
   align-items: center;
   margin: auto;
-  height: 100vh;
+  height: auto;
   color: black;
   background: transparent; 
   margin-bottom: 50px;
@@ -113,7 +113,7 @@
     font-size: 18px;
     color: white;
     border-radius: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: 20px;
     box-shadow: 
       0px 0px 5px 1px black;
@@ -142,20 +142,35 @@
   @media (max-width: 768px) {
     .sectionContainer {
       
-      margin-bottom: 170px;
+      margin-bottom: 0px;
+      height: auto;
+      margin-bottom: 40px;
     }
 
     .contactForm, .head {
       width: 80vw;
     } 
     .contactForm {
-      margin-bottom: 400px;
+      margin-bottom: 0px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .formGroup {
+      width: 80%;
+      margin-top: 20px;
+    }
+
+    .contactHeader {
+      font-size: 24px;
+      padding: 20px;
     }
       
   .button {
-    padding: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 10px;
+    
+    padding-left: 20px;
+    padding-right: 20px;
     font-size: 16px;
     letter-spacing: 2px;
   }

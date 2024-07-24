@@ -20,9 +20,8 @@
   content: "";
   width: 100%;
   height: 100vh;
-  background: linear-gradient(to right bottom, #6d327c, #485DA6, #00a1ba, #01b18e, #32b37b);
   background: #D3D3D3;
-  background-image: url("../../public/images/coast.jpeg");
+  background-image: url("../../public/images/coast.webp");
   opacity: .5;
   position: fixed;
   left: 0;
@@ -57,10 +56,10 @@
 }
 
 .logo {
-  width: 125px;
+  width: 175px;
   height: auto;
   border-radius: 16px;
-  margin-left: 40px;
+  margin-left: 80px;
 }
 
 .footerLogo {
@@ -73,7 +72,8 @@
 }
 
 .featuredPostHeader {
-  margin-top: 32px;
+  text-align: center;
+  margin-top: 60px;
   font-size: 24px;
   font-weight: 800;
   margin-bottom: 40px;
@@ -109,9 +109,9 @@
 .navLinks {
   display: flex;
   justify-content: flex-end;
-  gap: 15px;
+  gap: 60px;
   list-style: none;
-  margin-right: 40px;
+  margin-right: 80px;
   font-size: 24px;
   font-weight: 800;
 }
@@ -146,7 +146,7 @@
   text-decoration: none;
   letter-spacing: 1.5px;
   color: #333; /* Link color */
-  font-size: 20px; /* Adjust based on your design */
+  font-size: 24px; /* Adjust based on your design */
   transition: all .5s ease;
   text-shadow: rgb(255, 255, 255) 1px 4px 10px;
 }
@@ -171,16 +171,41 @@
   gap: 40px;
 }
 
+@media (max-width: 950px) {
+  .navLinks {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    list-style: none;
+    margin-right: 80px;
+    font-size: 22px;
+    font-weight: 800;
+  }
+
+  .logo {
+    width: 160px;
+  }
+}
+
 @media (max-width: 768px) {
 
+  .featuredPostHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    font-size: 20px;
+  }
+
   .navbar {
+    padding-top: 0;
       display: flex;
       flex-direction: column;
   }
   .logo {
     margin: auto;
     margin-bottom: 30px;
-    margin-top: 10px;
+    margin-top: 30px;
   }
   
   .navLinks {
@@ -189,8 +214,16 @@
     justify-content: center;
     align-items: center;
     margin-right: 0px;
-    gap: 40px;
-    margin-bottom: 20px;
+    gap: 10%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .footerNavLinks {
+    gap: 10%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .navLink {
@@ -201,4 +234,46 @@
     align-items: center;
   }
 
+}
+
+@media (max-width: 425px) {
+
+  .logo {
+    width: 150px;
+  }
+
+  .navLink {
+    font-size: 20px;
+    gap: 3%;
+  }
+}
+
+@media (max-width: 380px) {
+
+  .navLink {
+    font-size: 22px;
+  }
+  .navLinks {
+    gap: 7.5%;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .navLink {
+    font-size: 20px;
+  }
+  .navLinks {
+    gap: 5%;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .navLink {
+    font-size: 18px;
+  }
+  .navLinks {
+    gap: 5%;
+  }
 }
