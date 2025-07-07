@@ -8,7 +8,7 @@ const Works = () => {
   const experiences = [
     {
       title: 'Wealth Planning Advisors',
-      summary: 'A full logo/brand design and implementation. Design work done in Figma and fully custom code using HTML/CSS, JS, and PHP implemented in Wordpress',
+      summary: 'A full brand design and implementation. Design work done in Figma and full custom solution developed HTML/CSS, JS, and PHP and implemented within Wordpress',
       image: '/images/Depth_Large.png',
       link: 'www.wpadvisorsgroup.com',
     },

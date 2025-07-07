@@ -283,6 +283,10 @@
     display: none;
   }
 
+  .startProcessBtn {
+    margin: 0;
+  }
+
   .logo {
     cursor: pointer;
     margin-left: 4%;
@@ -362,7 +366,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
     z-index: 100;
     animation: fadeIn 0.3s ease-out;
   }
@@ -450,6 +454,8 @@
     height: 1px;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
     margin: 0;
+    margin-top: 12px;
+    margin-bottom: 12px;;
   }
 
   .blog {

@@ -214,6 +214,17 @@ text-shadow: 0px 0px 0px black;
 }
 }
 
+@media (max-width: 600px) {
+
+  .experienceTile {
+
+    width: 60vw;
+    margin-bottom: 80px;
+
+  }
+
+}
+
 @media (max-width: 500px) {
   .imageDiv {
     width: 60vw;
@@ -254,6 +265,7 @@ text-shadow: 0px 0px 0px black;
 .experienceTile {
 
   width: 70vw;
+  height: 400px;
 
 }
 }

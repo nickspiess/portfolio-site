@@ -211,14 +211,23 @@
       gap: 40px;
   }
 
+  .aboutDescription {
+    font-size: 19px;
+    width: 120% !important;
+
+}
+
   .aboutHeader {
       padding: 40px 20px;
   }
 
   .paragraphContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
       margin-top: 0;
       line-height: 1.6;
-      padding: 30px 25px;
+      padding: 30px 45px;
       gap: 24px;
   }
 

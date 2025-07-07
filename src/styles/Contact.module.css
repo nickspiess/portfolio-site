@@ -294,12 +294,13 @@
 }
 
 @media (max-width: 480px) {
+
   .sectionContainer {
     padding: 30px 10px;
   }
 
   .contactForm, .head {
-    width: 95vw;
+    width: 85vw;
   }
 
   .contactForm {

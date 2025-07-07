@@ -122,8 +122,8 @@ const Navbar = () => {
           <Link href='/Portfolio' onClick={handleMobileMenuClose}>Portfolio</Link>
           <Link href='/Services' onClick={handleMobileMenuClose}>Services</Link>
           <Link href='/Contact' onClick={handleMobileMenuClose}>Contact</Link>
-          <div className={styles.divider} />
           <Link className={styles.blog} href="/ordoabchao" onClick={handleMobileMenuClose}>Blog</Link>
+          <div className={styles.divider} />
           <Link href="/consultation" onClick={handleMobileMenuClose}>
             <button className={styles.startProcessBtn}>Start Process</button>
           </Link>
