@@ -23,7 +23,7 @@ const BlogHeader = () => {
 
     <nav className={styles.footer}>
         <Link href={`/ordoabchao`} passHref>
-            <Image src={OrdoAbChao} className={styles.footerLogo}/>
+            <Image src={OrdoAbChao} className={styles.footerLogo} alt="Order out of Chaos"/>
         </Link>
             <ul className={styles.footerNavLinks}>
                 {categories.map((category, index) => (

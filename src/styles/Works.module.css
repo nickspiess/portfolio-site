@@ -1,22 +1,35 @@
 
   .header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-    margin-top: 0px;
+    justify-content: left;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100px;
+    margin-top: -17px;
+    margin-left: 180px;
     border-radius: 30px;
-    text-align: center;
+    text-align: left;
   }
   
   
-  .head {
-    
-    text-align: center;
+  .head1 {
+    margin-top: 280px;
     color: white;
     text-shadow: 4px 4px 8px black;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 70px;
+    font-weight: lighter;
+    text-align: left;
+    letter-spacing:2px;
+
+  }
+  .head2 {
+    margin-top:330px;
+    text-align: left;
+    color: white;
+    text-shadow: 4px 4px 8px black;
+    font-size: 60px;
+    font-weight:600;
+    letter-spacing:4px;
   }
 
 .floating { 
@@ -34,34 +47,69 @@
     100%   { transform: translate(0, -0px); }   
   }
 
-.mainContainer {
-    display: inline;
+  .mainContainer {
+    background-image: url('/images/PortfolioBackground.webp');
+    display: block;
+    height: 100%;
+    padding-bottom: 90px;
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
+    width: 100%; /* Ensure full width */
+    box-sizing: border-box; /* Include padding in the width */
 }
 
 .tileContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 280px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  justify-items: center;
+  align-items: start;
+  padding: 0px;
+  width: 100%; /* Constrain grid to parent width */
+  box-sizing: border-box; /* Prevent padding from adding extra width */
+}
 
+@media (max-width: 1200px) {
+  .header {
+    margin-left: 140px;
+  }
 }
 
 @media (max-width: 1000px) {
 
-    .tileContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .header {
-      margin-bottom: 0;
-    }
+  .tileContainer {
+    grid-template-columns: 1fr; /* Switch to a single column on smaller screens */
+  }
 
-    .head {
-        margin-bottom: 100px;
-        margin-top: 200px;
-    }
+  .header {
+
+    margin-bottom: 100px;
+    margin-left: 140px;
+  }
+
+  .head2 {
+    
+    margin-bottom: 100px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .mainContainer {
+    background-image: url('/images/PortfolioBackgroundMobile.webp');
+  }
+
+  .head2 {
+    margin-top: 250px;
+    font-size: 42px;
+    margin-right: 40px;
+  }
+
+  .header {
+    margin-left: 110px;
+
+  }
 
 }

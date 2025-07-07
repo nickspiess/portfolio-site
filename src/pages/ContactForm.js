@@ -12,9 +12,9 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
 
 
-  const SERVICE_ID = "service_5e4f1be";
-  const TEMPLATE_ID = "template_9dkquwn";
-  const USER_ID = "VPkdzprTCBDdiUbQI";
+  const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_PROCESS_TEMPLATE_ID;
+  const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -23,7 +23,7 @@ const BlogHeader = () => {
 
     <nav className={styles.navbar}>
         <Link href={`/ordoabchao`} passHref>
-            <Image src={OrdoAbChao} className={styles.logo}/>
+            <Image src={OrdoAbChao} className={styles.logo} alt="Order out of Chaos" />
         </Link>
             <ul className={styles.navLinks}>
                 {categories.map((category, index) => (

@@ -1,15 +1,11 @@
 
-
-import Link from 'next/link';
-import Image from 'next/image';
 import Navbar from './Navbar'
-import ContactForm from './ContactForm';
+import ContactFormPage from './ContactFormPage';
 import Footer from './Footer'
 import styles from '../styles/ContactPage.module.css';
 import React from 'react';
 import Head from 'next/head'
 import StructuredData from 'src/pages/StructuredData';
-import Logo from '../../public/images/Logo.png'
 
 
 const Contact = () => {
@@ -53,7 +49,7 @@ const Contact = () => {
             <div className={styles.background}>
             <Navbar />
             <div className={styles.contactFormContainer}>
-                <ContactForm />
+                <ContactFormPage />
             </div>
             <Footer />
             </div>

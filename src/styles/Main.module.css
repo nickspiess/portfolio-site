@@ -1,3 +1,154 @@
 .gradientBackground {
-    background: linear-gradient(180deg, rgb(30, 48, 73), rgb(139, 100, 143),  rgb(177, 100, 91), rgb(192, 154, 30));
+    background: linear-gradient(180deg, rgb(16, 36, 63), rgb(93, 110, 133));
 }
+
+
+
+/* PageBackground.module.css */
+.pageBackground {
+
+    z-index: -1;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 75%, #1e293b 100%);
+    overflow: hidden;
+  }
+  
+  .pageBackground::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    animation: gradientShift 20s ease-in-out infinite;
+  }
+  
+  .pageBackground::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 100px,
+        rgba(255, 255, 255, 0.01) 100px,
+        rgba(255, 255, 255, 0.01) 200px
+      );
+    pointer-events: none;
+    opacity: 0.3;
+  }
+  
+  @keyframes gradientShift {
+    0%, 100% {
+      background: 
+        radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+    }
+    
+    25% {
+      background: 
+        radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
+    }
+    
+    50% {
+      background: 
+        radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 50% 20%, rgba(6, 182, 212, 0.09) 0%, transparent 50%);
+    }
+    
+    75% {
+      background: 
+        radial-gradient(circle at 80% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+    }
+  }
+  
+  /* Alternative version that goes to bottom of content instead of viewport */
+  .pageBackgroundAbsolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 75%, #1e293b 100%);
+    overflow: hidden;
+  }
+  
+  .pageBackgroundAbsolute::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    animation: gradientShift 20s ease-in-out infinite;
+  }
+  
+  .pageBackgroundAbsolute::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 100px,
+        rgba(255, 255, 255, 0.01) 100px,
+        rgba(255, 255, 255, 0.01) 200px
+      );
+    pointer-events: none;
+    opacity: 0.3;
+  }
+  
+  /* For sections that need to override the background */
+  .sectionOverride {
+    background: transparent !important;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Mobile optimizations */
+  @media (max-width: 768px) {
+    .pageBackground::before,
+    .pageBackgroundAbsolute::before {
+      background: 
+        radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+    }
+    
+    @keyframes gradientShift {
+      0%, 100% {
+        background: 
+          radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+          radial-gradient(circle at 70% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
+      }
+      
+      50% {
+        background: 
+          radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.06) 0%, transparent 40%),
+          radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.1) 0%, transparent 40%);
+      }
+    }
+  }

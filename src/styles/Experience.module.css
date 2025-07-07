@@ -2,14 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0vh;
-  margin-top: 150px;
+  margin-bottom: 40px;
+  margin-top: 180px;
   width: 60%;
   border-radius: 30px;
 }
 
 .sectionContainer {
-  background: transparent;
+  background: rgb(0,61,34);
+background: linear-gradient(0deg, rgb(115, 146, 188) 0%, rgb(99, 130, 195) 18%, rgba(47, 77, 123,1) 50%,
+ rgb(47, 77, 123) 79%, rgb(25, 28, 30) 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +36,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px; /* Adjust the gap as per your preference */
+  gap: 40px; /* Adjust the gap as per your preference */
 }
 
 .skillImage {
@@ -44,7 +46,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 40px;
+  margin: 0px;
   flex: 1;
   min-width: 150px; /* Adjust the min-width as per your preference */
   max-width: 300px; /* Adjust the max-width as per your preference */

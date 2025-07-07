@@ -1,166 +1,166 @@
-.gallery {
+.galleryContainer {
   width: 100%;
-  max-width: 800px;
-  text-align: center;
-  position: relative;
-  margin: auto;
-  color: white;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.galleryCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .galleryTitle {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 100px;
-  text-shadow: 1px 2px 4px black;
-  letter-spacing: 2px;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
   color: white;
-}
-
-.prevButton,
-.nextButton,
-.navButton {
-  text-shadow: 1px 2px 2px black;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(to bottom, #dcdcdc, #a8a8a8, #dcdcdc);
-  border: 1px solid #979797;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 2.5px;
-  padding: 5px 10px;
-  border-radius: 12px;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.1), inset 0px -1px 1px rgba(255,255,255,0.3), inset 0px 1px 1px rgba(0,0,0,0.4);
-  transition: background 0.6s ease;
-}
-
-.prevButton:hover,
-.nextButton:hover {
-  background: linear-gradient(to bottom, #dcdcdc, #9a9a9a, #dcdcdc);
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.1), inset 0px -1px 1px rgba(255,255,255,0.3), inset 0px 1px 1px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.imageWrapper {
   position: relative;
-  padding: 20px;
-  border-radius: 15px;
-  display: inline-block;
-}
-
-.prevButton {
-  left: -100px;
-}
-
-.nextButton {
-  right: -100px;
+  width: 600px;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .image {
-  max-width: 600px;
-  height: 400px;
-  margin: auto;
-  opacity: 0;
-  transition: opacity 2s ease-in-out;
-  border-radius: 15px;
-  box-shadow: 8px 6px 6px 3px rgba(0, 0, 0, 0.3);
-}
-
-.image-fade-in {
-  opacity: 1;
-}
-
-.fade-in {
-  opacity: 1;
-  transition: opacity 5s ease-in-out;
-}
-
-.fade-out {
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.buttonGroup {
-  margin-top: 50px;
-  
-}
-
-.buttonGroup button {
-  background: linear-gradient(to bottom, #dcdcdc, #a8a8a8, #dcdcdc);
-  box-shadow: 8px 6px 6px 3px rgba(0, 0, 0, 0.3);
-  border: 1px solid #979797;
-  cursor: pointer;
-  color: #ffffff;
-  padding: 10px 20px;
-  margin: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   border-radius: 12px;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.1), inset 0px -1px 1px rgba(255,255,255,0.3), inset 0px 1px 1px rgba(0,0,0,0.4);
-  transition: all 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+}
+
+.fadeIn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fadeOut {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+.navButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: white;
+  backdrop-filter: blur(5px);
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+}
+
+.navButton:active {
+  transform: scale(0.95);
+}
+
+.categoryButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.categoryButton {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  color: white;
   font-weight: 500;
-  letter-spacing: 1.5px;
-  text-shadow: 1px 2px 2px black;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(5px);
 }
 
-.buttonGroup button:hover {
-  background: linear-gradient(to bottom, #dcdcdc, #9a9a9a, #dcdcdc);
-  box-shadow: 0px 2px 4px rgba(0,0,0,0.1), inset 0px -1px 1px rgba(255,255,255,0.3), inset 0px 1px 1px rgba(0,0,0,0.4);
+.categoryButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
+.categoryButton.active {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-
+@media (max-width: 1024px) {
+  .imageWrapper {
+    width: 600px;
+    height: 450px;
+  }
+}
 
 @media (max-width: 768px) {
+  .galleryCard {
+    padding: 1rem;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 
-  .gallery {
-    width: 90%;
+  .imageWrapper {
+    width: 100%;
+    height: 350px;
   }
 
   .galleryTitle {
-    font-size: 1.5em;
-    margin-bottom: 50px;
+    font-size: 2rem;
   }
 
-  .prevButton,
-  .nextButton {
-    font-size: 18px;
-    padding: 3px 10px;
+  .categoryButtons {
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 12px;
   }
 
-  .image {
-    width: 300px;
-    height: auto;
-  }
-
-  .buttonGroup button {
-    padding: 8px 16px;
-    margin: 5px;
-    font-size: 14px;
+  .categoryButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 550px) {
-
-  .prevButton,
-  .nextButton {
-    position: static;
-    margin: 10px auto;
-    transform: none;
-    display: inline-block;
-    margin-top: 40px;
+@media (max-width: 480px) {
+  .imageWrapper {
+    height: 300px;
   }
 
-  .imageContainer {
-    padding-bottom: 50px;  /* Adjust as needed */
+  .navButton {
+    width: 40px;
+    height: 40px;
   }
 
-  .buttonGroup {
-    margin-top: 0px; /* Adjust as needed */
-    margin-bottom: 50px;
-  }
-
-  /* Re-position .prevButton and .nextButton below the image */
-  .prevButton {
-    margin-right: 20px; /* Space between buttons */
+  .galleryTitle {
+    font-size: 1.5rem;
   }
 }

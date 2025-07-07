@@ -95,6 +95,8 @@
   }
   
   .authorPhoto {
+    width: 32px;
+    height: auto;
     border-radius: 50%;
     margin-right: 0.5em;
   }

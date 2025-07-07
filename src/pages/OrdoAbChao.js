@@ -64,7 +64,7 @@ const blog = ({ posts }) => {
             <div className="lg:col-span-8 col-span-1">
               <div className={styles.posts}>
                 {posts.map((post) => (
-                  <PostCard post={post.node} key={post.node.id} /> // Ensure each post has a unique key
+                  <PostCard post={post.node} key={post.node.id || post.node.slug || index} /> // Ensure each post has a unique key
                 ))}
               </div>
             </div>

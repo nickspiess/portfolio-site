@@ -1,9 +1,11 @@
 
 
 .background {
-    background: linear-gradient(360deg,  hsla(216, 41%, 64%, 1)0%, hsla(216, 39%, 45%, 1) 30%,hsla(216, 85%, 29%, 1) 100%);
+    background: linear-gradient(360deg, rgb(126, 156, 201) 0%, hsla(216, 39%, 45%, 1) 30%, hsla(216, 85%, 29%, 1) 100%);
     background-size: cover;
     background-position: center;
+    width: 100%; /* Use percentage to respect scrollbar */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 .links a:hover {

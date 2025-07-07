@@ -1,18 +1,13 @@
 import React from 'react';
 import FirstLanding from './FirstLanding'
-import Experience from './Experience';
 import ServiceComponent from './ServiceComponent';
-import Works from './Works';
 import AboutLanding from './AboutLanding'
 import ContactForm from './ContactForm'
 import Footer from './Footer'
 import Navbar from './Navbar'
-//import Highlights from './Highlights'
-import Link from 'next/link';
 import Head from 'next/head'
 import styles from '../styles/Main.module.css'
 import StructuredData from 'src/pages/StructuredData';
-//import BackgroundPhoto from '../../public/images/mountainBackdrop.jpeg'
 
 export default class extends React.Component {
     
@@ -64,17 +59,17 @@ export default class extends React.Component {
             </Head>
             
         <StructuredData data={structuredData} />
+        <div className={styles.navbarSpacer}></div>
             <div className="body">
-                <div className="background-photo" />
                 <div className="wrapper">
                     <Navbar />
                     <FirstLanding />
                     <div className={styles.gradientBackground}>
                         <ServiceComponent />
+                    </div>
+                    <div className={styles.pageBackground}>
                         <AboutLanding />
-                        <div className={styles.contactContainer}>
-                            <ContactForm />
-                        </div>
+                        <ContactForm />
                         <Footer />
                     </div>
                 </div>

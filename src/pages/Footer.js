@@ -52,7 +52,7 @@ const Footer = () => {
         </Link>
       </div>
       <div className={styles.name} onClick={scrollToTop}>
-        <p>&copy;2023 Nick Spiess | All Rights Reserved</p>
+        <p>&copy;2025 Nick Spiess | All Rights Reserved</p>
       </div>
     </footer>
   );

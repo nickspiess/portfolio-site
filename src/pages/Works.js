@@ -7,6 +7,12 @@ import styles from '../styles/Works.module.css'
 const Works = () => {
   const experiences = [
     {
+      title: 'Wealth Planning Advisors',
+      summary: 'A full logo/brand design and implementation. Design work done in Figma and fully custom code using HTML/CSS, JS, and PHP implemented in Wordpress',
+      image: '/images/Depth_Large.png',
+      link: 'www.wpadvisorsgroup.com',
+    },
+    {
       title: 'Spiess Carpet Cleaning',
       summary: 'This is a web app, built using React and Nextjs, for a small business located in Minnesota. This was a project very close to home since it was the first company I ever worked for.',
       image: '/images/logo copy.png',
@@ -31,14 +37,12 @@ return (
     <>
     <section id='works' className={styles.mainContainer}>
     <header className={styles.header}> 
-          <h2 className={styles.head}>Projects</h2>
+          <h2 className={styles.head2}>Portfolio</h2>
       </header>
-        <div className={styles.secondaryContainer}>
-        <div className={`${styles.floating2} ${styles.tileContainer}`}>
+        <div className={`${styles.tileContainer}`}>
         {experiences.map((experience, index) => (
             <ExperienceTile key={index} {...experience} />
         ))}
-        </div>
         </div>
     </section>
     </>

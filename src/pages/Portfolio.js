@@ -1,12 +1,9 @@
-import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from './Navbar'
 import Works from './Works';
 import Experience from './Experience';
 import Footer from './Footer'
 import styles from '../styles/Portfolio.module.css';
-import { useRouter } from "next/router";
-import { useEffect, useState, useRef } from 'react';
 import React from 'react';
 import Head from 'next/head'
 import StructuredData from 'src/pages/StructuredData';
@@ -20,7 +17,7 @@ const Portfolio = () => {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Spiess Tech's Portfolio",
-        "url": "https://spiess.tech/portfolio",
+        "url": "https://spiess.tech/Portfolio",
         "description": "Check out the work and visions we have brought to life.",
         "address": {
             "@type": "PostalAddress",

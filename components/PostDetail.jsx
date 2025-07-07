@@ -26,14 +26,18 @@ export const PostDetail = ({ post }) => {
             target={obj.openInNewTab ? '_blank' : '_self'} 
             rel="noopener noreferrer"
           >
-            {obj.children ? obj.children.map((child, childIndex) => getContentFragment(childIndex, child.text, child)) : text}
+            {obj.children ? obj.children.map((child, childIndex) => 
+              getContentFragment(`${index}-${childIndex}`, child.text, child)
+            ) : text}
           </a>
         );
       } else if (obj.children) {
         modifiedText = (
-          <>
-            {obj.children.map((child, childIndex) => getContentFragment(childIndex, child.text, child))}
-          </>
+          <React.Fragment key={index}>
+            {obj.children.map((child, childIndex) => 
+              getContentFragment(`${index}-${childIndex}`, child.text, child)
+            )}
+          </React.Fragment>
         );
       }
     } else {
@@ -47,8 +51,10 @@ export const PostDetail = ({ post }) => {
     return (
       <ul key={index} className={styles.list}>
         {typeObj.children.map((item, itemIndex) => (
-          <li key={itemIndex} className={styles.listItem}>
-            {item.children ? item.children.map((child, childIndex) => getContentFragment(childIndex, child.text || '', child, child.type)) : ''}
+          <li key={`${index}-item-${itemIndex}`} className={styles.listItem}>
+            {item.children ? item.children.map((child, childIndex) => 
+              getContentFragment(`${index}-${itemIndex}-${childIndex}`, child.text || '', child, child.type)
+            ) : ''}
           </li>
         ))}
       </ul>
@@ -57,20 +63,23 @@ export const PostDetail = ({ post }) => {
 
   const renderContent = (content) => {
     return content.map((typeObj, index) => {
-      const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text || '', item, item.type));
+      const children = typeObj.children.map((item, itemIndex) => 
+        getContentFragment(`content-${index}-${itemIndex}`, item.text || '', item, item.type)
+      );
+      
       switch (typeObj.type) {
         case 'heading-three':
-          return <h3 key={index} className={styles.textXl}>{children}</h3>;
+          return <h3 key={`h3-${index}`} className={styles.textXl}>{children}</h3>;
         case 'paragraph':
-          return <p key={index} className={styles.paragraph}>{children}</p>;
+          return <p key={`p-${index}`} className={styles.paragraph}>{children}</p>;
         case 'heading-four':
-          return <h4 key={index} className={styles.textMd}>{children}</h4>;
+          return <h4 key={`h4-${index}`} className={styles.textMd}>{children}</h4>;
         case 'bulleted-list':
-          return renderList(typeObj, index);
+          return renderList(typeObj, `list-${index}`);
         case 'image':
           return (
             <img
-              key={index}
+              key={`img-${index}`}
               alt={typeObj.title}
               height={typeObj.height}
               width={typeObj.width}
@@ -78,7 +87,7 @@ export const PostDetail = ({ post }) => {
             />
           );
         default:
-          return <span key={index} className={styles.paragraph}>{children}</span>;
+          return <span key={`span-${index}`} className={styles.paragraph}>{children}</span>;
       }
     });
   };
