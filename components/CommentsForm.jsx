@@ -1,102 +1,139 @@
 import React, { useRef, useState, useEffect } from 'react'
 import styles from './styles/Comments.module.css'
-
 import { submitComment } from '../services'
 
 export const CommentsForm = ({ slug }) => {
+    const [error, setError] = useState(false)
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [error, setError] = useState(false)
-  const [localStorage, useLocalStorage] = useState(null);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const commentEl = useRef();
+    const nameEl = useRef();
+    const emailEl = useRef();
+    const storeDataEl = useRef();
 
-  useEffect(() => {
-    nameEl.current.value = window.localStorage.getItem('name');
-    emailEl.current.value = window.localStorage.getItem('email');
-  }, [])
-  
-  const commentEl = useRef();
-  const nameEl = useRef();
-  const emailEl = useRef();
-  const storeDataEl = useRef();
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            nameEl.current.value = window.localStorage.getItem('name') || '';
+            emailEl.current.value = window.localStorage.getItem('email') || '';
+        }
+    }, [])
 
-  const handleCommentSubmission = () => {
-    setError(false);
+    const handleCommentSubmission = async () => {
+        setError(false);
+        setIsSubmitting(true);
 
-    const { value: comment } = commentEl.current;
-    const { value: name } = nameEl.current;
-    const { value: email } = emailEl.current;
-    const { checked: storeData } = storeDataEl.current;
+        const { value: comment } = commentEl.current;
+        const { value: name } = nameEl.current;
+        const { value: email } = emailEl.current;
+        const { checked: storeData } = storeDataEl.current;
 
-    if (!comment || !name || !email) {
-      setError(true);
-      return;
-    }
+        if (!comment || !name || !email) {
+            setError(true);
+            setIsSubmitting(false);
+            return;
+        }
 
-    if (storeData) {
-      window.localStorage.setItem('name', name)
-      window.localStorage.setItem('email', email)
-    } else {
-      window.localStorage.removeItem('name', name)
-      window.localStorage.removeItem('email', email)
-    }
+        if (storeData) {
+            window.localStorage.setItem('name', name)
+            window.localStorage.setItem('email', email)
+        } else {
+            window.localStorage.removeItem('name')
+            window.localStorage.removeItem('email')
+        }
 
-    const commentObj =  { name, email, comment, slug };
+        const commentObj = { name, email, comment, slug };
 
-    submitComment(commentObj)
-      .then((res) => {
-        setShowSuccessMessage(true);
-        setTimeout(() => {
-          setShowSuccessMessage(false);
-        }, 3000);
-      });
-  };
+        try {
+            await submitComment(commentObj);
+            setShowSuccessMessage(true);
+            commentEl.current.value = '';
+            setTimeout(() => {
+                setShowSuccessMessage(false);
+            }, 5000);
+        } catch (err) {
+            setError(true);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
-  return (
-    <div className={styles.commentsFormContainer}>
-        <h1 className={styles.formHeader}>Leave a Reply:</h1>
-        <div className={styles.commentArea}>
-          <textarea 
-            ref={commentEl} 
-            className={styles.commentInput} 
-            placeholder="Comment"
-            name="comment"
-          />
+    return (
+        <div className={styles.formContainer}>
+            <h3 className={styles.formTitle}>Leave a Comment</h3>
+            
+            <div className={styles.form}>
+                <div className={styles.commentGroup}>
+                    <label htmlFor="comment" className={styles.label}>Comment *</label>
+                    <textarea 
+                        id="comment"
+                        ref={commentEl} 
+                        className={styles.textarea} 
+                        placeholder="Share your thoughts..."
+                        rows={6}
+                        required
+                    />
+                </div>
+
+                <div className={styles.inputRow}>
+                    <div className={styles.inputGroup}>
+                        <label htmlFor="name" className={styles.label}>Name *</label>
+                        <input 
+                            id="name"
+                            type="text" 
+                            ref={nameEl}
+                            className={styles.input}
+                            required
+                        />
+                    </div>
+                    <div className={styles.inputGroup}>
+                        <label htmlFor="email" className={styles.label}>Email *</label>
+                        <input 
+                            id="email"
+                            type="email" 
+                            ref={emailEl}
+                            className={styles.input}
+                            required
+                        />
+                    </div>
+                </div>
+
+                <div className={styles.checkboxGroup}>
+                    <input 
+                        className={styles.checkbox} 
+                        ref={storeDataEl} 
+                        type="checkbox" 
+                        id="storeData" 
+                        name="storeData" 
+                    />
+                    <label htmlFor="storeData" className={styles.checkboxLabel}>
+                        Save my name and email for next time
+                    </label>
+                </div>
+
+                {error && (
+                    <p className={styles.error}>
+                        All fields are required. Please fill them out.
+                    </p>
+                )}
+
+                {showSuccessMessage && (
+                    <p className={styles.success}>
+                        Thank you! Your comment has been submitted for review.
+                    </p>
+                )}
+
+                <button 
+                    type="button" 
+                    onClick={handleCommentSubmission}
+                    className={styles.submitButton}
+                    disabled={isSubmitting}
+                >
+                    {isSubmitting ? 'Submitting...' : 'Post Comment'}
+                </button>
+            </div>
         </div>
-        <div className={styles.infoArea}>
-          <input 
-            type="text" 
-            ref={nameEl}
-            placeholder="Name"
-            name="name"
-            className={styles.input}
-          />
-          <input 
-            type="text" 
-            ref={emailEl}
-            placeholder="Email"
-            name="email"
-            className={styles.input}
-          />
-        </div>
-        <div className={styles.inputContainer}>
-          <div>
-            <input className={styles.inputButton} ref={storeDataEl} type='checkbox' id='storeData' name='storeData' value='true' />
-              <label className={styles.label}>Save my name and e-mail for the next time I comment.</label>
-          </div>
-        </div>
-        {error && <p className={styles.errorField}>All fields are required.</p>}
-        <div className={styles.buttonContainer}>
-          <button 
-            type="button" 
-            onClick={handleCommentSubmission}
-            className={styles.button}
-            >
-            Post Comment
-          </button>
-          {showSuccessMessage && <span className={styles.successMessage}>Comment submitted for review.</span>}
-        </div>
-    </div>
-  )
+    )
 }
 
 export default CommentsForm;

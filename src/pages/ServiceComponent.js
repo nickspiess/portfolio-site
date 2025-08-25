@@ -14,9 +14,41 @@ const ServiceCard = ({ title, subtitle, listItems, quote, link, img, alt }) => {
   const router = useRouter();
 
     const [isFlipped, setIsFlipped] = useState(false);
+
+    const handleCardClick = (e) => {
+      e.preventDefault();
+      setIsFlipped(!isFlipped);
+    };
+
+    const handleCardTouch = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setIsFlipped(!isFlipped);
+    };
+
+    const handleTouchEnd = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+
+    const handleMouseEnter = () => {
+      setIsFlipped(true);
+    };
+
+    const handleMouseLeave = () => {
+      setIsFlipped(false);
+    };
   
     return (
-      <div className={styles.pullInCard} onMouseEnter={() => setIsFlipped(true)} onMouseLeave={() => setIsFlipped(false)}>
+      <div 
+        className={styles.pullInCard} 
+        onMouseEnter={handleMouseEnter} 
+        onMouseLeave={handleMouseLeave}
+        onClick={handleCardClick}
+        onTouchStart={handleCardTouch}
+        onTouchEnd={handleTouchEnd}
+        style={{ touchAction: 'manipulation' }}
+      >
         <div className={`${styles.cardInner} ${isFlipped ? styles.isFlipped : ""}`}>
           <div className={styles.cardFront}>
             <h2 className={styles.cardTitle}>{title}</h2>
@@ -38,7 +70,10 @@ const ServiceCard = ({ title, subtitle, listItems, quote, link, img, alt }) => {
                   <li className={styles.listItem} key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
                 ))}
               </ul>
-              <button className={styles.learnMore} onClick={() => router.push(link)}>
+              <button className={styles.learnMore} onClick={(e) => {
+                e.stopPropagation();
+                router.push(link);
+              }}>
                 Learn More
               </button>
               </div>

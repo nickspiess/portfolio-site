@@ -15,7 +15,7 @@ import HyperLedger from '../../public/images/hyperledger.png'
 import Agile from '../../public/images/agile.png'
 import NextJS from '../../public/images/NextJS.png'
 import MongoDB from '../../public/images/mongoDB.png'
-import SCCM from '../../public/images/SCCM.png'
+import Supabase from '../../public/images/supabase.png'
 import CareerExperiences from './CareerExperiences';
 
 const Experience = () => {
@@ -30,7 +30,7 @@ const Experience = () => {
             <CareerExperiences />
         </div>
       <div className={styles.skillSection}>
-        <h2 className={`${styles.sectionTitle}`}>Skills and Technologies</h2>
+        <h2 className={`${styles.sectionTitle}`}> and Technologies</h2>
         <div className={styles.listContainer}>
             <ul className={styles.list}>
                 <li className={`${styles.floating4} ${styles.skillImage}`}><Image className={styles.image} src={Javascript} width={80} alt='JavaScript' />JavaScript</li>
@@ -39,22 +39,22 @@ const Experience = () => {
             </ul>
             <ul className={styles.list}>
                 <li className={`${styles.floating4} ${styles.skillImage}`}><Image className={styles.image} src={ReactIcon} width={80} alt='Reactjs' />React</li>
-                <li className={`${styles.floating3} ${styles.skillImage}`}><Image className={styles.image} src={AWS} width={80} alt='Amazon Web Services' />AWS</li>
-                <li className={`${styles.floating} ${styles.skillImage}`}><Image className={styles.image} src={Git} width={80} alt='Git/Version Control' />Git</li>
+                <li className={`${styles.floating1} ${styles.skillImage}`}><Image className={styles.image} src={NodeJS} width={80} alt='Node.js' />Node.js</li>
+                <li className={`${styles.floating} ${styles.skillImage}`}><Image className={styles.image} src={HyperLedger} width={80} alt='IBM Hyperledger' />Hyperledger</li>
             </ul>
             <ul className={styles.list}>
                 <li className={`${styles.floating1} ${styles.skillImage}`}><Image className={styles.image} src={HTML} width={80} alt='HTML' />HTML</li>
-                <li className={`${styles.floating} ${styles.skillImage}`}><Image className={styles.image} src={HyperLedger} width={80} alt='IBM Hyperledger' />Hyperledger</li>
+                <li className={`${styles.floating2} ${styles.skillImage}`}><Image className={styles.image} src={NextJS} width={80} alt='Nextjs' />NextJS</li>
                 <li className={`${styles.floating2} ${styles.skillImage}`}><Image className={styles.image} src={MongoDB} width={80} alt='MongoDB' />MongoDB</li>
             </ul>
             <ul className={styles.list}>
                 <li className={`${styles.floating4} ${styles.skillImage}`}><Image className={styles.image} src={CSS} width={100} alt='CSS' />CSS</li>
-                <li className={`${styles.floating2} ${styles.skillImage}`}><Image className={styles.image} src={NextJS} width={80} alt='Nextjs' />NextJS</li>
-                <li className={`${styles.floating1} ${styles.skillImage}`}><Image className={styles.image} src={NodeJS} width={80} alt='Node.js' />Node.js</li>
+                <li className={`${styles.floating} ${styles.skillImage}`}><Image className={styles.image} src={Git} width={80} alt='Git/Version Control' />Git</li>
+                <li className={`${styles.floating3} ${styles.skillImage}`}><Image className={styles.image} src={Java} width={80} alt='Java' />Java</li>
             </ul>
             <ul className={styles.list}>
-                <li className={`${styles.floating3} ${styles.skillImage}`}><Image className={styles.image} src={Java} width={80} alt='Java' />Java</li>
-                <li className={`${styles.floating1} ${styles.skillImage}`}><Image className={styles.image} src={SCCM} width={80} alt='SCCM' />SCCM</li>
+                <li className={`${styles.floating1} ${styles.skillImage}`}><Image className={styles.image} src={Supabase} width={80} alt='Supabase' />Supabase</li>
+                <li className={`${styles.floating3} ${styles.skillImage}`}><Image className={styles.image} src={AWS} width={80} alt='Amazon Web Services' />AWS</li>
                 <li className={`${styles.floating2} ${styles.skillImage}`}><Image className={styles.image} src={Agile} width={80} alt='Agile Methdologies' />Agile</li>
             </ul>
         </div>

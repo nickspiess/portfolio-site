@@ -1,0 +1,61 @@
+.themeSwitcherContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .themeSwitcherTitle {
+    margin: 0 0 0.75rem 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .themeButtonsContainer {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .themeButton {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .themeButton:hover {
+    transform: scale(1.1);
+  }
+  
+  .themeButton.active {
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  }
+  
+  .themeButtonNorthern {
+    background: linear-gradient(135deg, #43cea2, #185a9d, #6b54d3);
+  }
+  
+  .themeButtonSunset {
+    background: linear-gradient(135deg, #ff7e5f, #eb4962, #7045af);
+  }
+  
+  .themeButtonOcean {
+    background: linear-gradient(135deg, #00c9b1, #005c97, #363795);
+  }
+  
+  .themeButtonAurora {
+    background: linear-gradient(135deg, #61e786, #1ca7ec, #d957cf);
+  }

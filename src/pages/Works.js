@@ -7,6 +7,12 @@ import styles from '../styles/Works.module.css'
 const Works = () => {
   const experiences = [
     {
+      title: 'Run It',
+      summary: 'A new generation of training has begun.. Coming soon! Come check out what we\'re building.',
+      image: '/images/RunIt.png',
+      link: 'https://run-it-delta.vercel.app',
+    },
+    {
       title: 'Wealth Planning Advisors',
       summary: 'A full brand design and implementation. Design work done in Figma and full custom solution developed HTML/CSS, JS, and PHP and implemented within Wordpress',
       image: '/images/Depth_Large.png',
@@ -23,22 +29,13 @@ const Works = () => {
       summary: 'Web Design overhaul for Preece Financial Planning, bringing their website to life through modern design principles.',
       image: '/images/transparentPFP.png',
       link: 'www.preecefp.com',
-    },
-    {
-      title: 'Run It',
-      summary: 'An automated marathon training platform.. coming soon!',
-      image: '/images/RunIt.png',
-      link: '#',
-    },
+    }
     // Add more experiences here...
   ];
 
 return (
     <>
     <section id='works' className={styles.mainContainer}>
-    <header className={styles.header}> 
-          <h2 className={styles.head2}>Portfolio</h2>
-      </header>
         <div className={`${styles.tileContainer}`}>
         {experiences.map((experience, index) => (
             <ExperienceTile key={index} {...experience} />

@@ -1,0 +1,342 @@
+/* Base Skeleton */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.skeletonShimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* PostCard Skeleton */
+.postContainer {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 240px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.authorPhotoSkeleton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.authorNameSkeleton {
+  width: 100px;
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dateSkeleton {
+  width: 80px;
+  height: 14px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.titleSkeleton {
+  width: 85%;
+  height: 32px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.excerptSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.excerptSkeleton > div {
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.excerptSkeleton > div:nth-child(1) {
+  width: 100%;
+}
+
+.excerptSkeleton > div:nth-child(2) {
+  width: 90%;
+}
+
+.excerptSkeleton > div:nth-child(3) {
+  width: 65%;
+}
+
+.buttonSkeleton {
+  width: 140px;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.5rem;
+}
+
+/* Widget Skeleton */
+.widget {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+}
+
+.widgetTitle {
+  width: 120px;
+  height: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.postsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.postItem {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.smallImageContainer {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.smallContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.smallTitleSkeleton {
+  width: 100%;
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.smallDateSkeleton {
+  width: 60px;
+  height: 12px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Categories Skeleton */
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.categoryItem {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Featured Post Skeleton */
+.featuredContainer {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 300px;
+}
+
+.featuredImageContainer {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+}
+
+.featuredContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.featuredTitleSkeleton {
+  width: 80%;
+  height: 28px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.featuredExcerptSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.featuredExcerptSkeleton > div {
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.featuredExcerptSkeleton > div:nth-child(1) {
+  width: 100%;
+}
+
+.featuredExcerptSkeleton > div:nth-child(2) {
+  width: 75%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .postContainer {
+    padding: 1rem;
+  }
+  
+  .imageContainer {
+    height: 200px;
+    margin-bottom: 1rem;
+  }
+  
+  .meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .titleSkeleton {
+    height: 24px;
+  }
+  
+  .widget {
+    padding: 1rem;
+  }
+  
+  .featuredContainer {
+    height: 250px;
+  }
+  
+  .featuredContent {
+    padding: 1.5rem;
+  }
+  
+  .featuredTitleSkeleton {
+    height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .postContainer {
+    padding: 0.75rem;
+  }
+  
+  .imageContainer {
+    height: 180px;
+  }
+  
+  .authorPhotoSkeleton {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .authorNameSkeleton {
+    width: 80px;
+    height: 14px;
+  }
+  
+  .titleSkeleton {
+    height: 20px;
+  }
+  
+  .excerptSkeleton > div {
+    height: 14px;
+  }
+  
+  .buttonSkeleton {
+    width: 120px;
+    height: 36px;
+  }
+  
+  .widget {
+    padding: 0.75rem;
+  }
+  
+  .featuredContainer {
+    height: 220px;
+  }
+  
+  .featuredContent {
+    padding: 1rem;
+  }
+  
+  .featuredTitleSkeleton {
+    height: 20px;
+  }
+}

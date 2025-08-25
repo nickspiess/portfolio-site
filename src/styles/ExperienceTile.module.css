@@ -1,272 +1,226 @@
-.title {
-    border-radius: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-    background-color: #3a5b95;
-    background: linear-gradient(to bottom, rgba(68, 33, 138, 0.55),rgba(103, 63, 183, 0.9),rgb(123, 81, 205),rgba(103, 63, 183, 0.9), rgba(68, 33, 138, 0.55));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    width: 400px;
-    box-shadow: 
-  0px 0px 3px 1px rgb(208, 208, 208);
-  text-shadow: 4px 4px 8px black;
-}
-
-.titleHeader {
-  padding: 20px;
+.mainContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .experienceTile {
-  box-shadow: 
-  0px 0px 10px 1px rgb(255, 255, 255);
-  background-image: linear-gradient(to bottom, rgba(186, 186, 186, 0.9), rgba(253, 253, 253, 0.9));
-  background-color: white;
-    /* Existing styles */
-
-  width: 400px;
-    transition: transform 0.8s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-    height: 300px;
-    margin: 30px;
-    margin-top: 5px;
-    transition: background-image 0.6s ease-in-out;
-}
-
-.experienceTile:hover {
-  background-image: linear-gradient(to bottom, rgb(231, 231, 231, 1), rgba(231, 231, 231, 0.9));
-  cursor: pointer;
-}
-  
-  .hovered {
-    transform: rotateY(-180deg);
-  }
-
-  .hoveredTile {
-    transform: rotateY(-180deg);
-  }
-  
-  .imageDiv {
-    display: flex;
-    justify-content: center;
-    backface-visibility: hidden;
-    transition: transform 0.5s;
-    margin: 0px;
-  }
-  
-  .projectInfo {
-    /* Existing styles */
-    position: absolute;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: rotateY(180deg);
-    transform-style: preserve-3d;
-    transition: transform 0.3s, opacity 0.8s;
-    backface-visibility: hidden;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
     width: 100%;
-    z-index: -1;
-  }
-
-  .projectInfo button {
-    pointer-events: auto; /* Add this line */
-  }
-  
-  
-  .show {
-
-    opacity: 1;
-    visibility: visible;
-    transform: scaleY(1);
-    pointer-events: auto;
-    z-index: auto;
-  }
-  .hide {
-    opacity: 0;
-    transform: rotateY(-180deg);
-    pointer-events: auto; /* Add this line */
-  }
-
-  .container {
+    min-height: 400px;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.experienceTile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.experienceTile:hover,
+.experienceTile.active {
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.4),
+        0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.titleHeader {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+}
+  
+.imageDiv {
+    flex: 1;
+    display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin: 0;
-  }
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
 
+.image {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+}
 
+.experienceTile:hover .image,
+.experienceTile.active .image {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+}
 
-.mainContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.projectInfo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
-    margin: 0;
+    align-items: center;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    border-radius: 16px;
+    z-index: 3;
+}
+
+.experienceTile:hover .projectInfo,
+.experienceTile.active .projectInfo {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
 }
 
 .summary {
-    color: black;
-    margin-bottom: 1vh;
-    text-shadow: 4px 4px 8px white;
-    line-height: 1.7;
-    font-weight: 600;
-    width: 90%;
-    font-size: 18px;
+    color: #e2e8f0;
+    font-size: 1rem;
+    line-height: 1.6;
     text-align: center;
-    opacity: 1;
-}
-
-.hovered {
-    transform: rotateY(0deg);
-    
-}
-
-.imageDiv {
-
-  width: 20vw;
-  padding: 10px;
-}
-
-
-.img {
+    margin-bottom: 2rem;
+    font-weight: 400;
 }
 
 .projectButton {
-    color: black;
-    background-color: rgb(197, 27, 27);
+    background: rgba(59, 130, 246, 0.9);
     color: white;
-    border-radius: 10px;
-    padding: 12px;
-    letter-spacing: 1px;
-    box-shadow: 
-  0px 0px 5px 1px black;
-  font-weight: 700;
-  margin-top: 15px;
-  transition: transform 0.6s ease-in-out;
-  transition: background-color 0.6s ease-in-out;
-  transition: text-shadow 0.45s ease-in-out;
-  transition: border 0.4s ease-in-out;
-text-shadow: 2px 2px 12px black;
-
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(8px);
+    text-decoration: none;
+    letter-spacing: 0.025em;
 }
 
 .projectButton:hover {
-  color: rgb(197, 27, 27);
-  background-color: white;
-  border: solid rgb(197, 27, 27) 3px;
-transform: translateY(-3px);
-text-shadow: 0px 0px 0px black;
+    background: rgba(59, 130, 246, 1);
+    border-color: rgba(59, 130, 246, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
-
-@media (max-width: 1000px) {
-  .imageDiv {
-    width: 60vw;
-}
-  .image {
- 
-}
-.mainContainer {
-
-}
-
-.titleHeader {
-  padding: 20;
-}
-
-.title {
-  padding: 0px;
-  margin: 0;
-  margin-bottom: 40px;
-  width: 70vw;
+.show,
+.hide {
+    transition: all 0.3s ease;
 }
 
 .container {
-  height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
-.titleHeader {
-  width: 50vw;
+/* Specific styling for Preece Financial Planning card */
+.preeceCard .imageDiv {
+    background: white !important;
 }
 
-.title {
-  padding: 0;
-  width: 50vw;
+
+@media (max-width: 768px) {
+    .mainContainer {
+        max-width: 90vw;
+    }
+    
+    .experienceTile {
+        padding: 1.5rem;
+        min-height: 350px;
+    }
+    
+    .titleHeader {
+        font-size: 1.25rem;
+    }
+    
+    .summary {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .projectButton {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.85rem;
+    }
 }
 
-.experienceTile {
-
-  width: 50vw;
-  margin-bottom: 80px;
-
-}
-}
-
-@media (max-width: 600px) {
-
-  .experienceTile {
-
-    width: 60vw;
-    margin-bottom: 80px;
-
-  }
-
-}
-
-@media (max-width: 500px) {
-  .imageDiv {
-    width: 60vw;
-}
-  .image {
- 
-}
-.mainContainer {
-
-}
-
-.titleHeader {
-  padding: 20;
-}
-
-.title {
-  padding: 0px;
-  margin: 0;
-  margin-bottom: 40px;
-  width: 70vw;
-}
-
-.container {
-  height: 100%;
-}
-
-.titleHeader {
-  width: 50vw;
-}
-
-.title {
-  padding: 0;
-  width: 70vw;
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.experienceTile {
-
-  width: 70vw;
-  height: 400px;
-
-}
+@media (max-width: 480px) {
+    .mainContainer {
+        max-width: 95vw;
+    }
+    
+    .experienceTile {
+        padding: 1.25rem;
+        min-height: 320px;
+    }
+    
+    .titleHeader {
+        font-size: 1.125rem;
+    }
+    
+    .projectInfo {
+        padding: 1.5rem;
+    }
+    
+    .summary {
+        font-size: 0.85rem;
+        margin-bottom: 1.25rem;
+    }
 }
 

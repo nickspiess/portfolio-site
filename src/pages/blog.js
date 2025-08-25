@@ -6,10 +6,23 @@ import Head from 'next/head';
 import BlogHeader from './BlogHeader';
 import Footer from './BlogFooter';
 import { PostCard, Categories, PostWidget } from '../../components/';
+import { PostCardSkeleton, PostWidgetSkeleton, CategoriesSkeleton, FeaturedPostSkeleton } from '../../components/SkeletonLoader';
 import { getPosts } from '../../services';
 import { FeaturedPosts } from '../../sections';
+import { useState, useEffect } from 'react';
 
 const blog = ({ posts }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading state
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <div className={styles.blog}>
@@ -17,30 +30,64 @@ const blog = ({ posts }) => {
           <BlogHeader />
         </div>
         
-        <div className={styles.mainContainer}>
+        <div className={styles.container}>
           <Head>
             <title>Ordo Ab Chao</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <h1 className={styles.featuredPostHeader}>
-            Featured Posts
-          </h1>
-          <FeaturedPosts />
-          <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-            <div className="lg:col-span-8 col-span-1">
-              <div className={styles.posts}>
-                {posts.map((post) => (
-                  <PostCard post={post.node} key={post.node.id} /> // Ensure each post has a unique key
-                ))}
-              </div>
+          
+          <header className={styles.header}>
+            <div className={styles.headerContent}>
+              <h1 className={styles.title}>Ordo Ab Chao</h1>
+              <p className={styles.subtitle}>Thoughts, insights, and explorations</p>
             </div>
-            <div className="lg:col-span-4 col-span-1">
-              <div className={styles.sideContainer}>
-                <PostWidget />
-                <Categories />
-              </div>
+          </header>
+
+          <div className={styles.featured}>
+            <div className={styles.featuredContent}>
+              <h2 className={styles.featuredTitle}>Featured</h2>
+              {isLoading ? (
+                <FeaturedPostSkeleton />
+              ) : (
+                <FeaturedPosts />
+              )}
             </div>
           </div>
+
+          <main className={styles.main}>
+            <div className={styles.content}>
+              <section className={styles.postsSection}>
+                <h2 className={styles.postsTitle}>Recent Posts</h2>
+                <div className={styles.posts}>
+                  {isLoading ? (
+                    <>
+                      <PostCardSkeleton />
+                      <PostCardSkeleton />
+                      <PostCardSkeleton />
+                    </>
+                  ) : (
+                    posts.map((post) => (
+                      <PostCard post={post.node} key={post.node.id} />
+                    ))
+                  )}
+                </div>
+              </section>
+              
+              <aside className={styles.sidebar}>
+                {isLoading ? (
+                  <>
+                    <PostWidgetSkeleton />
+                    <CategoriesSkeleton />
+                  </>
+                ) : (
+                  <>
+                    <PostWidget />
+                    <Categories />
+                  </>
+                )}
+              </aside>
+            </div>
+          </main>
         </div>
         <div>
           <Footer />

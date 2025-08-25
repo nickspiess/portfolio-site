@@ -116,9 +116,9 @@ export const PostDetail = ({ post }) => {
           </p>
         </div>
         <div className={styles.info}>
-          <span className={styles.createdAt}>
-            {moment(post.createdAt).format('MMM DD, YYYY')}
-          </span>
+          <time className={styles.createdAt} dateTime={post.createdAt}>
+            {moment(post.createdAt).format('MMMM DD, YYYY')}
+          </time>
         </div>
         <div className={styles.contentHolder}>
           {renderContent(post.content.raw.children)}
