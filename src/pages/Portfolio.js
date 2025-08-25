@@ -49,6 +49,12 @@ const Portfolio = () => {
         <StructuredData data={structuredData} />
             <div className={styles.background}>
             <Navbar />
+            <div className={styles.heroSection}>
+                <div className={styles.heroContent}>
+                    <h1 className={styles.heroTitle}>Portfolio</h1>
+                    <p className={styles.heroSubtitle}>Explore the work and visions we have brought to life</p>
+                </div>
+            </div>
                 <Works />
                 <Experience />
             <Footer />

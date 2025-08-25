@@ -1,44 +1,162 @@
+/* Root styles */
+.blog {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.6;
+  color: #2c3e50;
+  background: #fefefe;
+  min-height: 100vh;
+}
+
+/* Main container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08);
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Header section */
+.header {
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  padding: 8rem 3rem 4rem;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: center;
+  margin: 0 -2rem;
+  margin-top: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.headerContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: #1a202c;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  font-family: 'Georgia', serif;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #64748b;
+  font-weight: 400;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Featured section */
+.featured {
+  background: #f8fafc;
+  padding: 4rem 3rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin: 0 -2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.featuredContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.featuredTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
+/* Main content */
+.main {
+  padding: 5rem 3rem 6rem;
+  position: relative;
+  z-index: 2;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.postsSection {
+  min-width: 0;
+}
+
+.postsTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 2rem;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
 
 .posts {
-  color: black;
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  margin-bottom: 40px;
+  gap: 3rem;
 }
 
-.blog {
-  padding: 0;
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 2rem;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
-.blog:before{
-  content:'';
-  content: "";
-  width: 100%;
-  height: 100vh;
-  background: #D3D3D3;
-  background-image: url("../../public/images/coast.webp");
-  opacity: .5;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+/* Legacy support */
+.mainContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  min-height: 100vh;
 }
 
-/* styles.module.css */
+.featuredPostHeader {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  margin-top: 40px;
+}
+
+.sideContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Navbar styles (keeping existing) */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; /* Adjust based on your design */
-  background-color: transparent; /* Example background color */
+  padding: 0 20px;
+  background-color: transparent;
   margin-bottom: 50px;
   padding-top: 40px;
 }
@@ -48,8 +166,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 20px; /* Adjust based on your design */
-  background-color: transparent; /* Example background color */
+  padding: 0 20px;
+  background-color: transparent;
   margin-bottom: 20px;
   margin-top: 40px;
   padding-top: 20px;
@@ -71,23 +189,6 @@
   margin-top: 22px;
 }
 
-.featuredPostHeader {
-  text-align: center;
-  margin-top: 60px;
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 40px;
-  text-decoration: underline;
-  letter-spacing: 2px;
-  background: linear-gradient(0deg, rgba(19, 120, 148, 0.85) 0%, rgba(4,39,73, 0.85) 50%, rgba(11, 92, 114, 0.85) 100%);
-  padding: 15px;
-  padding-left: 80px;
-  padding-right: 80px;
-  border-radius: 20px;
-  color: white;
-  box-shadow: 0 0 10px rgb(208, 197, 197), 0px 3px 12px 3px rgba(64, 155, 203, 0.5);
-}
-
 .recentPostHeader {
   text-shadow: rgb(255, 255, 255) 1px 0 10px;
   font-size: 24px;
@@ -95,15 +196,6 @@
   padding-bottom: 30px;
   text-decoration: underline;
   text-align: center;
-}
-
-.mainContainer {
-  display: flex;  /* Use flexbox to center the child */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  width: 90%;
-  flex-direction: column;
-  margin: auto;
 }
 
 .navLinks {
@@ -122,17 +214,17 @@
   gap: 40px;
   margin-top: 12px;
   list-style: none;
-  margin-bottom:  16px;
+  margin-bottom: 16px;
   font-size: 24px;
   font-weight: 800;
 }
 
 .navLinkPost {
-  margin-left: 20px; /* Space between links */
+  margin-left: 20px;
   text-decoration: none;
   letter-spacing: 1.5px;
-  color: rgb(255, 255, 255); /* Link color */
-  font-size: 18px; /* Adjust based on your design */
+  color: rgb(255, 255, 255);
+  font-size: 18px;
   transition: all .5s ease;
   text-shadow: rgb(83, 128, 218) 1px 2px 10px;
 }
@@ -142,11 +234,11 @@
 }
 
 .navLink {
-  margin-left: 20px; /* Space between links */
+  margin-left: 20px;
   text-decoration: none;
   letter-spacing: 1.5px;
-  color: #333; /* Link color */
-  font-size: 24px; /* Adjust based on your design */
+  color: #333;
+  font-size: 24px;
   transition: all .5s ease;
   text-shadow: rgb(255, 255, 255) 1px 4px 10px;
 }
@@ -154,8 +246,8 @@
 .footerNavLink {
   text-decoration: none;
   letter-spacing: 1.5px;
-  color: #333; /* Link color */
-  font-size: 20px; /* Adjust based on your design */
+  color: #333;
+  font-size: 20px;
   transition: all .5s ease;
   text-shadow: rgb(255, 255, 255) 1px 4px 10px;
 }
@@ -165,44 +257,158 @@
   text-shadow: rgb(255, 255, 255) 1px 0 10px;
 }
 
-.sideContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .header {
+    padding: 5rem 2.5rem 3.5rem;
+    margin: 0 -1.5rem;
+  }
+  
+  .featured {
+    padding: 2.5rem 2.5rem;
+    margin: 0 -1.5rem;
+  }
+  
+  .main {
+    padding: 3.5rem 2.5rem;
+  }
+  
+  .content {
+    gap: 4rem;
+  }
 }
 
-@media (max-width: 950px) {
-  .navLinks {
-    display: flex;
-    justify-content: flex-end;
-    gap: 30px;
-    list-style: none;
-    margin-right: 80px;
-    font-size: 22px;
-    font-weight: 800;
+/* iPad and large tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
+  
+  .sidebar {
+    position: static;
+    order: -1;
+  }
+  
+  .container {
+    padding: 0 3rem;
+  }
+  
+  .header {
+    padding: 8rem 4rem 5rem;
+    margin: 0 -3rem;
+  }
+  
+  .headerContent {
+    max-width: 800px;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .featured {
+    padding: 5rem 4rem;
+    margin: 0 -3rem;
+  }
+  
+  .main {
+    padding: 6rem 4rem 7rem;
+  }
+  
+  .posts {
+    gap: 3.5rem;
+  }
+}
 
-  .logo {
-    width: 160px;
-    height: auto;
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .sidebar {
+    position: static;
+    order: -1;
+  }
+  
+  .container {
+    padding: 0 2rem;
+  }
+  
+  .header {
+    padding: 7rem 3rem 4rem;
+    margin: 0 -2rem;
+  }
+  
+  .featured {
+    padding: 4rem 3rem;
+    margin: 0 -2rem;
+  }
+  
+  .main {
+    padding: 5rem 3rem 6rem;
+  }
+  
+  .posts {
+    gap: 3rem;
   }
 }
 
 @media (max-width: 768px) {
-
-  .featuredPostHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    font-size: 20px;
+  .container {
+    padding: 0 1.5rem;
+    box-shadow: none;
   }
-
+  
+  .header {
+    padding: 6rem 2.5rem 3rem;
+    margin: 0 -1.5rem;
+  }
+  
+  .title {
+    font-size: 2.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .featured {
+    padding: 4rem 2.5rem;
+    margin: 0 -1.5rem;
+  }
+  
+  .main {
+    padding: 4rem 2.5rem 5rem;
+  }
+  
+  .content {
+    gap: 3rem;
+  }
+  
+  .posts {
+    gap: 2.5rem;
+    width: 80vw;
+    margin: auto;
+  }
+  
   .navbar {
     padding-top: 0;
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
+  
   .logo {
     margin: auto;
     margin-bottom: 30px;
@@ -219,6 +425,7 @@
     margin-top: 10px;
     margin-bottom: 0px;
   }
+  
   .footerNavLinks {
     gap: 10%;
     margin: 0;
@@ -234,11 +441,44 @@
     justify-content: center;
     align-items: center;
   }
-
 }
 
-@media (max-width: 425px) {
-
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .header {
+    padding: 5rem 1.5rem 2.5rem;
+    margin: 0 -1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+  
+  .featured {
+    padding: 3rem 1.5rem;
+    margin: 0 -1rem;
+  }
+  
+  .main {
+    padding: 3.5rem 1.5rem 4rem;
+  }
+  
+  .content {
+    gap: 2.5rem;
+  }
+  
+  .posts {
+    gap: 2rem;
+  }
+  
   .logo {
     width: 150px;
   }
@@ -249,8 +489,40 @@
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 425px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+  
+  .title {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .header {
+    padding: 4.5rem 1.25rem 2rem;
+    margin: 0 -0.75rem;
+  }
+  
+  .featured {
+    padding: 2.5rem 1.25rem;
+    margin: 0 -0.75rem;
+  }
+  
+  .main {
+    padding: 3rem 1.25rem 3.5rem;
+  }
+  
+  .content {
+    gap: 2rem;
+  }
+  
+  .posts {
+    gap: 1.75rem;
+  }
+}
 
+@media (max-width: 380px) {
   .navLink {
     font-size: 22px;
   }
@@ -260,7 +532,6 @@
 }
 
 @media (max-width: 360px) {
-
   .navLink {
     font-size: 20px;
   }
@@ -270,7 +541,6 @@
 }
 
 @media (max-width: 320px) {
-
   .navLink {
     font-size: 18px;
   }

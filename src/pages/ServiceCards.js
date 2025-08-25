@@ -1,7 +1,63 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/ServiceCard.module.css';
 import Image from 'next/image';
-// ... import other images
+
+const ServiceCard = ({ service, index }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleCardMouseEnter = () => {
+    setIsFlipped(true);
+  };
+
+  const handleCardMouseLeave = () => {
+    setIsFlipped(false);
+  };
+
+  const handleCardClick = (e) => {
+    e.preventDefault();
+    setIsFlipped(!isFlipped);
+  };
+
+  const handleCardTouch = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsFlipped(!isFlipped);
+  };
+
+  const handleTouchEnd = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  return (
+    <div 
+      className={`${styles.floating} ${styles.card}`} 
+      key={index}
+      style={{ animationDuration: `${Math.random() * 5 + 3}s`, touchAction: 'manipulation' }}
+      onMouseEnter={handleCardMouseEnter} 
+      onMouseLeave={handleCardMouseLeave}
+      onClick={handleCardClick}
+      onTouchStart={handleCardTouch}
+      onTouchEnd={handleTouchEnd}
+    >
+      <div className={`${styles.cardInner} ${isFlipped ? styles.isFlipped : ""}`}>
+        <div className={styles.cardFront}>
+          <Image 
+            className={styles.image} 
+            src={service.image} 
+            alt={service.title} 
+            width={300} 
+            height={200}
+          />
+          <h3 className={styles.title}>{service.title}</h3>
+        </div>
+        <div className={styles.cardBack}>
+          <p>{service.description}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
     const services = [
         {
@@ -65,21 +121,7 @@ import Image from 'next/image';
         return (
           <div className={styles.cardContainer}>
             {services.map((service, index) => (
-                      <div 
-                      className={`${styles.floating} ${styles.card}`} 
-                      key={index}
-                      style={{ animationDuration: `${Math.random() * 5 + 3}s` }} // Random duration between 1 and 6 seconds
-                    >
-                <div className={styles.cardInner}>
-                  <div className={styles.cardFront}>
-                    <Image className={styles.image} src={service.image} alt={service.title} width={300} height={200} />
-                    <h3 className={styles.title}>{service.title}</h3>
-                  </div>
-                  <div className={styles.cardBack}>
-                    <p>{service.description}</p>
-                  </div>
-                </div>
-              </div>
+              <ServiceCard key={index} service={service} index={index} />
             ))}
           </div>
         );

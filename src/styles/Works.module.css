@@ -1,115 +1,69 @@
 
-  .header {
+.mainContainer {
+    position: relative;
+    z-index: 1;
+    padding: 0rem 2rem 6rem;
+    background: transparent;
+}
+
+.header {
     display: flex;
-    justify-content: left;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 100px;
-    margin-top: -17px;
-    margin-left: 180px;
-    border-radius: 30px;
-    text-align: left;
-  }
-  
-  
-  .head1 {
-    margin-top: 280px;
-    color: white;
-    text-shadow: 4px 4px 8px black;
-    font-size: 70px;
-    font-weight: lighter;
-    text-align: left;
-    letter-spacing:2px;
-
-  }
-  .head2 {
-    margin-top:330px;
-    text-align: left;
-    color: white;
-    text-shadow: 4px 4px 8px black;
-    font-size: 60px;
-    font-weight:600;
-    letter-spacing:4px;
-  }
-
-.floating { 
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    margin-left: 30px;
-    margin-top: 5px;
-  }
-  
-  @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 5px); }
-    100%   { transform: translate(0, -0px); }   
-  }
-
-  .mainContainer {
-    background-image: url('/images/PortfolioBackground.webp');
-    display: block;
-    height: 100%;
-    padding-bottom: 90px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
     text-align: center;
-    margin: 0 auto;
-    width: 100%; /* Ensure full width */
-    box-sizing: border-box; /* Include padding in the width */
+}
+
+.head2 {
+    color: white;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.head2::after {
+    content: '';
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), transparent);
+    border-radius: 2px;
 }
 
 .tileContainer {
-  margin-top: 280px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0px;
-  justify-items: center;
-  align-items: start;
-  padding: 0px;
-  width: 100%; /* Constrain grid to parent width */
-  box-sizing: border-box; /* Prevent padding from adding extra width */
-}
-
-@media (max-width: 1200px) {
-  .header {
-    margin-left: 140px;
-  }
-}
-
-@media (max-width: 1000px) {
-
-  .tileContainer {
-    grid-template-columns: 1fr; /* Switch to a single column on smaller screens */
-  }
-
-  .header {
-
-    margin-bottom: 100px;
-    margin-left: 140px;
-  }
-
-  .head2 {
-    
-    margin-bottom: 100px;
-  }
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
 }
 
 @media (max-width: 768px) {
+    .mainContainer {
+        padding: 2rem 1rem 4rem;
+    }
+    
+    .header {
+        margin-bottom: 2rem;
+    }
+    
+    .tileContainer {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        width: 80vw;
+    }
+}
 
-  .mainContainer {
-    background-image: url('/images/PortfolioBackgroundMobile.webp');
-  }
-
-  .head2 {
-    margin-top: 250px;
-    font-size: 42px;
-    margin-right: 40px;
-  }
-
-  .header {
-    margin-left: 110px;
-
-  }
+@media (max-width: 480px) {
+    .mainContainer {
+        padding: 1.5rem 0.75rem 3rem;
+    }
 
 }

@@ -77,9 +77,10 @@ const Services = () => {
                 <link rel="canonical" href={`https://spiess.tech/Services`} />
         </Head>
         <StructuredData data={structuredData} />
+        <Navbar />
       <div className={styles.background}>
+        <div className={styles.pageBackground}></div>
           <div className={styles.serviceHeader}>
-          <Navbar />
           <div className={styles.videoWrapper}>
             <video 
               autoPlay 

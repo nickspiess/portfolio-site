@@ -1,64 +1,92 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import styles from '../../styles/Slug.module.css'
-
-import Navbar from '../BlogHeader';
+import styles from '../../styles/CategoryPage.module.css'
+import BlogHeader from '../BlogHeader';
 import BlogFooter from '../BlogFooter';
 import { getCategories, getCategoryPost } from '../../../services';
-import { PostCardCategorySlug, CategoriesCat, Loader } from '../../../components';
+import { PostCard, Categories, Loader } from '../../../components';
 import Head from 'next/head'
 
+const CategoryPost = ({ posts, categoryName }) => {
+    const router = useRouter();
 
-const CategoryPost = ({ posts }) => {
+    if (router.isFallback) {
+        return <Loader />;
+    }
 
-  const router = useRouter();
+    return (
+        <>
+            <Head>
+                <title>{categoryName ? `${categoryName} - Ordo Ab Chao` : 'Category - Ordo Ab Chao'}</title>
+                <link rel="icon" href="/ordoabchao.ico" />
+                <meta name="description" content={`Posts in ${categoryName || 'this category'}`} />
+            </Head>
+            
+            <div className={styles.page}>
+                <BlogHeader />
+                
+                <main className={styles.main}>
+                    <div className={styles.container}>
+                        <header className={styles.header}>
+                            <h1 className={styles.title}>
+                                {categoryName || 'Category'}
+                            </h1>
+                            <p className={styles.subtitle}>
+                                {posts.length} post{posts.length !== 1 ? 's' : ''} in this category
+                            </p>
+                        </header>
 
-  if (router.isFallback) {
-    return <Loader />;
-  }
-
-  return (
-<>
-    <Head>
-    <title>Ordo Ab Chao</title>
-    <link rel="icon" href="/ordoabchao.ico" />
-    </Head>
-    <div className={styles.categoryBackground}>
-      <Navbar />
-      <div className={styles.categoryContainer}>
-        <div className={styles.posts}>
-          {posts.map((post, index) => (
-            <PostCardCategorySlug key={index} post={post.node} />
-          ))}
-        </div>
-        <div className={styles.categoryContainer}>
-          <div className={styles.categorySubContainer}>
-            <CategoriesCat />
-          </div>
-        </div>
-      </div>
-      <BlogFooter />
-    </div>
-    </>
-  );
+                        <div className={styles.content}>
+                            <section className={styles.postsSection}>
+                                <div className={styles.posts}>
+                                    {posts.map((post) => (
+                                        <PostCard key={post.node.id} post={post.node} />
+                                    ))}
+                                </div>
+                                
+                                {posts.length === 0 && (
+                                    <div className={styles.emptyState}>
+                                        <h3>No posts found</h3>
+                                        <p>There are no posts in this category yet.</p>
+                                    </div>
+                                )}
+                            </section>
+                            
+                            <aside className={styles.sidebar}>
+                                <Categories />
+                            </aside>
+                        </div>
+                    </div>
+                </main>
+                
+                <BlogFooter />
+            </div>
+        </>
+    );
 };
+
 export default CategoryPost;
 
-// Fetch data at build time
 export async function getStaticProps({ params }) {
-  const posts = await getCategoryPost(params.slug);
+    const posts = await getCategoryPost(params.slug);
+    const categories = await getCategories();
+    
+    // Find the category name
+    const category = categories.find(cat => cat.slug === params.slug);
+    const categoryName = category ? category.name : null;
 
-  return {
-    props: { posts },
-  };
+    return {
+        props: { 
+            posts: posts || [],
+            categoryName 
+        },
+    };
 }
 
-// Specify dynamic routes to pre-render pages based on data.
-// The HTML is generated at build time and will be reused on each request.
 export async function getStaticPaths() {
-  const categories = await getCategories();
-  return {
-    paths: categories.map(({ slug }) => ({ params: { slug } })),
-    fallback: true,
-  };
+    const categories = await getCategories();
+    return {
+        paths: categories.map(({ slug }) => ({ params: { slug } })),
+        fallback: true,
+    };
 }

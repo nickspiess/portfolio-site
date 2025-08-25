@@ -1,164 +1,203 @@
-.imgContainer {
-  position: relative; /* This is crucial for absolute children to be positioned correctly */
-  height: 300px; /* Set the height to the desired value */
-  width: 100%;
-  margin-bottom: 100px;
+/* Featured Post Card */
+.card {
+    position: relative;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
 }
 
-.imageSlide {
-  position: absolute; /* Positioned absolutely to its first positioned ancestor */
-  top: 0; /* Align top edge with the container's top edge */
-  left: 0; /* Align left edge with the container's left edge */
-  right: 0; /* Align right edge with the container's right edge */
-  bottom: 0; /* Align bottom edge with the container's bottom edge */
-  display: flex; /* Use flexbox to center content */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  opacity: 0; /* Start out transparent */
-  transition: opacity 1s ease; /* Smooth transition for opacity changes */
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.imageSlide:active {
-  opacity: 1; /* Make active slide fully opaque */
-}
-
-
-.featuredCard {
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%; /* Ensures the card takes full width of its parent */
-  height: 100%; /* Ensures the card takes full height of its parent */
-  overflow: hidden; /* Keeps any overflowing content from being visible */
-  border-radius: 12px; /* Optional: For rounded corners if you need them */
+.link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
 }
 
 .imageContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px; /* Ensure consistency with .featuredCard */
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(156, 163, 175, 0.5), rgba(55, 65, 81, 0.7), rgba(0, 0, 0, 0.9));
-  border-radius: 12px; /* Matches .featuredCard and .imageContainer */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0px;
-  color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-end;
 }
 
-  
-  .imageContainer {
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+.content {
+    color: white;
+    width: 100%;
+}
 
-    position: absolute; /* Ensure full coverage within .featuredCard */
-    width: 300px;
-    height: 100%; /* Updated to fill .featuredCard */
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px; /* Ensure consistency with .featuredCard */
-  }
-  
-  .overlay {
+.date {
+    font-size: 0.875rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 0 0 0.75rem 0;
+    font-family: 'Georgia', serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.authorImage {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+.authorName {
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Legacy styles for backwards compatibility */
+.imgContainer {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.imageSlide {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(156, 163, 175, 0.5), rgba(55, 65, 81, 0.7), rgba(0, 0, 0, 0.9));
-    border-radius: 12px; /* Match the .featuredCard and .imageContainer */
-  }
-  
-  
-  .info {
-    position: absolute; /* Adjusted for absolute positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.imageSlide:active {
+    opacity: 1;
+}
+
+.featuredCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.info {
+    position: absolute;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Center content */
-    gap: 0px; /* Maintain gap for visual spacing */
-    color: #fff; /* Ensure text color is white for readability */
-  }
-  
-  .date {
-    font-style: italic;
-    margin-bottom: 45px; /* Adjust spacing */
-    font-weight: 600;
-    font-size: 14px; /* Adjusted for consistency */
-  }
-
-  .itemMargin {
-    margin: 0 0 32px 42px; /* Adjust the 32px to whatever value you need */
-    
+    align-items: center;
+    gap: 0px;
+    color: #fff;
 }
 
-  .carousel-item-padding {
-    padding: 0 16px; /* Adjust the horizontal padding if needed */
-    margin-right: 24px; /* Add margin to create gaps between items */
-    margin-left: 24px; /* Add margin to create gaps between items */
-  }
-  
-  .title {
-    font-weight: 600;
-    font-size: 28px; /* Adjusted for visual hierarchy */
-    text-align: center;
-    color: white; /* Ensure readability */
-    text-decoration: none; /* Maintain your style */
-    margin: 0; /* Reset margin */
-    margin-bottom: 110px; /* Adjusted spacing */
-    margin-top: 30px;
-    transition: all 0.5s;
-  }
+.itemMargin {
+    margin: 0 0 32px 42px;
+}
 
-  .title:hover {
-    color: rgb(238, 238, 238);
-    text-shadow: rgb(94, 94, 94) 1px 4px 10px;
+.carousel-item-padding {
+    padding: 0 16px;
+    margin-right: 24px;
+    margin-left: 24px;
+}
 
-  }
-  
-  .authorInfo {
+.authorInfo {
     display: flex;
     align-items: center;
     position: absolute;
-    bottom: 30px; /* Position at the bottom */
+    bottom: 30px;
     width: 100%;
     justify-content: center;
-    gap: 10px; /* Maintain gap between image and name */
-  }
-  
-  .authorImage {
-    height: 32px;
-    width: auto;
-    border-radius: 50%; /* Ensure circular images */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
-  }
-  
-  .authorName {
-    font-weight: 500;
-    color: #fff; /* Ensure text color is white for readability */
-    margin: 0; /* Reset margin */
-  }
-  
-  .postNameLink {
+    gap: 10px;
+}
+
+.postNameLink {
     font-weight: 600;
     color: #fff;
     text-decoration: underline;
     cursor: pointer;
-  }
-  
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .card {
+        height: 280px;
+    }
+    
+    .overlay {
+        padding-bottom: 50px;
+    }
+    
+    .title {
+        font-size: 1.25rem;
+    }
+    
+    .date {
+        font-size: 0.8rem;
+    }
+    
+    .authorName {
+        font-size: 0.8rem;
+    }
+    
+    .authorImage {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: 250px;
+    }
+
+    .title {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+    }
+}

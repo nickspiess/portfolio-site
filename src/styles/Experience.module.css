@@ -2,30 +2,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
-  margin-top: 180px;
-  width: 60%;
-  border-radius: 30px;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .sectionContainer {
-  background: rgb(0,61,34);
-background: linear-gradient(0deg, rgb(115, 146, 188) 0%, rgb(99, 130, 195) 18%, rgba(47, 77, 123,1) 50%,
- rgb(47, 77, 123) 79%, rgb(25, 28, 30) 100%);
+  position: relative;
+  background: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
+  padding: 4rem 2rem 6rem;
 }
 
 .listContainer {
-  color: black;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-  gap: 4.5vw;
-  margin-bottom: 150px;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .list {
@@ -33,27 +33,42 @@ background: linear-gradient(0deg, rgb(115, 146, 188) 0%, rgb(99, 130, 195) 18%, 
   padding: 0;
   list-style-type: none;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  gap: 40px; /* Adjust the gap as per your preference */
+  gap: 2rem;
+  flex: 1;
 }
 
 .skillImage {
-  font-size: 20px;
+  font-size: 0.9rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0px;
-  flex: 1;
-  min-width: 150px; /* Adjust the min-width as per your preference */
-  max-width: 300px; /* Adjust the max-width as per your preference */
-  transition: opacity 0.3s ease;
-  color: white;
-  text-shadow: 1px 2px 2px black;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  color: #e2e8f0;
   font-weight: 500;
+  min-width: 120px;
+  cursor: pointer;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.skillImage:hover {
+  transform: translateY(-4px);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    0 4px 12px rgba(59, 130, 246, 0.2);
 }
 .floating { 
   animation-name: floating;
@@ -162,12 +177,26 @@ background: linear-gradient(0deg, rgb(115, 146, 188) 0%, rgb(99, 130, 195) 18%, 
 }
 
 .head {
-
   text-align: center;
   color: white;
-  text-shadow: 4px 4px 8px black;
-  font-size: 40px;
-  font-weight: bold;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.head::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), transparent);
+  border-radius: 2px;
 }
 
 .resumeContainer {
@@ -181,7 +210,7 @@ background: linear-gradient(0deg, rgb(115, 146, 188) 0%, rgb(99, 130, 195) 18%, 
   margin-top: 75px;
 }
 
-.skillSection {
+.ection {
   width: 50%;
   margin: auto;
   display: flex;
@@ -191,20 +220,29 @@ background: linear-gradient(0deg, rgb(115, 146, 188) 0%, rgb(99, 130, 195) 18%, 
 }
 
 .sectionTitle {
-  display:  flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100%;
-  text-align: center;
   color: white;
-  text-shadow: 4px 4px 8px black;
-  font-size: 38px;
-  margin: auto;
-  font-weight: bold;
-  margin-top: 200px;
-  margin-bottom: 150px;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  margin: 6rem auto 4rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
 
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.8), transparent);
+  border-radius: 2px;
 }
 
 
@@ -259,100 +297,61 @@ background: linear-gradient(0deg, rgb(115, 146, 188) 0%, rgb(99, 130, 195) 18%, 
   margin-bottom: 8px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1024px) {
   .listContainer {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 75px;
+    gap: 3rem;
   }
+  
   .list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-wrap:nowrap;
-    gap: 1vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
   }
-
 }
 
 @media (max-width: 768px) {
-  .header {
-
-    margin-top: calc(5vh + 130px);
-}
-}
-
-
-@media (max-width: 600px) {
-
-  .sectionTitle {
-    display: flex;
-    justify-content: center;
-
+  .sectionContainer {
+    padding: 2rem 1rem 4rem;
   }
-
-.image {
-  margin-bottom: 10px;
-  width: 75px;
-  height: 75px;
-}
-.list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap:nowrap;
-  gap: 0vw;
-}
-.skillImage {
-  margin: 40px;
-  flex: 1;
-  min-width: 70px; /* Adjust the min-width as per your preference */
-}
-
-}
-
-@media (max-width: 500px) {
-
-  .header {
-    height: 100px;
-    margin-bottom: -5vh;
-    width: 80%;
+  
+  .listContainer {
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
-
-.image {
-  margin-bottom: 10px;
-  width: 50px;
-  height: 50px;
-}
-.list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-wrap:nowrap;
-  gap: 0vw;
-}
-.skillImage {
-  margin: 25px;
-  min-width: 50px; /* Adjust the min-width as per your preference */
-}
-
-}
-
-@media (max-width: 450px) {
-
+  
   .skillImage {
-    font-size: 16px;
+    padding: 1rem;
+    min-width: 100px;
+    font-size: 0.8rem;
+  }
+  
+  .sectionTitle {
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionContainer {
+    padding: 1.5rem 0.75rem 3rem;
+  }
+  
+  .list {
+    gap: 0.75rem;
+  }
+  
+  .skillImage {
+    padding: 0.75rem;
+    min-width: 80px;
+    font-size: 0.75rem;
+  }
+  
+  .image {
+    margin-bottom: 8px;
+    width: 40px !important;
+    height: 40px !important;
   }
 
-.image {
-  margin-bottom: 10px;
-  width: 60px;
-
-}
 }
