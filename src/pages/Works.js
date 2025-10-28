@@ -7,6 +7,12 @@ import styles from '../styles/Works.module.css'
 const Works = () => {
   const experiences = [
     {
+      title: 'Preece Financial Services',
+      summary: 'Authorable custom-built web application for Preece Financial Services built in Payload CMS, TypeScript and React.',
+      image: '/images/PreeceFinancialServices.webp',
+      link: 'www.preecefp.com',
+    },
+    {
       title: 'Run It',
       summary: 'A new generation of training has begun.. Coming soon! Come check out what we\'re building.',
       image: '/images/RunIt.png',
@@ -23,14 +29,7 @@ const Works = () => {
       summary: 'This is a web app, built using React and Nextjs, for a small business located in Minnesota. This was a project very close to home since it was the first company I ever worked for.',
       image: '/images/logo copy.png',
       link: 'www.spiesscarpet.com',
-    },
-    {
-      title: 'Preece Financial Planning',
-      summary: 'Web Design overhaul for Preece Financial Planning, bringing their website to life through modern design principles.',
-      image: '/images/transparentPFP.png',
-      link: 'www.preecefp.com',
     }
-    // Add more experiences here...
   ];
 
 return (
