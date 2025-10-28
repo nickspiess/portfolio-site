@@ -13,11 +13,21 @@ const ExperienceTile = ({ title, summary, image, link }) => {
     }
   };
 
-  const handleTileClick = () => {
+  const handleTileClick = (e) => {
+    // If clicking the button, don't toggle
+    if (e.target.closest(`.${styles.projectButton}`)) {
+      return;
+    }
+    // Toggle active state
     setIsActive(!isActive);
   };
 
-  const handleTileTouch = () => {
+  const handleTileTouch = (e) => {
+    // If touching the button, don't toggle
+    if (e.target.closest(`.${styles.projectButton}`)) {
+      return;
+    }
+    // Toggle active state
     setIsActive(!isActive);
   };
 
