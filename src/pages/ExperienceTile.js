@@ -8,6 +8,7 @@ const ExperienceTile = ({ title, summary, image, link }) => {
 
   const handleButtonClick = (e) => {
     e.stopPropagation();
+    e.preventDefault();
     if (link) {
       window.open(link.startsWith('http') ? link : `//${link}`, '_blank', 'noopener noreferrer');
     }
@@ -27,6 +28,7 @@ const ExperienceTile = ({ title, summary, image, link }) => {
     if (e.target.closest(`.${styles.projectButton}`)) {
       return;
     }
+    e.preventDefault();
     // Toggle active state
     setIsActive(!isActive);
   };
@@ -34,10 +36,11 @@ const ExperienceTile = ({ title, summary, image, link }) => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.container}>
-        <div 
+        <div
           className={`${styles.experienceTile} ${title === 'Preece Financial Planning' ? styles.preeceCard : ''} ${isActive ? styles.active : ''}`}
           onClick={handleTileClick}
-          onTouchStart={handleTileTouch}
+          onTouchEnd={handleTileTouch}
+          style={{ touchAction: 'manipulation' }}
         >
           <div className={styles.title}>
             <h2 className={styles.titleHeader}>{title}</h2>
