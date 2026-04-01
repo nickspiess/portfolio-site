@@ -1,138 +1,193 @@
+import React from 'react'
+import { motion } from 'framer-motion'
+import { useRouter } from 'next/router'
+import { Building2, Rocket, User } from 'lucide-react'
 
-import React, { useState } from 'react';
-import styles from "../styles/Services.module.css";
-import Link from "next/link";
-import Image from 'next/image';
-import Business from '../../public/images/Business.jpeg'
-import Individual from '../../public/images/Individual.jpeg'
-import StartUp from '../../public/images/StartUp.jpeg'
-import { useRouter } from 'next/router';
+const services = [
+  {
+    icon: Building2,
+    title: 'Businesses',
+    description: 'Scalable web platforms, e-commerce, and SEO strategies built to grow with your company.',
+    features: [
+      'Custom web applications',
+      'E-commerce solutions',
+      'SEO & performance optimization',
+      'Ongoing maintenance & support',
+    ],
+  },
+  {
+    icon: Rocket,
+    title: 'Startups',
+    description: 'Ship fast with MVPs and full-stack solutions designed to capture your market from day one.',
+    features: [
+      'MVP development',
+      'Mobile-responsive apps',
+      'Launch-ready e-commerce',
+      'Growth-focused SEO',
+    ],
+  },
+  {
+    icon: User,
+    title: 'Individuals',
+    description: 'Personal portfolios, blogs, and brand sites that turn your expertise into a professional presence.',
+    features: [
+      'Portfolio & personal sites',
+      'Blog platforms',
+      'Personal brand optimization',
+      'Content management setup',
+    ],
+  },
+]
 
+const ServiceComponent = () => {
+  const router = useRouter()
 
-const ServiceCard = ({ title, subtitle, listItems, quote, link, img, alt }) => {
+  return (
+    <section style={{
+      padding: 'clamp(4rem, 8vw, 8rem) clamp(1rem, 4vw, 4rem)',
+      background: '#060B18',
+      position: 'relative',
+    }}>
+      {/* Header */}
+      <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto', marginBottom: 'clamp(3rem, 5vw, 5rem)' }}>
+        <motion.p
+          style={{
+            fontSize: '0.875rem', color: '#007ed8', letterSpacing: '0.15em',
+            textTransform: 'uppercase', fontWeight: 600, marginBottom: '1rem',
+          }}
+          initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.5 }}
+        >
+          Services
+        </motion.p>
+        <motion.h2
+          style={{
+            fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 700,
+            color: '#F5F5F7', lineHeight: 1.2, marginBottom: '1.25rem',
+          }}
+          initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          Solutions for every stage
+        </motion.h2>
+        <motion.p
+          style={{
+            fontSize: '1.05rem', color: '#94A3B8', lineHeight: 1.7,
+            maxWidth: '560px', margin: '0 auto',
+          }}
+          initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          Whether you're launching, growing, or establishing your personal brand — every project is custom-built and fully yours.
+        </motion.p>
+      </div>
 
-  const router = useRouter();
-
-    const [isFlipped, setIsFlipped] = useState(false);
-
-    const handleCardClick = (e) => {
-      e.preventDefault();
-      setIsFlipped(!isFlipped);
-    };
-
-    const handleCardTouch = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      setIsFlipped(!isFlipped);
-    };
-
-    const handleTouchEnd = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-    };
-
-    const handleMouseEnter = () => {
-      setIsFlipped(true);
-    };
-
-    const handleMouseLeave = () => {
-      setIsFlipped(false);
-    };
-  
-    return (
-      <div 
-        className={styles.pullInCard} 
-        onMouseEnter={handleMouseEnter} 
-        onMouseLeave={handleMouseLeave}
-        onClick={handleCardClick}
-        onTouchStart={handleCardTouch}
-        onTouchEnd={handleTouchEnd}
-        style={{ touchAction: 'manipulation' }}
-      >
-        <div className={`${styles.cardInner} ${isFlipped ? styles.isFlipped : ""}`}>
-          <div className={styles.cardFront}>
-            <h2 className={styles.cardTitle}>{title}</h2>
-            
-            <Image className={styles.img}
-              src={img} // The path of the image file
-              alt={alt} // Alternative text for the image
-              width={300} // Width of the image in pixels
-              height={300} // Height of the image in pixels
-            />
-            
-            <p className={styles.cardQuote}>{quote}</p>
-          </div>
-          <div className={styles.cardBack}>
-            <div className={styles.backContainer}>
-              <h3 className={styles.cardSubtitle}>{subtitle}</h3>
-              <ul className={styles.cardList}>
-                {listItems.map((item, index) => (
-                  <li className={styles.listItem} key={index} dangerouslySetInnerHTML={{ __html: item }}></li>
-                ))}
-              </ul>
-              <button className={styles.learnMore} onClick={(e) => {
-                e.stopPropagation();
-                router.push(link);
-              }}>
-                Learn More
-              </button>
+      {/* Service cards */}
+      <div style={{
+        maxWidth: '1100px',
+        margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+        gap: '1.5rem',
+      }}>
+        {services.map((service, i) => {
+          const Icon = service.icon
+          return (
+            <motion.div
+              key={service.title}
+              style={{
+                background: 'rgba(10, 15, 30, 0.6)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                borderRadius: '20px',
+                border: '1px solid rgba(255, 255, 255, 0.06)',
+                padding: 'clamp(1.5rem, 3vw, 2.5rem)',
+                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.25)',
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 + i * 0.1 }}
+            >
+              {/* Icon + label */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
+                <div style={{
+                  width: '40px', height: '40px', borderRadius: '12px',
+                  background: 'rgba(0, 126, 216, 0.08)',
+                  border: '1px solid rgba(0, 126, 216, 0.15)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }}>
+                  <Icon size={18} color="#FFFFFF" strokeWidth={1.5} />
+                </div>
+                <p style={{
+                  fontSize: '1.15rem', fontWeight: 600, color: '#F5F5F7',
+                }}>
+                  {service.title}
+                </p>
               </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-  
-  const ServiceComponent = () => {
-    return (
-      <div className={styles.container}>
-        <h1 className={styles.title}>Our Services</h1>
-        <div className={styles.services}>
-          <ServiceCard
-            title="Businesses"
-            subtitle="Comprehensive Digital Solutions for Enterprises"
-            listItems={[
-              "<strong>Web Development</strong>: <br/>Scalable and secure web apps.",
-              "<br/><strong>E-commerce Solutions</strong>: <br/>Robust & Dynamic online stores.",
-              "<br/><strong>SEO Footprint</strong>: <br/>Optimize your online presence.",
-              "<br/><strong>Maintenance and Support</strong>: <br/>Maintain Smooth Digital Operations."
-            ]}
-            quote="📈 Boost your business's ROI with our holistic digital solutions."
-            link="/Services"
-            img={Business}
-            alt="Providing Solutions for Businesses of any size"
-          />
-          <ServiceCard
-            title="Startups"
-            subtitle="Tailor-made Services for Emerging Businesses"
-            listItems={[
-              "<strong>Web Development</strong>: <br/>MVPs and full-stack solutions",
-              "<br/><strong>Mobile App Development</strong>: <br/>Capture the mobile audience.",
-              "<br/><strong>E-commerce Solutions</strong>: <br/>Start selling online quickly.",
-              "<br/><strong>SEO Footprint</strong>: <br/>Get noticed in a crowded digital world."
-            ]}
-            quote="🚀 Fast-track your startup's success with our specialized offerings."
-            link="/Services"
-            img={StartUp}
-            alt="Providing Solutions for Startups looking to announce and expand their digital footprint."
-          />
-          <ServiceCard
-            title="Individuals"
-            subtitle="Empowering Individual Creators and Freelancers"
-            listItems={[
-              "<strong>Web Development</strong>: <br/>Personal portfolios and blogs.",
-              "<br/><strong>Mobile App Development</strong>:<br/>Apps for freelancers and creators.",
-              "<br/><strong>SEO Presence</strong>: <br/>Personal brand optimization.",
-              "<br/><strong>Maintenance and Support</strong>: <br/>Maintain Smooth Digital Operations."
-            ]}
-            quote="🎨 Turn your passion into a profession with our personalized services."
-            link="/Services"
-            img={Individual}
-            alt="Bringing your content to the next level and a bigger audience."
-          />
-        </div>
-      </div>
-    );
-};
 
-export default ServiceComponent;
+              {/* Description */}
+              <p style={{
+                fontSize: '0.95rem', color: '#94A3B8', lineHeight: 1.6,
+                marginBottom: '1.5rem',
+              }}>
+                {service.description}
+              </p>
+
+              {/* Accent line */}
+              <div style={{
+                width: '40px', height: '2px', borderRadius: '1px',
+                background: 'linear-gradient(90deg, rgba(0, 126, 216, 0.5), transparent)',
+                marginBottom: '1.5rem',
+              }} />
+
+              {/* Features list */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2rem', flex: 1 }}>
+                {service.features.map((feature) => (
+                  <div key={feature} style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
+                    <div style={{
+                      width: '6px', height: '6px', borderRadius: '50%',
+                      background: '#475569', flexShrink: 0,
+                    }} />
+                    <p style={{ fontSize: '0.9rem', color: '#CBD5E1', lineHeight: 1.4 }}>
+                      {feature}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* CTA */}
+              <motion.button
+                onClick={() => router.push('/Services')}
+                style={{
+                  width: '100%',
+                  padding: '0.75rem 1.5rem',
+                  fontSize: '0.9rem',
+                  fontWeight: 500,
+                  color: '#CBD5E1',
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  borderRadius: '12px',
+                  cursor: 'pointer',
+                }}
+                whileHover={{
+                  scale: 1.02,
+                  color: '#F5F5F7',
+                  borderColor: 'rgba(255, 255, 255, 0.25)',
+                  background: 'rgba(255, 255, 255, 0.08)',
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Learn More
+              </motion.button>
+            </motion.div>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
+export default ServiceComponent

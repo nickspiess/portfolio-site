@@ -7,7 +7,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 //import Stars from '../../public/images/Stars.mov';
 import Head from 'next/head'
-import StructuredData from 'src/pages/StructuredData';
+import StructuredData from './StructuredData';
 
 const About = () => {
     

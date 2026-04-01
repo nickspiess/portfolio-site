@@ -1,60 +1,24 @@
-
-  
-  .bgOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 310vh;  /* Covering both videos */
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-    color: white;
-  }
-
-  .content {
-    background: rgb(2,12,27);
-background: linear-gradient(0deg, 
-    rgba(2,12,27,1) 0%, 
-    rgba(10,25,47,1) 20%, 
-    rgba(17,34,64,1) 50%, 
-    rgba(26,54,93,1) 75%, 
-    rgba(38,77,118,1) 100%);
+.content {
+  background: #060B18;
+  min-height: 100vh;
 }
-  
-  .bgvideo,
-  .bgvideoSecond {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;  /* Changed to 100% */
-    z-index: 0;
-    object-fit: cover;
-    color: white;
-  }
-  
-  .bgvideoSecond {
-    top: 155vh;
-  }
-  
-  .background,
-  .aboutContainer,
-  .galleryContainer {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .galleryContainer {
-      margin-bottom: 50px;
-      color: white;
-  }
-  
-  .aboutContainer {
-      margin-top: 0;
-      color: white;
-    margin-bottom: 100px;
-  }
-  
+.aboutContainer,
+.galleryContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleryContainer {
+  margin-bottom: 50px;
+}
+
+.aboutContainer {
+  margin-bottom: 0;
+}
+
+.overlayWrapper {
+  position: relative;
+}

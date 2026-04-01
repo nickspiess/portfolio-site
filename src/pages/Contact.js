@@ -5,7 +5,7 @@ import Footer from './Footer'
 import styles from '../styles/ContactPage.module.css';
 import React from 'react';
 import Head from 'next/head'
-import StructuredData from 'src/pages/StructuredData';
+import StructuredData from './StructuredData';
 
 
 const Contact = () => {

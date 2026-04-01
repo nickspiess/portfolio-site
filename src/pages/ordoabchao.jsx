@@ -6,7 +6,7 @@ import Footer from './BlogFooter';
 import { PostCard, Categories, PostWidget } from '../../components';
 import { getPosts } from '../../services';
 import { FeaturedPosts } from '../../sections';
-import StructuredData from 'src/pages/StructuredData';
+import StructuredData from './StructuredData';
 
 
 

@@ -6,44 +6,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: none;
-  transition: all 0.3s ease-in-out;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   z-index: 50000;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
 }
 
-/* Hide navbar when mobile menu is open */
 .navbar.mobileMenuOpen {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-100%);
 }
 
-.consultationButton {
-  background-color: #0070f3;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.consultationButton:hover {
-  background-color: #0056b3;
-}
-
-.navWrapper {
-  padding-top: 2rem;
-  background-color: rgb(212, 212, 212);
-}
-
-.navbarClass {
-  
-}
-
-/* Add this to create space for the fixed navbar */
 .navbarSpacer {
   height: 80px;
   width: 100%;
@@ -56,119 +30,80 @@
 }
 
 .solid {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-  height: 80px;
-}
-
-/* When scrolled on homepage */
-.navbar.solid {
-  height: 135px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
-}
-
-/* Default color */
-.navbar.solid {
-  background-color: rgb(14, 35, 72);
-}
-
-/* About page */
-.solid[data-page="/About"] {
-  background-color: rgb(2, 18, 37);
-}
-
-/* Portfolio page */
-.solid[data-page="/Portfolio"] {
-  background-color: rgb(32, 64, 105);
-}
-
-/* Services page */
-.solid[data-page="/Services"] {
-  background-color: rgb(38, 77, 118);
-}
-
-/* Contact page */
-.solid[data-page="/Contact"] {
-  background-color: rgb(20, 45, 82);
+  background-color: rgba(10, 17, 32, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
   cursor: pointer;
   margin-left: 50px;
-  margin-top: 0px;
   width: 120px;
   height: auto;
   max-width: 100%;
   overflow: visible;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.04);
 }
 
 .links {
   display: flex;
-  gap: 1vw;
+  gap: 0.25rem;
   align-items: center;
   margin-right: 50px;
   margin-left: auto;
 }
 
 .links a {
-  margin-left: 1.4rem;
+  margin-left: 0.5rem;
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: color 0.25s ease, background-color 0.25s ease;
 }
 
 .links a:hover {
-  transition: 0.3s;
-  color: rgb(213, 184, 96);
-  transform: translateY(-2px);
-  cursor: pointer;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 .startProcessBtn {
-  background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #F5F5F7;
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 126, 216, 0.3);
+  background: rgba(0, 126, 216, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   cursor: pointer;
   font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
   transition: all 0.3s ease;
-  margin-left: 1rem;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
-}
-
-.startProcessBtn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.5s;
+  margin-left: 0.75rem;
 }
 
 .startProcessBtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(30, 64, 175, 0.4);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.startProcessBtn:hover::before {
-  left: 100%;
+  background: rgba(0, 126, 216, 0.18);
+  border-color: rgba(0, 126, 216, 0.5);
+  transform: translateY(-1px);
 }
 
 .divider {
   width: 1px;
-  height: 20px;
-  background-color: #ccc;
-  margin-left: 1.5vw;
-  display: none;
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.12);
+  margin-left: 0.5rem;
+  margin-right: 0.25rem;
 }
 
 .contactBlog {
@@ -180,41 +115,42 @@
   cursor: pointer;
   display: none;
   align-items: center;
+  justify-content: center;
   position: fixed;
   top: 20px;
   right: 20px;
   z-index: 1200;
-  padding: 8px;
+  padding: 16px;
+  min-width: 48px;
+  min-height: 48px;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hamburger {
-  margin-top: 42px;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background-color: #fff;
   position: relative;
   transition: all 0.3s ease;
   z-index: 1100;
-  opacity: 1;
-  display: block;
 }
 
 .hamburger::before,
 .hamburger::after {
   content: '';
   position: absolute;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background-color: #fff;
   transition: all 0.3s ease;
 }
 
 .hamburger::before {
-  top: -8px;
+  top: -7px;
 }
 
 .hamburger::after {
-  top: 8px;
+  top: 7px;
 }
 
 .mobileMenuToggle.open .hamburger {
@@ -224,53 +160,36 @@
 .mobileMenuToggle.open .hamburger::before {
   transform: rotate(45deg);
   top: 0;
-  background-color: #000000;
-  width: 32px;
-  height: 4px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 26px;
+  height: 2px;
 }
 
 .mobileMenuToggle.open .hamburger::after {
   transform: rotate(-45deg);
   top: 0;
-  background-color: #000000;
-  width: 32px;
-  height: 4px;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 26px;
+  height: 2px;
 }
 
 .mobileContainer {
   display: none;
 }
 
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @media (max-width: 1100px) {
   .links a {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 
   .logo {
-    cursor: pointer;
     margin-left: 4%;
-    margin-top: 0px;
-    width: 135px;
+    width: 110px;
   }
 }
 
@@ -288,9 +207,7 @@
   }
 
   .logo {
-    cursor: pointer;
     margin-left: 4%;
-    margin-top: 0px;
     width: 100px;
     height: auto;
     max-width: 100%;
@@ -302,50 +219,24 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1200;
-    padding: 12px;
-  }
-
-  /* Make X MUCH more visible when menu is open */
-  .mobileMenuToggle.open {
-    background: #ffffff;
-    border-radius: 12px;
-    border: 3px solid #000000;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4);
-    transform: scale(1.3);
-    transition: all 0.3s ease;
-    padding: 16px;
-    position: fixed;
-    top: 30px;
-    right: 30px;
     z-index: 20000;
+    padding: 16px;
+    min-width: 48px;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* Make X lines very prominent */
+  .mobileMenuToggle.open {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .mobileMenuToggle.open .hamburger::before,
   .mobileMenuToggle.open .hamburger::after {
-    background-color: #000000;
-    width: 32px;
-    height: 4px;
-    box-shadow: none;
-  }
-
-  /* Add hover effect for the X button */
-  .mobileMenuToggle.open:hover {
-    background: #f0f0f0;
-    transform: scale(1.4);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 0.6);
-  }
-
-  /* Add a subtle pulse animation to draw attention */
-  .mobileMenuToggle.open {
-    animation: pulse 2s infinite;
-  }
-
-  @keyframes pulse {
-    0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4); }
-    50% { box-shadow: 0 0 30px rgba(255, 255, 255, 1), 0 0 60px rgba(255, 255, 255, 0.6); }
-    100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.4); }
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 26px;
+    height: 2px;
   }
 
   .hamburger {
@@ -359,103 +250,86 @@
     right: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(27, 35, 54, 1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(10, 17, 32, 0.95);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 0.5rem;
     z-index: 100;
-    animation: fadeIn 0.3s ease-out;
+    animation: fadeIn 0.25s ease-out;
+  }
+
+  .mobileClose {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    transition: background 0.25s ease, border-color 0.25s ease;
+    z-index: 10;
+  }
+
+  .mobileClose:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(0, 126, 216, 0.3);
+    color: #fff;
   }
 
   .mobileContainer a {
-    color: white;
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    padding: 1rem 2rem;
+    font-size: 1.35rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: color 0.25s ease;
+    padding: 0.9rem 2rem;
     border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .mobileContainer a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    transition: left 0.5s;
   }
 
   .mobileContainer a:hover {
-    color: rgb(216, 191, 113);
-    transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  .mobileContainer a:hover::before {
-    left: 100%;
+    color: #ffffff;
   }
 
   .mobileContainer .startProcessBtn {
-    background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 50%, #60A5FA 100%);
-    color: white;
-    padding: 1.2rem 3rem;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #F5F5F7;
+    padding: 1rem 2.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 126, 216, 0.3);
+    background: rgba(0, 126, 216, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     cursor: pointer;
     font-weight: 600;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
     transition: all 0.3s ease;
-    margin-top: 1rem;
-    box-shadow: 0 6px 25px rgba(30, 64, 175, 0.4);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .mobileContainer .startProcessBtn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
+    margin-top: 0.75rem;
   }
 
   .mobileContainer .startProcessBtn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(30, 64, 175, 0.5);
-    border-color: rgba(255, 255, 255, 0.4);
-  }
-
-  .mobileContainer .startProcessBtn:hover::before {
-    left: 100%;
-  }
-
-  .mobileContainer p {
-    margin: 0;
-    color: inherit;
+    background: rgba(0, 126, 216, 0.18);
+    border-color: rgba(0, 126, 216, 0.5);
   }
 
   .divider {
     display: block;
-    width: 60%;
+    width: 50%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    margin: 0;
-    margin-top: 12px;
-    margin-bottom: 12px;;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin: 0.5rem 0;
   }
 
   .blog {
@@ -467,12 +341,12 @@
 
 @media (max-width: 480px) {
   .mobileContainer a {
-    font-size: 1.3rem;
-    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
   }
 
   .mobileContainer .startProcessBtn {
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
   }
 }

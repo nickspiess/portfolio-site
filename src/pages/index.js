@@ -1,13 +1,17 @@
 import React from 'react';
 import FirstLanding from './FirstLanding'
+import HeroSection from '../components/HeroSection'
 import ServiceComponent from './ServiceComponent';
+import ComparisonSection from '../components/ComparisonSection'
+import WhatYouGetSection from '../components/WhatYouGetSection'
+import PricingSection from '../components/PricingSection'
 import AboutLanding from './AboutLanding'
 import ContactForm from './ContactForm'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Head from 'next/head'
 import styles from '../styles/Main.module.css'
-import StructuredData from 'src/pages/StructuredData';
+import StructuredData from './StructuredData';
 
 export default class extends React.Component {
     
@@ -45,15 +49,15 @@ export default class extends React.Component {
         <>
             <Head>
                 <title>Spiess Technologies</title>
-                <meta name="description" content='Your partner in expanding your digital footprint.' />
+                <meta name="description" content='Custom-built websites you own and manage yourself. No templates, no subscriptions.' />
                 <meta property="og:title" content='Spiess Technologies' />
-                <meta property="og:description" content='Your partner in expanding your digital footprint.'/>
+                <meta property="og:description" content='Custom-built websites you own and manage yourself. No templates, no subscriptions.'/>
                 <meta property="og:image" content={'/images/Logo.png'}  />
                 <meta property="og:url" content={`https://spiess.tech`} />
                 <meta name="robots" content="index,follow" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Spiess Technologies" />
-                <meta name="twitter:description" content='Your partner in expanding your digital footprint.' />
+                <meta name="twitter:description" content='Custom-built websites you own and manage yourself. No templates, no subscriptions.' />
                 <meta name="twitter:image" content={'/images/Logo.png'} />
                 <link rel="canonical" href={`https://spiess.tech`} />
             </Head>
@@ -63,7 +67,10 @@ export default class extends React.Component {
             <div className="body">
                 <div className="wrapper">
                     <Navbar />
-                    <FirstLanding />
+                    <HeroSection />
+                    <ComparisonSection />
+                    <WhatYouGetSection />
+                    <PricingSection />
                     <div className={styles.gradientBackground}>
                         <ServiceComponent />
                     </div>
