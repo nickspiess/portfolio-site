@@ -68,10 +68,10 @@ function GlassCard({ item }) {
   const [hovered, setHovered] = useState(false);
   const isTouchRef = React.useRef(false);
 
-  const handleClick = () => {
-    // On touch devices, first tap expands, second tap navigates
+  const handleClick = (e) => {
     if (isTouchRef.current) {
       if (!hovered) {
+        e.preventDefault();
         setHovered(true);
         return;
       }
@@ -100,8 +100,8 @@ function GlassCard({ item }) {
   return (
     <div
       className={styles.glassCard}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => { if (!isTouchRef.current) setHovered(true); }}
+      onMouseLeave={() => { if (!isTouchRef.current) setHovered(false); }}
       onTouchStart={() => { isTouchRef.current = true; }}
       onClick={handleClick}
       style={{

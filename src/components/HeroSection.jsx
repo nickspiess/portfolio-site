@@ -171,7 +171,7 @@ const HeroSection = () => {
 
         {/* Location info */}
         <motion.div
-          className="text-center mt-12"
+          className="text-center mt-12 pb-16 md:pb-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}

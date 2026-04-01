@@ -216,13 +216,12 @@
 
   .mobileMenuToggle {
     display: flex;
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: relative;
+    top: auto;
+    right: auto;
+    margin-right: 1rem;
     z-index: 20000;
-    padding: 16px;
-    min-width: 48px;
-    min-height: 48px;
+    padding: 12px;
     align-items: center;
     justify-content: center;
   }

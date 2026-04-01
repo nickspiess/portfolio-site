@@ -168,7 +168,7 @@ const Services = () => {
             position: 'absolute', inset: 0, zIndex: 1,
             background: 'linear-gradient(to bottom, rgba(10, 17, 32, 0.5) 0%, rgba(10, 17, 32, 0.85) 100%)',
           }} />
-          <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '0 1.5rem' }}>
+          <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', padding: '4rem 1.5rem 0' }}>
             <motion.h1 {...fade(0)} style={{
               fontSize: 'clamp(2rem, 5vw, 3.25rem)', fontWeight: 700, color: '#F5F5F7',
               lineHeight: 1.15, marginBottom: '1.25rem',

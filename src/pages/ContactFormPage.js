@@ -12,7 +12,7 @@ const ContactFormPage = () => {
   const [focused, setFocused] = useState(null)
 
   const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-  const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_PROCESS_TEMPLATE_ID
+  const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID
   const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID
 
   const handleInputChange = (e) => {
